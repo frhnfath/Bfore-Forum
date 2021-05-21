@@ -1,0 +1,106 @@
+/* NOTES
+ * Penggunaan fonts :
+	 * font-family: 'Roboto', sans-serif;
+	 * font-family: 'Secular One', sans-serif;
+	 * font-family: 'Slabo 13px', serif;
+ */
+
+ /* NAVBAR SECTION */
+#navbar-logo {
+	width: 50%;
+}
+
+#logoBFore {
+	width: 70%;
+}
+
+#tombolLink {
+	color: #0d6efd ;
+}
+
+#tombolLink:hover {
+	color: #084298;
+}
+
+/* CAROUSEL ATAS */
+.row {
+	margin-right: 0;
+	padding: 1.5rem 0 0 1.5rem;
+}
+
+#promoCarousel {
+	background-color: #cfe2ff;
+}
+
+.carousel-image {
+	width: 90%;
+}
+
+.caption-carousel {
+	font-family: 'Slabo 13px', serif;
+	padding-top: 20%;
+}
+
+h3, p {
+	font-family: 'Slabo 13px', serif;
+}
+
+/* FEATURE SECTION */
+.midTitleSep {
+	padding-top: 5%;
+	text-align: center;
+	font-family: 'Secular One', sans-serif;
+	color: #FF8F27;
+}
+
+.row {
+	padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.feature-grid {
+	padding: 1.5rem 1.5rem 2.0rem 1.5rem;
+}
+
+.card-content {
+	padding: 20%;
+}
+
+.featureCaption {
+	display: inline-block;
+	font-family: 'Secular One', sans-serif;
+	color: #FF8F27;
+}
+
+.featureObject {
+	font-size: 150%;
+	color: #FF8F27;
+	margin-right: 2%;
+}
+
+/* FOOTER */
+footer {
+	text-align: center;
+	padding: 2% 15% 1% 15%;
+}
+
+.socmed {
+	color: #212529;
+	margin-left: 0.5em;
+}
+
+.socmed:hover {
+	color: #f8f9fa;
+}
+
+/* RESPON BUAT TABLET/MOBILE */
+@media (max-width: 1000px) {
+	.caption-carousel {
+		padding-top: 0%;
+	}
+	.row {
+		text-align: center;
+	}
+	.carousel-image {
+		width: 50%;
+	}
+}
