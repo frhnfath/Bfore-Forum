@@ -30,6 +30,23 @@
 
 #promoCarousel {
 	background-color: #cfe2ff;
+	padding: 0 3% 0 3%;
+}
+
+#carousel-counter {
+	right: 74%;
+	left: 2%;
+	margin-left: 0;
+}
+
+#carousel-cont-left {
+	position: relative;
+	right: 49%;
+}
+
+#carousel-cont-right {
+	position: relative;
+	left: 35%;
 }
 
 .carousel-image {
@@ -38,7 +55,7 @@
 
 .caption-carousel {
 	font-family: 'Slabo 13px', serif;
-	padding-top: 20%;
+	padding-top: 17%;
 }
 
 h3, p {
