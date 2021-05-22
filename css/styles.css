@@ -33,12 +33,6 @@
 	padding: 0 3% 0 3%;
 }
 
-#carousel-counter {
-	right: 74%;
-	left: 2%;
-	margin-left: 0;
-}
-
 #carousel-cont-left {
 	position: relative;
 	right: 49%;
@@ -62,6 +56,12 @@ h3, p {
 	font-family: 'Slabo 13px', serif;
 }
 
+/* MID-SECTION BOOGALOO */
+
+.mid-img {
+	padding: 5%;
+}
+
 /* FEATURE SECTION */
 .midTitleSep {
 	padding-top: 5%;
@@ -79,7 +79,7 @@ h3, p {
 }
 
 .card-content {
-	padding: 20%;
+	padding: 15%;
 }
 
 .featureCaption {
@@ -120,4 +120,31 @@ footer {
 	.carousel-image {
 		width: 50%;
 	}
+}
+
+/* About Page */
+
+#about-big-promo {
+	padding: 5% 3% 3% 3%;
+}
+
+#about-bigPromoImg {
+	width: 48%;
+	filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.25));
+}
+
+#about-mid1section {
+	padding: 3% 20% 3% 20%;
+}
+
+#featureCardBlue {
+	background-color: #cfe2ff;
+}
+
+#about-botsection {
+	padding: 5%;
+}
+
+.tag-badge {
+	width: 6rem;
 }
