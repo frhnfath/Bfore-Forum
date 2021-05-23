@@ -31,6 +31,7 @@ Solusi untuk masalah ini adalah dengan menyediakan forum sebagai sarana untuk me
 Version Control dan Collaboration Platform	:
 * Github
 * Trello
+
 Teknologi	: 
 * HTML/CSS
 * JavaScript
