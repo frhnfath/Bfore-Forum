@@ -38,4 +38,7 @@ Teknologi	:
 * MySQL
 
 ## Deskripsi 
-BFore adalah web forum untuk memudahkan mahasiswa IPB dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, tag, dan page admin untuk menambahkan berita.
+BFore adalah web forum untuk memudahkan mahasiswa dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, tag, dan page admin untuk menambahkan berita.
+
+## User Profile
+Target pengguna dari web kami adalah mahasiswa Institut Pertanian Bogor.
