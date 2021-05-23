@@ -42,3 +42,11 @@ BFore adalah web forum untuk memudahkan mahasiswa dalam mencari informasi terten
 
 ## User Profile
 Target pengguna dari web kami adalah mahasiswa Institut Pertanian Bogor.
+
+## User Story
+* Sebagai calon pengguna, agar dapat melakukan aktivitas pada web, saya dapat memasukkan data diri, alamat email, dan password.
+* Sebagai pengembang, agar memfasilitasi platform pengguna, saya dapat memberikan halaman dan fitur login untuk user.
+* Sebagai pengguna yang telah log out, agar dapat melakukan aktivitas kembali pada web, saya dapat memasukkan alamat email dan password.
+* Sebagai pengguna terdaftar, agar dapat memulai diskusi baru pada forum, saya dapat menggunakan fungsi membuat topik baru.
+* Sebagai pengguna yang terdaftar, agar dapat menemukan topik diskusi yang diminati, saya dapat menggunakan fitur kategori topik di dalam forum.
+* Sebagai pengguna terdaftar, agar dapat meneruskan diskusi topik tertentu, saya dapat menggunakan fungsi jawab pada fitur diskusi forum.
