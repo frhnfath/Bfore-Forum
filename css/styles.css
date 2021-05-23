@@ -148,3 +148,26 @@ footer {
 .tag-badge {
 	width: 6rem;
 }
+
+/* Forum Page */
+#forum-cover-img {
+	object-fit: cover;
+	width: 100%;
+	height: 15rem;
+}
+
+#forum-content {
+	padding: 1%;
+}
+
+.icon-inbutton {
+	padding-right: 5px;
+}
+
+#news-item-img {
+	width: 45%;
+}
+
+#list-postingan {
+	padding-right: 0;
+}
