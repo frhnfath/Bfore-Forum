@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Forum mahasiswa IPB">
+		<meta name="author" content="Kelompok 3 RPL">
 		<title>BFore : Forum Kampus IPB</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
@@ -53,10 +55,10 @@
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
 							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="#">Masuk</a>
+								<a id="tombolLink" class="nav-link" href="sign-in.html">Masuk</a>
 							</li>
 							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="#">Daftar</a>
+								<a id="tombolLink" class="nav-link" href="sign-up.html">Daftar</a>
 							</li>
 						</ul>
 					</div>
@@ -66,9 +68,9 @@
 		</section>
 
 		<section id="promoCarousel">
-			<div id="promo-carousel" class="carousel slide" data-ride="true">
+			<div id="promo-carousel" class="carousel slide" data-ride="true" data-bs-ride="carousel">
 				<div class="carousel-inner">
-					<div class="carousel-item active">
+					<div class="carousel-item active" data-bs-interval="2000">
 						<div class="row">
 							<div class="col-lg-6">
 								<h2 class="caption-carousel">Belajar, perluas wawasan, jalin koneksi baru dengan mahasiswa lain melalui forum.</h2>
@@ -78,7 +80,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="carousel-item">
+					<div class="carousel-item" data-bs-interval="2500">
 						<div class="row">
 							<div class="col-lg-6">
 								<h2 class="caption-carousel">Berkembang menjadi mahasiswa multidisipliner dengan berdiskusi.</h2>
@@ -88,7 +90,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="carousel-item">
+					<div class="carousel-item" data-bs-interval="2500">
 						<div class="row">
 							<div class="col-lg-6">
 								<h2 class="caption-carousel">Saling bantu dan berkolaborasi dalam memecahkan berbagai masalah.</h2>
@@ -109,25 +111,24 @@
 		</section>
 
 		<section id="midSection bg-light">
-			<div class="mid-img">
-				<img id="ellipse32" src="img/home/Ellipse32.svg" alt="ellipse32">
-				<img id="ellipse31" src="img/home/Ellipse31.svg" alt="ellipse31">
-				<img src="img/home/person1.svg" alt="person1">
-				<img src="img/home/person2.svg" alt="person2">
-				<img src="img/home/person3.svg" alt="person3">
-				<img src="img/home/person4.svg" alt="person4">
-				<img src="img/home/person5.svg" alt="person5">
-				<img src="img/home/person6.svg" alt="person6">
-				<img src="img/home/person7.svg" alt="person7">
-				<img src="img/home/person8.svg" alt="person8">
-				<img src="img/home/person9.svg" alt="person9">
-				<img src="img/home/rectangle79.svg" alt="rectangle79">
-				<img src="img/home/rectangle81.svg" alt="rectangle81">
-				<img src="img/home/rectangle85.svg" alt="rectangle85">
-				<img src="img/home/rectangle86.svg" alt="rectangle86">
-				<img src="img/home/rectangle87.svg" alt="rectangle87">
-				<img src="img/home/rectangle88.svg" alt="rectangle88">
-			<h3>Dapat terhubung dengan banyak pengguna dalam forum.</h3>
+			<div class="midTitleSep"></div>
+			<div class="container col-xxl-8 px-4 py-5">
+			  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+				<div class="col-10 col-sm-8 col-lg-6">
+				  <img src="img/home-Circle.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+				</div>
+				<div class="col-lg-6">
+				  <h1 class="display-5 fw-bold lh-1 mb-3">Dapat terhubung dengan banyak pengguna di dalam forum</h1>
+				  <p class="lead">Saling bantu dan berkolaborasi dalam memecahkan berbagai masalah. 
+					  Belajar, perluas wawasan, jalin koneksi baru dengan mahasiswa lain melalui forum. 
+					  Saling bantu dan berkolaborasi dalam memecahkan berbagai masalah.
+				  </p>
+				  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+					<a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href="sign-in.html" role="button">Daftar</a>
+					<a type="button" class="btn btn-outline-secondary btn-lg px-4" href="sign-up.html" role="button">Masuk</a>
+				  </div>
+				</div>
+			  </div>
 			</div>
 		</section>
 		
@@ -172,6 +173,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="midTitleSep"></div>
 		</section>
 
 	</body>
