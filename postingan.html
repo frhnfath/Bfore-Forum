@@ -76,95 +76,60 @@
 				<div class="card-item">
 					<div class="row">
 						<div class="col-lg-9">
-							<div class="d-flex w-100 justify-content-between">
-								<h3 style="display: inline-block;">Pertanyaan Teratas</h3>
-								<div class="btn btn-primary"><i class="fa fa-pen-square icon-inbutton"></i> Bertanya</button>
+							<div id="judul-postingan" class="d-flex w-100 justify-content-between">
+								<div class="col-lg-6">
+									<p>UKM apa yang paling diminati anak fisika</p>
+									<div id="tag-badge"  class="badge bg-secondary text-wrap">Ormawa</div>
+									<div id="tag-badge" class="badge bg-secondary text-wrap">Ilkom</div>
+									<div id="tag-badge" class="badge bg-secondary text-wrap">FMIPA</div>
+								</div>
+								<div class="col-lg-6 g-1">
+									<div class="d-flex w-100 justify-content-end">
+									<button id="badge-indicator" class="btn btn-primary btn-sm">
+										Suara <span class="badge bg-secondary btn-sm">2</span>
+										</button>
+										<button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
+										Jawaban <span class="badge bg-secondary">3</span>
+										</button>
+										<button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
+										<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
+										</button>
+									</div>
+								</div>
 							</div>
-							</div>
-							<ul id="list-postingan" class="list-group feature-grid g-1">
-								<a class="list-group-item list-group-item-action" href="postingan.html">
-									<div class="row">
-										<div class="col-lg-6">
-											<p>UKM apa yang paling diminati anak fisika</p>
-											<div id="tag-badge"  class="badge bg-secondary text-wrap">Ormawa</div>
-											<div id="tag-badge" class="badge bg-secondary text-wrap">Ilkom</div>
-											<div id="tag-badge" class="badge bg-secondary text-wrap">FMIPA</div>
-										</div>
-										<div class="col-lg-6 g-1">
-											<div class="d-flex w-100 justify-content-end">
-											<button id="badge-indicator" class="btn btn-primary btn-sm">
-												Suara <span class="badge bg-secondary btn-sm">2</span>
-											  </button>
-											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												Jawaban <span class="badge bg-secondary">3</span>
-											  </button>
-											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
-											  </button>
-											  </div>
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-1">
+										<div id="vote-cont" class="btn-group-vertical align-items-center">
+											<i id="fawesome-button" class="fas fa-chevron-up"></i>
+											<p id="vote-cont-count" >23</p>
+											<i id="fawesome-button" class="fas fa-chevron-down"></i>
 										</div>
 									</div>
-								</a>
-								<a class="list-group-item list-group-item-action">
-									<div class="row">
-										<div class="col-lg-6">
-											<p>Beasiswa apa saja yang sedang dibuka pendaftarannya</p>
-											<div id="tag-badge"  class="badge bg-secondary text-wrap">Beasiswa</div>
-											<div id="tag-badge" class="badge bg-secondary text-wrap">Faperta</div>
-										</div>
-										<div class="col-lg-6 g-1">
-											<div class="d-flex w-100 justify-content-end">
-											<button id="badge-indicator" class="btn btn-primary btn-sm">
-												Suara <span class="badge bg-secondary btn-sm">1</span>
-											  </button>
-											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												Jawaban <span class="badge bg-secondary">1</span>
-											  </button>
-											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
-											  </button>
-											  </div>
-										</div>
-									</div>
-								</a>
-								<a class="list-group-item list-group-item-action">
-									<div class="row">
-										<div class="col-lg-6">
-											<p>JUDUL TOPIK</p>
-											<div id="tag-badge"  class="badge bg-secondary text-wrap">TAG1</div>
-											<div id="tag-badge" class="badge bg-secondary text-wrap">TAG2</div>
-										</div>
-										<div class="col-lg-6 g-1">
-											<div class="d-flex w-100 justify-content-end">
-											<button id="badge-indicator" class="btn btn-primary btn-sm">
-												Suara <span class="badge bg-secondary btn-sm">1</span>
-											  </button>
-											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												Jawaban <span class="badge bg-secondary">1</span>
-											  </button>
-											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
-											  </button>
-											  </div>
+									<div class="col-lg-11">
+										<div class="row">
+											<div class="col-lg-11">
+												<p>Saya ingin mengetahui lebih banyak mengenai prodi Ilmu Komputer.
+												Kegiatan rutin apa yang diselenggarakan secara rutin dan ada komunitas apa saja di ilkom?</p>
+											</div>
+											<div class="col-lg-11 d-flex justify-content-end">
+												<div class="card mb-3" style="max-width: 45%;">
+													<div class="row g-0">
+														<div class="col-md-4">
+															<img src="..." alt="...">
+														</div>
+														<div class="col-md-8">
+															<div class="card-body">
+																<h6 class="card-title">Ditanya <span>5 jam</span> lalu</h6>
+																<p id="nama-profile" class="card-text">Dx.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
-								</a>
-							</ul>
-							<div class="d-flex w-100 justify-content-end">
-								<nav aria-label="...">
-									<ul class="pagination">
-										<li class="page-item disabled">
-											<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Kembali</a>
-										</li>
-										<li class="page-item active"><a class="page-link" href="#">1</a></li>
-										<li class="page-item" aria-current="page">
-											<a class="page-link" href="#">2</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#">Selanjutnya</a>
-										</li>
-									</ul>
-								</nav>
+								</div>
 							</div>
 						</div>
 						<div class="col-lg-3">

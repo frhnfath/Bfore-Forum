@@ -187,9 +187,11 @@ footer {
 }
 
 .form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
+  width: 35%;
+  max-width: 400px;
+  background-color: white;
+  box-shadow: 0px 0px 25px 4px grey;
+  padding: 4% 5%;
   margin: auto;
 }
 
@@ -213,8 +215,43 @@ footer {
   border-top-right-radius: 0;
 }
 
+#floatingPasswordSignin {
+  margin-bottom: 18px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 #floatingPasswordVal {
   margin-bottom: 18px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+/* MAIN FORUM PAGE*/
+#badge-indicator {
+	margin: 0 1% 0 1%;
+}
+
+#badge-indicator:disabled,
+#badge-indicator[disabled]{
+	background-color:#0d6efd;
+	opacity: 1;
+}
+
+.row {
+	padding: 1.0rem;
+}
+
+/* POSTINGAN PAGE*/
+#judul-postingan {
+	padding: 0.5% 0 1% 0;
+	border-bottom: 1px solid grey;
+}
+
+#vote-cont-count {
+	margin: 0;
+}
+
+#fawesome-button:hover {
+	color: #0d6efd;
 }
