@@ -57,6 +57,14 @@
         <label for="floatingInput">Alamat Email</label>
       </div>
       <div class="form-floating">
+        <input type="name" class="form-control" id="floatingInput" placeholder="text">
+        <label for="floatingInput">Nama</label>
+      </div>
+      <div class="form-floating">
+        <input type="nim" class="form-control" id="floatingInput" placeholder="text">
+        <label for="floatingInput">NIM</label>
+      </div>
+      <div class="form-floating">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
         <label for="floatingPassword">Kata Sandi</label>
       </div>

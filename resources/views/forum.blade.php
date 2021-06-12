@@ -33,7 +33,7 @@
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
 				    <a class="navbar-brand" href="/index">
-						<img id="logoBFore" src="{{asset('css/styles.css')}}" alt="BFore-Logo">
+						<img id="logoBFore" src="{{URL('/images/logo-Navbar.png')}}" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -82,7 +82,7 @@
 							</div>
 							</div>
 							<ul id="list-postingan" class="list-group feature-grid g-1">
-								<a class="list-group-item list-group-item-action" href="postingan.html">
+								<a class="list-group-item list-group-item-action" href="/postingan">
 									<div class="row">
 										<div class="col-lg-6">
 											<p>UKM apa yang paling diminati anak fisika</p>

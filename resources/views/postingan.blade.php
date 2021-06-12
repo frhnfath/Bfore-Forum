@@ -33,7 +33,7 @@
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
 				    <a class="navbar-brand" href="index.html">
-						<img id="logoBFore" src="img/logo-Navbar.png" alt="BFore-Logo">
+						<img id="logoBFore" src="{{URL('/images/logo-Navbar.png')}}" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -41,10 +41,10 @@
 					<div class="collapse navbar-collapse" id="navbarCollapsing">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
-								<a class="nav-link" href="index.html">Beranda</a>
+								<a class="nav-link" href="/index">Beranda</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="about.html">Tentang</a>
+								<a class="nav-link" href="/about">Tentang</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="#">Forum</a>
@@ -53,10 +53,10 @@
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
 							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="sign-in.html">Masuk</a>
+								<a id="tombolLink" class="nav-link" href="/signin">Masuk</a>
 							</li>
 							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="sign-up.html">Daftar</a>
+								<a id="tombolLink" class="nav-link" href="/signup">Daftar</a>
 							</li>
 						</ul>
 					</div>
@@ -149,7 +149,7 @@
 							<ul class="list-group feature-grid g-1">
 								<li class="list-group-item bg-primary">Berita</li>
 								<a class="list-group-item list-group-item-action">
-									<img id="news-item-img" class="rounded float-start" src="img/forum/personal-finance.png" alt="">
+									<img id="news-item-img" class="rounded float-start" src="{{URL('/images/forum/personal-finance.png')}}" alt="">
 									<div class="d-flex w-100 justify-content-between">
 										<p class="mb-1">
 											Bantuan UKT Semester Genap Tahun Akademik 2020/2021
@@ -157,7 +157,7 @@
 									  </div>
 								</a>
 								<a class="list-group-item list-group-item-action">
-									<img id="news-item-img" class="rounded float-start" src="img/forum/team_pag.png" alt="">
+									<img id="news-item-img" class="rounded float-start" src="{{URL('/images/forum/team_pag.png')}}" alt="">
 									<div class="d-flex w-100 justify-content-between">
 										<p class="mb-1">
 											Piawai Mengolah Data Besar, Tim Ini Mendapatkan Juara di Gemastik XII
