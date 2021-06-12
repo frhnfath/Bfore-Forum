@@ -116,7 +116,7 @@
 												<div class="card mb-3" style="max-width: 45%;">
 													<div class="row g-0">
 														<div class="col-md-4">
-															<img src="..." alt="...">
+															<img class="profilePictPost" src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profilePicture">
 														</div>
 														<div class="col-md-8">
 															<div class="card-body">

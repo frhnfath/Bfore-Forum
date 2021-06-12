@@ -41,3 +41,11 @@ Route::get('/signup', function () {
 Route::get('/postingan', function () {
   return view('postingan');
 });
+
+Route::get('/index-signed', function () {
+  return view('index-signed');
+});
+
+Route::get('/profile-edit', function () {
+  return view('profile-edit');
+});
