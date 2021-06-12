@@ -63,4 +63,5 @@ Teknologi	:
 * MySQL
 
 ## Hasil dan Pembahasan
-<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/608048c87333ff8af3cb595a/7a1a39d574d87d8197cd8080cf9efe8b/rplusecase.png" width="500" height="500"/>
+### Use Case Diagram
+<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/608048c87333ff8af3cb595a/7a1a39d574d87d8197cd8080cf9efe8b/rplusecase.png" width="300" height="900"/>
