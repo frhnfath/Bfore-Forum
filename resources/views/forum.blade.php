@@ -6,7 +6,7 @@
 		<title>BFore : forum</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
-		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="{{asset('css/styles.css')}}" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -32,8 +32,8 @@
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				    <a class="navbar-brand" href="index.html">
-						<img id="logoBFore" src="img/logo-Navbar.png" alt="BFore-Logo">
+				    <a class="navbar-brand" href="/index">
+						<img id="logoBFore" src="{{asset('css/styles.css')}}" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -41,10 +41,10 @@
 					<div class="collapse navbar-collapse" id="navbarCollapsing">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
-								<a class="nav-link" href="index.html">Beranda</a>
+								<a class="nav-link" href="/index">Beranda</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="about.html">Tentang</a>
+								<a class="nav-link" href="/about">Tentang</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="#">Forum</a>
@@ -53,10 +53,10 @@
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
 							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="sign-in.html">Masuk</a>
+								<a id="tombolLink" class="nav-link" href="/sign-in">Masuk</a>
 							</li>
 							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="sign-up.html">Daftar</a>
+								<a id="tombolLink" class="nav-link" href="/sign-up">Daftar</a>
 							</li>
 						</ul>
 					</div>

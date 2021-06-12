@@ -30,7 +30,7 @@
             }
           }
         </style>
-		<link rel="stylesheet" href="css/styles.css"/>
+		<link rel="stylesheet" href="{{asset('css/styles.css')}}"/>
 		<!-- FONTS -->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Secular+One&family=Slabo+13px&display=swap" rel="stylesheet">
@@ -47,8 +47,8 @@
 <body id="body-signin" class="text-center">
   <main class="form-signin">
     <form>
-     	<a class="navbar-brand" href="index.html">
-        <img class="mb-4" src="img/logo-Navbar.png" alt="" width="40%" height="60%">
+     	<a class="navbar-brand" href="/index">
+        <img class="mb-4" src="{{URL('/images/logo-Navbar.png')}}" alt="" width="40%" height="60%">
 			</a>
       <h1 class="h3 mb-3 fw-normal">Bergabung Forum</h1>
 
@@ -66,7 +66,7 @@
       </div>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Masuk</button>
       <p class="mt-5 mb-3 text-muted" style="display: inline-block; margin-right: 3%;">Sudah memiliki akun?</p>
-      <a type="button" class="btn btn-outline-primary" href="sign-in.html" role="button">Masuk</a>
+      <a type="button" class="btn btn-outline-primary" href="/signin" role="button">Masuk</a>
     </form>
   </main>
 </body>

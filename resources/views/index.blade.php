@@ -8,7 +8,7 @@
 		<title>BFore : Forum Kampus IPB</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
-		<link rel="stylesheet" href="css/styles.css" />
+		<link href= "{{asset('css/styles.css')}}" rel="stylesheet" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -34,8 +34,8 @@
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				    <a class="navbar-brand" href="index.html">
-						<img id="logoBFore" src="img/logo-Navbar.png" alt="BFore-Logo">
+				    <a class="navbar-brand" href="/index">
+						<img id="logoBFore" src="{{URL('/images/logo-Navbar.png')}}" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -46,19 +46,19 @@
 								<a class="nav-link active" aria-current="page" href="#">Beranda</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="about.html">Tentang</a>
+								<a class="nav-link" href="/about">Tentang</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="forum.html">Forum</a>
+								<a class="nav-link" href="/forum">Forum</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
 							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="sign-in.html">Masuk</a>
+								<a id="tombolLink" class="nav-link" href="/signin">Masuk</a>
 							</li>
 							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="sign-up.html">Daftar</a>
+								<a id="tombolLink" class="nav-link" href="/signup">Daftar</a>
 							</li>
 						</ul>
 					</div>
@@ -124,8 +124,8 @@
 					  Saling bantu dan berkolaborasi dalam memecahkan berbagai masalah.
 				  </p>
 				  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-					<a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href="sign-up.html" role="button">Daftar</a>
-					<a type="button" class="btn btn-outline-secondary btn-lg px-4" href="sign-in.html" role="button">Masuk</a>
+					<a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href="/signup" role="button">Daftar</a>
+					<a type="button" class="btn btn-outline-secondary btn-lg px-4" href="/signin" role="button">Masuk</a>
 				  </div>
 				</div>
 			  </div>
