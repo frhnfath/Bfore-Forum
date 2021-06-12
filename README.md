@@ -12,7 +12,7 @@ BFore adalah web forum untuk memudahkan mahasiswa dalam mencari informasi terten
   | Ali Naufal Amrullah         | G64180080 |
   | Muhammad Fauzan Ramadhan    | G64180117 |
 
-### Anggota Kelompok 3
+### Team
   | Nama                            | NIM       | Role                |
   | ----------------------------    | --------- | ------------------- |
   | Laili Nur Fadhillah Rohminatin  | G64190024 | Project Manager     |
@@ -64,4 +64,6 @@ Teknologi	:
 
 ## Hasil dan Pembahasan
 ### Use Case Diagram
-<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/608048c87333ff8af3cb595a/7a1a39d574d87d8197cd8080cf9efe8b/rplusecase.png" width="500" height="800"/>
+<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/608048c87333ff8af3cb595a/7a1a39d574d87d8197cd8080cf9efe8b/rplusecase.png" width="553" height="851"/>
+### Entity Relationship Diagram
+<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60854502d72ac94df75d7dcc/76937271cf327112fd3c35a848de68c4/image.png" width="689" height="571"/>
