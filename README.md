@@ -43,7 +43,7 @@ Target pengguna dari web kami adalah mahasiswa Institut Pertanian Bogor.
 * Sebagai pengguna terdaftar, agar dapat meneruskan diskusi topik tertentu, saya dapat menggunakan fungsi jawab pada fitur diskusi forum.
 
 ## Spesifikasi Teknis Lingkungan Pengembangan
-### Perangkat Lunak
+### Software
   | Komponen    | Teknologi                  |
   | ----------- | -------------------------- |
   | Database    | MySQL                      |
@@ -51,7 +51,7 @@ Target pengguna dari web kami adalah mahasiswa Institut Pertanian Bogor.
   | Text Editor | Vim dan Visual Studio Code |
   | UI Design   | Figma                      |
   
-### Perangkat Keras
+### Hardware
   | Komponen    | Teknologi  |
   | ----------- | ---------- |
   | Processor   | 1 Ghz      |
