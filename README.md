@@ -1,12 +1,22 @@
-# RPL-3
+# BFore
+BFore adalah web forum untuk memudahkan mahasiswa dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, tag, dan page admin untuk menambahkan berita.
+
+# Laporan Akhir Projek Rekayasa Perangkat Lunak (KOM331)
+* Paralel  : P2
+* Kelompok : 3
+
+## Asisten Praktikum
+  | Nama                        | NIM       |
+  | ----------------------------| --------- |
+  | Levina Siatono              | G64180019 |
+  | Ali Naufal Amrullah         | G64180080 |
+  | Muhammad Fauzan Ramadhan    | G64180117 |
 
 ## Anggota Kelompok 3
 1. Farhan Fathurrahman **G64190088**
 2. Laili Nur Fadhillah Rohminatin **G64190024**	
 3. Siti Magfiroh **G64190042**
 4. Genta Pramillean Bayu **G84170067**
-
-# BFore
 
 ## Latar Belakang
 Pengetahuan dan informasi terbuka menjadi kunci sukses setiap mahasiswa, namun sayangnya hal ini belum dapat terealisasikan dengan baik dalam bentuk wadah yang memadai. Sehingga, para mahasiswa terbatas dalam memperoleh informasi, terutama informasi lintas jurusan. Kerap terjadi juga terbentuknya kelompok sosial yang bersifat terbatas dan tertutup. Di Institut Pertanian Bogor sendiri, tidak sedikit yang mengalami kesulitan dalam mengakses informasi ketika mereka ingin menggali hal-hal baru, baik dalam akademik maupun non-akademik.
@@ -36,9 +46,6 @@ Teknologi	:
 * HTML/CSS
 * JavaScript
 * MySQL
-
-## Deskripsi 
-BFore adalah web forum untuk memudahkan mahasiswa dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, tag, dan page admin untuk menambahkan berita.
 
 ## User Profile
 Target pengguna dari web kami adalah mahasiswa Institut Pertanian Bogor.
