@@ -28,13 +28,13 @@ Solusi untuk masalah ini adalah dengan menyediakan forum sebagai sarana untuk me
 ## Tujuan
 1. Mempermudah mahasiswa dalam memperoleh informasi
 2. Menyediakan wadah untuk mahasiswa berdiskusi
-3. Menambah relasi antar jurusan di IPB
+3. Menambah relasi antar jurusan di dalam kampus
 
 ## User Analysis
 ### User Profile
-Target pengguna dari web kami adalah mahasiswa Institut Pertanian Bogor.
+Target pengguna dari BFore adalah mahasiswa IPB University.
 
-### User Stories
+### User Story
 * Sebagai calon pengguna, agar dapat melakukan aktivitas pada web, saya dapat memasukkan data diri, alamat email, dan password.
 * Sebagai pengembang, agar memfasilitasi platform pengguna, saya dapat memberikan halaman dan fitur login untuk user.
 * Sebagai pengguna yang telah log out, agar dapat melakukan aktivitas kembali pada web, saya dapat memasukkan alamat email dan password.
