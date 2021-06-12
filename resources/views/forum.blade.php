@@ -53,10 +53,10 @@
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
 							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="/sign-in">Masuk</a>
+								<a id="tombolLink" class="nav-link" href="/signin">Masuk</a>
 							</li>
 							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="/sign-up">Daftar</a>
+								<a id="tombolLink" class="nav-link" href="/signup">Daftar</a>
 							</li>
 						</ul>
 					</div>
