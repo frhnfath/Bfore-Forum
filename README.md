@@ -42,25 +42,33 @@ Target pengguna dari web kami adalah mahasiswa Institut Pertanian Bogor.
 * Sebagai pengguna yang terdaftar, agar dapat menemukan topik diskusi yang diminati, saya dapat menggunakan fitur kategori topik di dalam forum.
 * Sebagai pengguna terdaftar, agar dapat meneruskan diskusi topik tertentu, saya dapat menggunakan fungsi jawab pada fitur diskusi forum.
 
-## Ruang Lingkup
-### Perangkat Keras
-* Processor 	: 1 Ghz
-* RAM		    : 2 GB
+## Spesifikasi Teknis Lingkungan Pengembangan
 ### Perangkat Lunak
-* Framework 	    : Node.js
-* UI Design Tool    : Figma
-* Database 	        : MySQL
-* Hosting	        : Heroku
-* Text Editor	    : Sublime Text, Vim, Visual Studio Code
+  | Komponen    | Teknologi                  |
+  | ----------- | -------------------------- |
+  | Database    | MySQL                      |
+  | Hosting     | Heroku                     |
+  | Text Editor | Vim dan Visual Studio Code |
+  | UI Design   | Figma                      |
+  
+### Perangkat Keras
+  | Komponen    | Teknologi  |
+  | ----------- | ---------- |
+  | Processor   | 1 Ghz      |
+  | RAM         | 2 GB       |
+  
+### Tech Stack
+  | Komponen  | Teknologi                        |
+  | --------- | -------------------------------- |
+  | Front-End | HTML, CSS, Bootstrap, JavaScript |
+  | Back-End  | PHP, Laravel, Node.js            |
+  
 ### Lainnya
-Version Control dan Collaboration Platform	:
-* Github
-* Trello
-
-Teknologi	: 
-* HTML/CSS
-* JavaScript
-* MySQL
+  | Komponen                                   | Teknologi      |
+  | ------------------------------------------ | -------------- |
+  | Task Management                            | Trello         |
+  | Software Documentation                     | Google Sites   |
+  | Version Control dan Collaboration Platform | Github         |
 
 ## Hasil dan Pembahasan
 ### Use Case Diagram
