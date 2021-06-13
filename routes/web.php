@@ -66,6 +66,14 @@ Route::get('/profile-act', function () {
   return view('profile-act');
 });
 
+Route::get('/profile-admin-main', function () {
+  return view('profile-admin-main');
+});
+
+Route::get('/profile-admin-mod', function () {
+  return view('profile-admin-mod');
+});
+
 Route::get('/forum-post', function () {
   return view('forum-post');
 });

@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>BFore : Profil kamu</title>
+		<title>BFore : Akun kamu</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
-		<link rel="stylesheet" href="{{asset('css/styles.css')}}" /> 
+		<link rel="stylesheet" href="{{asset('css/styles.css')}}" />  
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -75,6 +75,9 @@
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/profile-act">Aktivitas</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/profile-admin-mod">Moderasi</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/profile-edit">Pengaturan Akun</a>

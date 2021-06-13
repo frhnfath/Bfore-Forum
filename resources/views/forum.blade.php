@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>BFore : forum</title>
+		<title>BFore : Forum</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
 		<link rel="stylesheet" href="{{asset('css/styles.css')}}" />
@@ -183,7 +183,7 @@
 							<ul class="list-group feature-grid g-1">
 								<li class="list-group-item bg-primary">Berita</li>
 								<a class="list-group-item list-group-item-action">
-									<img id="news-item-img" class="rounded float-start" src="img/forum/personal-finance.png" alt="">
+									<img id="news-item-img" class="rounded float-start" src="{{URL('/images/forum/personal-finance.png')}}" alt="tumbnail1">
 									<div class="d-flex w-100 justify-content-between">
 										<p class="mb-1">
 											Bantuan UKT Semester Genap Tahun Akademik 2020/2021
@@ -191,7 +191,7 @@
 									  </div>
 								</a>
 								<a class="list-group-item list-group-item-action">
-									<img id="news-item-img" class="rounded float-start" src="img/forum/team_pag.png" alt="">
+									<img id="news-item-img" class="rounded float-start" src="{{URL('/images/forum/team_pag.png')}}" alt="tumbnail2">
 									<div class="d-flex w-100 justify-content-between">
 										<p class="mb-1">
 											Piawai Mengolah Data Besar, Tim Ini Mendapatkan Juara di Gemastik XII

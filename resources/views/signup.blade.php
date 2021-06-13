@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Forum mahasiswa IPB">
 		<meta name="author" content="Kelompok 3 RPL">
-		<title>Masuk ke BFore</title>
+		<title>Bergabung ke BFore</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
 		<link
