@@ -163,7 +163,7 @@ footer {
 #forum-cover-img {
 	object-fit: cover;
 	width: 100%;
-	height: 15rem;
+	height: 7rem;
 }
 
 #forum-content {
@@ -256,13 +256,12 @@ footer {
 	margin: 0;
 }
 
-#fawesome-button:hover {
-	color: #0d6efd;
+#vote-cont {
+	padding: 18px 0 0 14px;
 }
 
-.profilePictPost {
-	width: 87px;
-	border-radius: 100%;
+#fawesome-button:hover {
+	color: #0d6efd;
 }
 
 /* USER PROFILE NAVBAR*/
@@ -276,20 +275,10 @@ footer {
 	border-radius: 100%;
 }
 
-/* USER PROFILE EDIT*/
-#profilEditContainer, #profilEditContent {
-	margin: 0;
-	padding: 0;
-}
-
 #profileNameHome {
 	display: inline-block;
 	box-sizing: border-box;
 	padding-left: 0.4rem;
-}
-
-#hapusAkun {
-	margin-bottom: 2%;
 }
 
 @media (min-width: 756px) {
@@ -304,15 +293,24 @@ footer {
 	}
 }
 
+/* USER PROFILE EDIT*/
+#profilEditContainer, #profilEditContent {
+	margin: 0;
+	padding: 0;
+}
+
+.profilePictPost {
+	width: 80px;
+	border-radius: 100%;
+}
+
 .feather {
   width: 16px;
   height: 16px;
   vertical-align: text-bottom;
 }
 
-/*
- * Sidebar
- */
+/* Sidebar */
 
  #sidebarMenu {
    background-color: #86B9F5;
@@ -344,6 +342,7 @@ footer {
   text-transform: uppercase;
 }
 
-.profilEditRows {
-	padding-top: 2rem;
+/* FORUM POST PAGE*/
+#newCommentContainer {
+	padding-right: 0;
 }

@@ -41,7 +41,7 @@
 					<div class="collapse navbar-collapse" id="navbarCollapsing">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
-								<a class="nav-link" href="/index">Beranda</a>
+								<a class="nav-link" href="/index-signed">Beranda</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="/about">Tentang</a>
@@ -52,11 +52,8 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
-							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="/signin">Masuk</a>
-							</li>
-							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="/signup">Daftar</a>
+							<li class="nav-item nav-fill">
+								<a id="profileLinkHome" href="/profil-main"><img class="profilePict" src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profilePicture"></a>
 							</li>
 						</ul>
 					</div>
@@ -81,7 +78,7 @@
 								<a class="btn btn-primary" role="button" href="/forum-post"><i class="fa fa-pen-square icon-inbutton"></i> Bertanya</a>
 							</div>
 							<ul id="list-postingan" class="list-group feature-grid g-1">
-								<a class="list-group-item list-group-item-action" href="/postingan">
+								<a class="list-group-item list-group-item-action" href="/postingan-signed">
 									<div class="row">
 										<div class="col-lg-6">
 											<p id="postTitle">UKM apa yang paling diminati anak fisika</p>

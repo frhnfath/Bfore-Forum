@@ -46,6 +46,22 @@ Route::get('/index-signed', function () {
   return view('index-signed');
 });
 
+Route::get('/forum-signed', function () {
+  return view('forum-signed');
+});
+
+Route::get('/postingan-signed', function () {
+  return view('postingan-signed');
+});
+
 Route::get('/profile-edit', function () {
   return view('profile-edit');
+});
+
+Route::get('/forum-post', function () {
+  return view('forum-post');
+});
+
+Route::get('/forum-edit', function () {
+  return view('forum-edit');
 });

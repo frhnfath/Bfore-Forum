@@ -6,7 +6,7 @@
 		<title>BFore : forum</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
-		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="{{asset('css/styles.css')}}" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -41,19 +41,19 @@
 					<div class="collapse navbar-collapse" id="navbarCollapsing">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
-								<a class="nav-link" href="/index">Beranda</a>
+								<a class="nav-link" href="/index-signed">Beranda</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="/about">Tentang</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Forum</a>
+								<a class="nav-link" href="/forum-signed">Forum</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
 							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="profil-main.html"><img class="profilePict" src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profilePicture"></a>
+								<a id="profileLinkHome" href="/profil-main"><img class="profilePict" src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profilePicture"></a>
 							</li>
 						</ul>
 						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>

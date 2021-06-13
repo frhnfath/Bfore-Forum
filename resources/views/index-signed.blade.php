@@ -49,7 +49,7 @@
 								<a class="nav-link" href="/about">Tentang</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Forum</a>
+								<a class="nav-link" href="/forum-signed">Forum</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">Bantuan</a>
