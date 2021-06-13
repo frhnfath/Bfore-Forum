@@ -64,7 +64,7 @@
 		</section>
 
 		<section id="forum-cover">
-			<img id="forum-cover-img" src="https://images.unsplash.com/photo-1590508965885-90c5502bd6f4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+	    	<img id="forum-cover-img" src="images/header.png" alt="">
 		</section>
 
 		<section id="profil-navbar">

@@ -161,9 +161,9 @@ footer {
 
 /* FORUM PAGE */
 #forum-cover-img {
-	object-fit: cover;
+	/*object-fit: cover;*/
 	width: 100%;
-	height: 7rem;
+	height: 4rem;
 }
 
 #forum-content {
