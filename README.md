@@ -1,5 +1,5 @@
 # BFore
-BFore adalah web forum untuk memudahkan mahasiswa Institut Pertanian Bogor dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, tag, dan page admin untuk menambahkan berita.
+BFore adalah web forum untuk memudahkan mahasiswa IPB University dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, tag, dan page admin untuk menambahkan berita.
 
 ## Laporan Akhir Projek Rekayasa Perangkat Lunak (KOM331)
 * Paralel  : P2
@@ -21,9 +21,9 @@ BFore adalah web forum untuk memudahkan mahasiswa Institut Pertanian Bogor dalam
   | Genta Pramillean Bayu           | G84170067 | Front-End Developer |
 
 ## Latar Belakang
-Pengetahuan dan informasi terbuka menjadi kunci sukses setiap mahasiswa, namun sayangnya hal ini belum dapat terealisasikan dengan baik dalam bentuk wadah yang memadai. Sehingga, para mahasiswa terbatas dalam memperoleh informasi, terutama informasi lintas jurusan. Kerap terjadi juga terbentuknya kelompok sosial yang bersifat terbatas dan tertutup. Di Institut Pertanian Bogor sendiri, tidak sedikit yang mengalami kesulitan dalam mengakses informasi ketika mereka ingin menggali hal-hal baru, baik dalam akademik maupun non-akademik.
+Pengetahuan dan informasi terbuka menjadi kunci sukses setiap mahasiswa, namun sayangnya hal ini belum dapat terealisasikan dengan baik dalam bentuk wadah yang memadai. Sehingga, para mahasiswa terbatas dalam memperoleh informasi, terutama informasi lintas jurusan. Kerap terjadi juga terbentuknya kelompok sosial yang bersifat terbatas dan tertutup. Di IPB University sendiri, tidak sedikit yang mengalami kesulitan dalam mengakses informasi ketika mereka ingin menggali hal-hal baru, baik dalam akademik maupun non-akademik.
 
-Solusi untuk masalah ini adalah dengan menyediakan forum sebagai sarana untuk mempermudah mahasiswa Institut Pertanian Bogor dalam memperoleh informasi, minat, dan kondisi tertentu dengan berdiskusi secara terbuka pada forum tersebut.
+Solusi untuk masalah ini adalah dengan menyediakan forum sebagai sarana untuk mempermudah mahasiswa IPB University dalam memperoleh informasi, minat, dan kondisi tertentu dengan berdiskusi secara terbuka pada forum tersebut.
 
 ## Tujuan
 1. Mempermudah mahasiswa dalam memperoleh informasi
@@ -61,7 +61,7 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
   | Komponen  | Teknologi                        |
   | --------- | -------------------------------- |
   | Front-End | HTML, CSS, Bootstrap, JavaScript |
-  | Back-End  | PHP, Laravel, Node.js            |
+  | Back-End  | PHP, Node.js            |
   
 ### Lainnya
   | Komponen                                   | Teknologi      |
