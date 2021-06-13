@@ -54,8 +54,16 @@ Route::get('/postingan-signed', function () {
   return view('postingan-signed');
 });
 
+Route::get('/profile-main', function () {
+  return view('profile-main');
+});
+
 Route::get('/profile-edit', function () {
   return view('profile-edit');
+});
+
+Route::get('/profile-act', function () {
+  return view('profile-act');
 });
 
 Route::get('/forum-post', function () {

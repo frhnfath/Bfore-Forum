@@ -32,7 +32,7 @@
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				    <a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="/index-signed">
 						<img id="logoBFore" src="{{URL('/images/logo-Navbar.png')}}" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,13 +47,13 @@
 								<a class="nav-link" href="/about">Tentang</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">Forum</a>
+								<a class="nav-link active" aria-current="page" href="/forum-signed">Forum</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
 							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="/profil-main"><img class="profilePict" src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profilePicture"></a>
+								<a id="profileLinkHome" href="/profile-main"><img class="profilePict" src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profilePicture"></a>
 							</li>
 						</ul>
 						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>

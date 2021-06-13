@@ -318,6 +318,13 @@ footer {
    padding: 1%;
  }
 
+@media (min-width: 750px) {
+	#sidebarMenu {
+		position: relative;
+		top: -72px;
+	}
+}
+
 .sidebar .nav-link {
   font-weight: 500;
   color: #333;
@@ -345,4 +352,10 @@ footer {
 /* FORUM POST PAGE*/
 #newCommentContainer {
 	padding-right: 0;
+}
+
+/* MAIN PROFILE PAGE*/
+#tag-badgeProf {
+	display: inline-block;
+	margin: 0.5rem 0 0.5rem 0;
 }

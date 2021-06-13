@@ -34,7 +34,7 @@
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				<a class="navbar-brand" href="/index">
+				<a class="navbar-brand" href="/index-signed">
 						<img id="logoBFore" src="{{URL('/images/logo-Navbar.png')}}" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,7 @@
 					<div class="collapse navbar-collapse" id="navbarCollapsing">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="/index">Beranda</a>
+								<a class="nav-link active" aria-current="page" href="#">Beranda</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="/about">Tentang</a>
@@ -55,7 +55,7 @@
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
 							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="/profil-main"><img class="profilePict" src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profilePicture"></a>
+								<a id="profileLinkHome" href="/profile-main"><img class="profilePict" src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profilePicture"></a>
 							</li>
 						</ul>
 						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
@@ -122,8 +122,8 @@
 					  Saling bantu dan berkolaborasi dalam memecahkan berbagai masalah.
 				  </p>
 				  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-					<a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href="/signup" role="button">Daftar</a>
-					<a type="button" class="btn btn-outline-secondary btn-lg px-4" href="/signin" role="button">Masuk</a>
+					<a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href="/forum-signed" role="button">Jelajahi forum</a>
+					<a type="button" class="btn btn-outline-secondary btn-lg px-4" href="/forum-post" role="button">Bertanya sekarang</a>
 				  </div>
 				</div>
 			  </div>

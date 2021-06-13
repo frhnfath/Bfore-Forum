@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>BFore : Pertanyaan baru</title>
+		<title>BFore : forum</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
 		<link rel="stylesheet" href="{{asset('css/styles.css')}}" /> 
@@ -27,7 +27,7 @@
 	</head>
 	
 	<body>
-	<section id="navigator bg-light">
+		<section id="navigator">
 		<div class="container-fluid bg-light">
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -47,13 +47,13 @@
 								<a class="nav-link" href="/about">Tentang</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">Forum</a>
+								<a class="nav-link" href="/forum-signed">Forum</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
 							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="/profile-main"><img class="profilePict" src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profilePicture"></a>
+								<a id="profileLinkHome" href="/profil-main"><img class="profilePict" src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profilePicture"></a>
 							</li>
 						</ul>
 						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
@@ -67,65 +67,70 @@
 			<img id="forum-cover-img" src="https://images.unsplash.com/photo-1590508965885-90c5502bd6f4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
 		</section>
 
-		<section id="forum-content">
-			<div class="card">
-				<div class="card-header bg-primary">
-				</div>
-				<div class="card-item">
-					<h3 class="m-4">Ajukan Pertayaan</h3>
-					<form class="m-3 p-2">
-						<div class="row g-3 align-items-center">
-							<div class="col-1">
-								<label for="inputPostTitle" class="col-form-label">Judul</label>
-							</div>
-							<div class="col-4">
-								<input type="text" id="inputPostTitle" class="form-control">
-							</div>
+		<section id="profil-navbar">
+			<div class="container mt-3 mb-3">
+			<ul class="nav nav-pills justify-content-center">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Profil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/profile-act">Aktivitas</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/profile-edit">Pengaturan Akun</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<main>
+			<section id="profil-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 mb-3" style="text-align: center;">
+							<img src="{{URL::asset('images/profile1/profile1-pp.png')}}" alt="profile" style="display: inline-block;">
+							<h2 class="m-3" style="display: inline-block;">DX</h2>
 						</div>
-						<div class="row g-3 align-items-center">
-							<div class="col-1">
-								<label for="inputPostCategory" class="col-form-label">Kategori</label>
-							</div>
-							<div class="col-lg-4">
-								<select class="col-lg-12" name="inputPostCategory" id="inputPostCategory">
-									<option value="Organisasi Mahasiswa">Organisasi Mahasiswa</option>
-									<option value="Unit Kegiatan Mahasiwa">Unit Kegiatan Mahasiwa</option>
-									<option value="Akademik">Akademik</option>
-									<option value="Beasiwa">Beasiwa</option>
-									<option value="Program Mahasiswa">Program Mahasiswa</option>
-								</select>
-							</div>
-						</div>
-						<div class="row g-3 align-items-center">
-							<div class="col-1">
-								<label for="inputPostDescription" class="col-form-label">Pesan</label>
-							</div>
-							<div id="newCommentContainer" class="col-lg-8">
-								<div class="input-group">
-									<textarea class="form-control" aria-label="kolom komentar" id="newComment"></textarea>
+						<div class="col-lg-6 d-flex justify-content-center mb-5">
+							<div class="card border-primary mb-3" style="max-width: 18rem;">
+								<div class="card-header"><i class="fa fa-user icon-inbutton"></i>Profil Jaringan</div>
+								<div class="card-body text-primary">
+									<dl class="row">
+										<dd class="list-item"><i class="fa fa-user-graduate icon-inbutton"></i>Prodi <span id="profilProdi">Biokimia</span></dd>
+										<dd><i class="fa fa-university icon-inbutton"></i>Fakultas <span id="profilFakultas">Matematika dan Ilmu Pengetahuan Alam</span></dd>
+									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="row g-3 align-items-center">
-							<div class="col-1">
-								<label for="inputPostTags" class="col-form-label">Tag</label>
-							</div>
-							<div class="col-4">
-								<div class="form-floating mb-3">
-									<input type="text" class="form-control" id="inputPostTags" placeholder="">
-									<label for="inputPostTags">Tambahkan 3 tag untuk mendeskripsikan pertanyaan</label>
-								  </div>
+						<div class="col-lg-12 d-flex justify-content-start">
+							<div class="border-bottom">
+								<h4>Tags teratas <span id="numTags"> (22)</span></h4>
 							</div>
 						</div>
-					<br>
-					<div class="col-9 d-flex justify-content-end">
-						<a type="button" class="btn btn-outline-secondary me-1" role="button"  href="/forum-signed">Kembali</a>
-						<button type="submit" class="btn btn-primary">Bagikan</button>
+						<div class="col-lg-8">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-lg-3">
+											<div id="tag-badgeProf"  class="badge bg-secondary text-wrap">Ormawa</div>
+										</div>
+										<div class="col-lg-9">
+											<div id="tag-badgeProf"  class="badge bg-light text-wrap text-dark">Kiriman 86   Skor 868</div>
+										</div>
+										<div class="col-lg-3">
+											<div id="tag-badgeProf"  class="badge bg-secondary text-wrap">Ilkom</div>
+										</div>
+										<div class="col-lg-9">
+											<div id="tag-badgeProf"  class="badge bg-light text-wrap text-dark">Kiriman 86   Skor 868</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
 					</div>
-					</form>
 				</div>
-			</div>
-		</section>
+			</section>
+		</main>
 
 	</body>
 	<footer class="bg-secondary">

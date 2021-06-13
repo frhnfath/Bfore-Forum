@@ -140,8 +140,8 @@
 		<section id="about-botsection">
 			<div class="container-fluid" style="text-align: center;">
 				<p>Temukan pertanyaan untuk dijawab, atau tanyakan pertanyaan Anda sendiri</p>
-				<a class="btn btn-primary" style="margin-right:1%;" role="button" href="forum.html">Lihat pertanyaan baru</a>
-				<button class="btn btn-primary">Ajukan pertanyaan</button>
+				<a class="btn btn-primary" style="margin-right:1%;" role="button" href="/forum">Lihat pertanyaan baru</a>
+				<a class="btn btn-outline-primary" style="margin-right:1%;" role="button" href="/signin">Ajukan pertanyaan</a>
 			</div>
 		</section>
 

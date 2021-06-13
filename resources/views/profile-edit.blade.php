@@ -32,7 +32,7 @@
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				<a class="navbar-brand" href="/index">
+				<a class="navbar-brand" href="/index-signed">
 						<img id="logoBFore" src="{{URL('/images/logo-Navbar.png')}}" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,9 +66,22 @@
 		<section id="forum-cover">
 			<img id="forum-cover-img" src="https://images.unsplash.com/photo-1590508965885-90c5502bd6f4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
 		</section>
-
+		<section id="profil-navbar">
+			<div class="container mt-3 mb-3">
+			<ul class="nav nav-pills justify-content-center">
+					<li class="nav-item">
+						<a class="nav-link" href="/profile-main">Profil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/profile-act">Aktivitas</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Pengaturan Akun</a>
+					</li>
+				</ul>
+			</div>
+		</section>
 		<section id="profilEditContent">
-
 <div id="profilEditContainer" class="container-fluid">
   <div id="profilEditContainer" class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar">
@@ -114,10 +127,10 @@
       </div>
 	</nav>
 	
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-3">
 	<section id="suntingProfil">
 	  <div class="container">
-		  <div class="row profilEditRows">
+		  <div class="row">
 			  <div class="col-lg-6">
 				  <div class="row justify-content-center">
 					  <div class="col-lg-6">
@@ -156,8 +169,10 @@
 						<label for="inputFakultas" class="form-label">Fakultas</label>
 						<input type="text" class="form-control" id="inputFakultas">
 					</div>
-					<button type="submit" class="btn btn-primary">Simpan</button>
-					<button type="reset" class="btn btn-primary">Batalkan</button>
+					<div class="d-flex justify-content-end">
+						<button type="submit" class="btn btn-primary m-1">Simpan</button>
+						<button type="reset" class="btn btn-outline-secondary m-1">Batalkan</button>
+					</div>
 				</form>
 			  </div>
 		  </div>
@@ -189,8 +204,10 @@
 								<label for="inputNewPasswordComf" class="form-label">Konfirmasi kata sandi baru</label>
 								<input type="password" class="form-control" id="inputNewPasswordComf">
 							</div>
-							<button type="submit" class="btn btn-primary">Simpan</button>
-							<button type="reset" class="btn btn-primary">Batalkan</button>
+							<div class="d-flex justify-content-end">
+								<button type="submit" class="btn btn-primary m-1">Simpan</button>
+								<button type="reset" class="btn btn-outline-secondary m-1">Batalkan</button>
+							</div>
 						</form>
 						<br>
 						<h3>Mengubah Email</h3>
@@ -203,8 +220,10 @@
 								<label for="inputNewEmail" class="form-label">Email baru</label>
 								<input type="email" class="form-control" id="inputNewEmail">
 							</div>
-							<button type="submit" class="btn btn-primary">Simpan</button>
-							<button type="reset" class="btn btn-primary">Batalkan</button>
+							<div class="d-flex justify-content-end">
+								<button type="submit" class="btn btn-primary m-1">Simpan</button>
+								<button type="reset" class="btn btn-outline-secondary m-1">Batalkan</button>
+							</div>
 						</form>
 					</div>
 			  </div>
@@ -230,7 +249,9 @@
 				</label>
 			</div>
 			<br>
-			<button type="submit" class="btn btn-danger">Hapus Akun</button>
+			<div class="d-flex justify-content-end">
+				<button type="submit" class="btn btn-danger">Hapus Akun</button>
+			</div>
 		</div>
 	</section>
 	</main>
