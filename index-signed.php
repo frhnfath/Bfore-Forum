@@ -1,3 +1,15 @@
+<?php
+
+include "koneksi.php";
+
+session_start();
+if (!isset($_SESSION['login'])) {
+  header("location: signin.php");
+  exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -34,7 +46,7 @@
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				<a class="navbar-brand" href="/index-signed">
+				<a class="navbar-brand" href="index-signed.php">
 						<img id="logoBFore" src="images/logo-Navbar.png" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +58,7 @@
 								<a class="nav-link active" aria-current="page" href="#">Beranda</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="about.php">Tentang</a>
+								<a class="nav-link" href="logout.php">Tentang</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="forum-signed.php">Forum</a>

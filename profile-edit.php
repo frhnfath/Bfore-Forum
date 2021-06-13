@@ -1,3 +1,14 @@
+<?php
+include "koneksi.php";
+
+session_start();
+if (!isset($_SESSION['login'])) {
+  header("location: signin.php");
+  exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -25,14 +36,6 @@
 			crossorigin="anonymous"
 		></script>
 	</head>
-  
-  <?php
-  include 'koneksi.php';
-  session_start();
-  $id=$_SESSION['id'];
-  $query = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = '$id'") or die(mysqli_error());
-  $row = mysqli_fetch_array($query);
-  ?>
 
 	<body>
 		<section id="navigator">

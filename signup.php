@@ -1,3 +1,15 @@
+<?php
+
+include "koneksi.php";
+
+session_start();
+if (isset($_SESSION['login'])) {
+  header("location: index-signed.php");
+  exit;
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -53,23 +65,23 @@
       <h1 class="h3 mb-3 fw-normal">Bergabung Forum</h1>
 
       <div class="form-floating">
-        <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
+        <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" required>
         <label for="floatingInput">Alamat Email</label>
       </div>
       <div class="form-floating">
-        <input type="name" class="form-control" name="name" id="floatingInput" placeholder="text">
+        <input type="name" class="form-control" name="name" id="floatingInput" placeholder="text" required>
         <label for="floatingInput">Nama</label>
       </div>
       <div class="form-floating">
-        <input type="nim" class="form-control" name="nim" id="floatingInput" placeholder="text">
+        <input type="nim" class="form-control" name="nim" id="floatingInput" placeholder="text" required>
         <label for="floatingInput">NIM</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
+        <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
         <label for="floatingPassword">Kata Sandi</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" name="repass" id="floatingPasswordVal" placeholder="Password">
+        <input type="password" class="form-control" name="repass" id="floatingPasswordVal" placeholder="Password" required>
         <label for="floatingPassword">Konfirmasi Kata Sandi</label>
       </div>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Daftar</button>

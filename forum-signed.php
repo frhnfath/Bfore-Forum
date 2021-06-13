@@ -1,3 +1,14 @@
+<?php
+include "koneksi.php";
+
+session_start();
+if (!isset($_SESSION['login'])) {
+  header("location: signin.php");
+  exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -44,7 +55,7 @@
 								<a class="nav-link" href="index-signed.php">Beranda</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="/about">Tentang</a>
+								<a class="nav-link" href="about.php">Tentang</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="#">Forum</a>

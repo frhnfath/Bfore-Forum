@@ -3,11 +3,13 @@
 include "koneksi.php";
 
 session_start();
-if (isset($_SESSION['login'])) {
-  header("location: about-signed.php");
+if (!isset($_SESSION['login'])) {
+  header("location: signin.php");
   exit;
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -42,7 +44,7 @@ if (isset($_SESSION['login'])) {
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				    <a class="navbar-brand" href="index.php">
+				    <a class="navbar-brand" href="index-signed.php">
 						<img id="logoBFore" src="images/logo-Navbar.png" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,24 +53,22 @@ if (isset($_SESSION['login'])) {
 					<div class="collapse navbar-collapse" id="navbarCollapsing">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
-								<a class="nav-link" href="index.php">Beranda</a>
+								<a class="nav-link" href="index-signed.php">Beranda</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="about.php">Tentang</a>
+								<a class="nav-link active" aria-current="page" href="about-signed.php">Tentang</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="forum.php">Forum</a>
+								<a class="nav-link" href="forum-signed.php">Forum</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
-							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="signin.php">Masuk</a>
-							</li>
-							<li class="nav-item">
-								<a id="tombolLink" class="nav-link" href="signup.php">Daftar</a>
+							<li class="nav-item nav-fill">
+								<a id="profileLinkHome" href="profile-main.php"><img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture"></a>
 							</li>
 						</ul>
+						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
 					</div>
 				</div>
 			</nav>
@@ -150,7 +150,7 @@ if (isset($_SESSION['login'])) {
 		<section id="about-botsection">
 			<div class="container-fluid" style="text-align: center;">
 				<p>Temukan pertanyaan untuk dijawab, atau tanyakan pertanyaan Anda sendiri</p>
-				<a class="btn btn-primary" style="margin-right:1%;" role="button" href="forum.php">Lihat pertanyaan baru</a>
+				<a class="btn btn-primary" style="margin-right:1%;" role="button" href="forum-signed.php">Lihat pertanyaan baru</a>
 				<button class="btn btn-primary">Ajukan pertanyaan</button>
 			</div>
 		</section>

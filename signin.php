@@ -1,3 +1,14 @@
+<?php
+
+include "koneksi.php";
+
+session_start();
+if (isset($_SESSION['login'])) {
+  header("location: index-signed.php");
+  exit;
+}
+
+?>
 <!doctype html>
 <html lang="en">
 	<head>
@@ -60,22 +71,10 @@
         <input type="password" class="form-control" name="password" id="floatingPasswordSignin" placeholder="Password">
         <label for="floatingPassword">Kata Sandi</label>
       </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Masuk</button>
+      <button class="w-100 btn btn-lg btn-primary" type="submit" name="login" >Masuk</button>
       <p class="mt-5 mb-3 text-muted" style="display: inline-block; margin-right: 3%;">Belum memiliki akun?</p>
       <a type="button" class="btn btn-outline-primary" href="signup.php" role="button">Daftar</a>
     </form>
   </main>
 </body>
 </html>
-
-<?php
-if(isset($_GET['pesan'])){
-		if($_GET['pesan'] == "gagal"){
-			echo "Login gagal! username dan password salah!";
-		}else if($_GET['pesan'] == "logout"){
-			echo "Anda telah berhasil logout";
-		}else if($_GET['pesan'] == "belum_login"){
-			echo "Anda harus login untuk mengakses halaman admin";
-		}
-	}
-  ?>

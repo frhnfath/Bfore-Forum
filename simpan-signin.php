@@ -1,10 +1,6 @@
 <?php
 include "koneksi.php";
 
-// // menerima nilai dari signin
-$email=$_POST["email"];
-$password=($_POST["password"]);
-
 // // query cek data
 // $signin = mysqli_query($koneksi, "SELECT * FROM table_mahasiwa WHERE email='$email' AND password='$password'");
 // $check = mysqli_num_rows($signin);
@@ -21,25 +17,22 @@ $password=($_POST["password"]);
 
 session_start();
 // If form submitted, insert values into the database.
-if (isset($_POST['email'])){
-        // removes backslashes
-	$email = stripslashes($_REQUEST['email']);
-        //escapes special characters in a string
-	$email = mysqli_real_escape_string($koneksi,$email);
-	$password = stripslashes($_REQUEST['password']);
-	$password = mysqli_real_escape_string($koneksi,$password);
-	//Checking is user existing in the database or not
-        $query = "SELECT * FROM `table_mahasiswa` WHERE email='$email'
-and password='".md5($password)."'";
-	$result = mysqli_query($koneksi, $query) or die(mysql_error());
-	$rows = mysqli_num_rows($result);
-        if($rows==1){
-	    $_SESSION['email'] = $email;
-            // Redirect user to index.php
-	    header("Location: index-signed.php");
-         }else{
-	echo "Email/password is incorrect";
+if (isset($_POST["login"])){
+  $email = $_POST["email"];
+  $password = $_POST["password"];
+
+  $result = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$email'");
+
+  // cek username
+  if (mysqli_num_rows($result) === 1) {
+    $row = mysqli_fetch_assoc($result);
+    if (password_verify($password, $row["password"])) {
+      $_SESSION["login"] = true;
+      header("Location: index-signed.php");
+      exit;
+    } 
   }
+
 }
 
 ?>
