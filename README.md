@@ -62,10 +62,10 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
   | RAM         | 2 GB       |
   
 ### Tech Stack
-  | Komponen  | Teknologi                        |
-  | --------- | -------------------------------- |
-  | Front-End | HTML, CSS, Bootstrap, JavaScript |
-  | Back-End  | PHP, Node.js            |
+  | Komponen  | Teknologi            |
+  | --------- | -------------------- |
+  | Front-End | HTML, CSS, Bootstrap |
+  | Back-End  | PHP                  |
   
 ### Lainnya
   | Komponen                                   | Teknologi      |
