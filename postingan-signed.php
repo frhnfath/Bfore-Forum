@@ -7,7 +7,21 @@ if (!isset($_SESSION['login'])) {
   exit;
 }
 
+$id = $_GET["id_forum"];
+
+$konten = mysqli_query($koneksi, "SELECT * FROM table_forum WHERE id_forum = $id");
+$isi = mysqli_fetch_array($konten);
+$au = $isi["id_user"];
+
+$auth = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = '$au'");
+$author = mysqli_fetch_array($auth);
 ?>
+
+<?php 
+  $currentuser = $_SESSION['login'];
+  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
+  $data = mysqli_fetch_array($sql);
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,12 +106,12 @@ if (!isset($_SESSION['login'])) {
 						<div class="col-lg-9">
 							<div id="judul-postingan" class="d-flex w-100 justify-content-between">
 								<div class="col-lg-6">
-									<p id="postTitle">UKM apa yang paling diminati anak fisika</p>
+									<h3 id="postTitle"><?=$isi['judul'];?></h3>
 								</div>
 								<div class="col-lg-6 g-1">
 									<div class="d-flex w-100 justify-content-end">
 									<button id="badge-indicator" class="btn btn-primary btn-sm">
-										Suara <span id="numVote" class="badge bg-secondary btn-sm">2</span>
+										Suara <span id="numVote" class="badge bg-secondary btn-sm"><?=$isi['vote'];?></span>
 										</button>
 										<button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
 										Jawaban <span id="numAnswer" class="badge bg-secondary">3</span>
@@ -113,16 +127,14 @@ if (!isset($_SESSION['login'])) {
 									<div class="col-md-1">
 										<div id="vote-cont" class="btn-group-vertical align-items-center">
 											<i id="fawesome-button" class="fas fa-chevron-up"></i>
-											<p id="vote-cont-count">23</p>
+											<p id="vote-cont-count"><?=$isi['vote'];?></p>
 											<i id="fawesome-button" class="fas fa-chevron-down"></i>
 										</div>
 									</div>
 									<div class="col-md-11">
 										<div class="row">
 											<div class="col-md-11 mb-3">
-												<p id="postDescription" >Saya ingin mengetahui lebih banyak mengenai prodi Ilmu Komputer.
-												Kegiatan rutin apa yang diselenggarakan secara rutin dan ada komunitas apa saja di ilkom?</p>
-												<a class="btn btn-sm btn-outline-info" role="button" href="/forum-edit">Ubah</a>
+												<p id="postDescription" ><?=$isi['isi'];?></p>
 											</div>
 											<div id="postCardContainer" class="col-sm-11 d-flex">
 												<div id="postProfileCard" class="card mb-3">
@@ -132,8 +144,8 @@ if (!isset($_SESSION['login'])) {
 														</div>
 														<div class="col-md-8">
 															<div class="card-body">
-																<h6 class="card-title">Ditanya <span id="timePosted">5 jam</span> lalu</h6>
-																<p id="namaPengguna" class="card-text">Dx.</p>
+																<h6 class="card-title">Ditanya <br> <span id="timePosted"><?=$isi['forum_waktu'];?></span></h6>
+																<p id="namaPengguna" class="card-text">Oleh <?=$author['nama'];?></p>
 															</div>
 														</div>
 													</div>
@@ -144,22 +156,26 @@ if (!isset($_SESSION['login'])) {
 								</div>
 							</div>
 							<!-- BAGIAN JAWABAN -->
-							<h3 class="border-bottom" style="margin-left: 27px;"><span id="numAnswer" >1</span>  Jawaban</h3>
+							<h3 class="border-bottom" style="margin-left: 27px;"><span id="numAnswer" ></span>  Komentar</h3>
+              <?php
+                $re = mysqli_query($koneksi, "SELECT * FROM table_reply WHERE id_forum = $id");
+                $res = mysqli_fetch_array($re);
+                while($rep = mysqli_fetch_array($re)) :
+
+                  ?>
 							<div id="jawaban-pertanyaan" class="container">
 								<div class="row border-bottom">
 									<div class="col-md-1">
 										<div id="vote-cont" class="btn-group-vertical align-items-center">
 											<i id="fawesome-button" class="fas fa-chevron-up"></i>
-											<p id="vote-cont-count" >2</p>
+											<p id="vote-cont-count" ><?=$rep['vote'];?></p>
 											<i id="fawesome-button" class="fas fa-chevron-down"></i>
 										</div>
 									</div>
 									<div class="col-md-11">
 										<div class="row border-bottom">
 											<div class="col-md-11 mb-3">
-												<p id="answerDescription" >Kegiatan rutin yang diselenggarakan ada seminar dan pembinaan lomba. 
-													Komunitas di ilkom itu ada agribot, MAD, data mining. Komunitas robotik berfokus pada pengembangan sistem tertanam dan juga pada bidang robotika. Komunitas ini diperuntukkan untuk semua mahasiswa aktif ilmu komputer IPB beserta mahasiswa lain yang tertarik dengan komunitas ini. Komunitas Mobile Apps Development (MAD) komunitas pengembangan perangkat lunak berbasis android. 
-													Komunitas Data Mining merupakan komunitas yang memfasilitasi mahasiswa IPB yang memiliki minat terhadap bidang Data Science. </p>
+												<p id="answerDescription" ><?=$rep['rep'];?></p>
 											</div>
 											<div id="postCardContainer" class="col-sm-11 d-flex">
 												<div id="postProfileCard" class="card mb-3">
@@ -169,29 +185,49 @@ if (!isset($_SESSION['login'])) {
 														</div>
 														<div class="col-md-8">
 															<div class="card-body">
-																<h6 class="card-title">Ditanya <span id="timePosted">5 jam</span> lalu</h6>
-																<p id="namaPengguna" class="card-text">Profile2.</p>
+																<h6 class="card-title">Ditanya <span id="timePosted">5 jam</span> lalu</h6>\
+                                <?php
+                                  $u = $res['id_user'];
+                                  $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = $u"));
+
+                                  ?>
+																<p id="namaPengguna" class="card-text"><?=$a['nama'];?></p>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
+                    
+                <?php endwhile; ?>
 									</div>
 									<!-- BAGIAN INPUT JAWABAN -->
 									<div class="col-md-11">
 									<h4 class="mt-3" style="margin-left: 27px;">Tambahkan komentar</h4>
 									<div id="deskripsiPertanyaan" class="col-md-12">
-										<form>
+										<form action="" method="POST">
 											<div class="input-group">
-												<textarea class="form-control" aria-label="kolom komentar" id="newComment"></textarea>
+												<textarea class="form-control" name="reply" aria-label="kolom komentar" id="newComment" required></textarea>
 											</div>
 											<br>
 											<div class="d-flex justify-content-end">
 												<a type="button" class="btn btn-outline-secondary me-1" role="button" href="forum-signed.php">Kembali</a>
-												<button type="submit" class="btn btn-primary">Bagikan</button>
+												<button type="button" name="btn-reply" class="btn btn-primary">Bagikan</button>
 											</div>
 										</form>
+                    <?php
+                      if (isset($_POST['btn-reply'])) {
+                        $aut = $currentuser;
+                        $reply = $_POST['reply'];
+                        $forum = $isi['id_forum'];
+                        if ($reply == "") {
+                          echo "<script>alert('text kosong')</script>";
+                          exit;
+                        }
+                        $query = "INSERT INTO table_reply (id_forum, id_user, rep) VALUES ('$forum', '$aut', $reply)";
+                        mysqli_query($koneksi, $query);
+                      }
+                    ?>
 									</div>
 								</div>
 							</div>
@@ -206,10 +242,13 @@ if (!isset($_SESSION['login'])) {
 							</div>
 							<ul class="list-group feature-grid g-1">
 								<li class="list-group-item bg-primary">Kategori</li>
-								<a class="list-group-item list-group-item-action">Organisasi Mahasiswa</a>
-								<a class="list-group-item list-group-item-action">Unit Kegiatan Mahasiswa</a>
-								<a class="list-group-item list-group-item-action">Akademik</a>
-								<a class="list-group-item list-group-item-action">Beasiswa</a>
+                <?php
+                  $cat = mysqli_query($koneksi, "SELECT * FROM table_category ORDER BY id_category");
+                  while ($cato = mysqli_fetch_array($cat)) :
+
+                  ?>
+								<a class="list-group-item list-group-item-action"><?=$cato['category']?></a>
+                <?php endwhile; ?>
 							</ul>
 							<ul class="list-group feature-grid g-1">
 								<li class="list-group-item bg-primary">Berita</li>
@@ -235,6 +274,11 @@ if (!isset($_SESSION['login'])) {
 				</div>
 			</div>
 		</section>
+
+    <?php
+
+    ?>
+     
 
 	</body>
 	<footer class="bg-secondary">

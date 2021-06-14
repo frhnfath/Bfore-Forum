@@ -8,6 +8,12 @@ if (!isset($_SESSION['login'])) {
   exit;
 }
 ?>
+
+<?php 
+  $currentuser = $_SESSION['login'];
+  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
+  $data = mysqli_fetch_array($sql);
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -88,13 +94,13 @@ if (!isset($_SESSION['login'])) {
 				</div>
 				<div class="card-item">
 					<h3 class="m-4">Ajukan Pertayaan</h3>
-					<form class="m-3 p-2">
+					<form action="" method="POST" class="m-3 p-2">
 						<div class="row g-0 align-items-center">
 							<div class="col-md-1">
 								<label for="inputPostTitle" class="col-form-label">Judul</label>
 							</div>
 							<div class="col-md-8">
-								<input type="text" id="inputPostTitle" class="form-control">
+								<input type="text" name="judul" id="inputPostTitle" class="form-control">
 							</div>
 						</div>
 						<div class="row g-0 align-items-center">
@@ -103,11 +109,11 @@ if (!isset($_SESSION['login'])) {
 							</div>
 							<div class="col-md-8">
 								<select class="col-lg-12" name="inputPostCategory" id="inputPostCategory">
-									<option value="Organisasi Mahasiswa">Organisasi Mahasiswa</option>
-									<option value="Unit Kegiatan Mahasiwa">Unit Kegiatan Mahasiwa</option>
-									<option value="Akademik">Akademik</option>
-									<option value="Beasiwa">Beasiwa</option>
-									<option value="Program Mahasiswa">Program Mahasiswa</option>
+									<option value="1">Organisasi Mahasiswa</option>
+									<option value="2">Unit Kegiatan Mahasiwa</option>
+									<option value="3">Akademik</option>
+									<option value="4">Beasiwa</option>
+									<option value="5">Program Mahasiswa</option>
 								</select>
 							</div>
 						</div>
@@ -117,15 +123,33 @@ if (!isset($_SESSION['login'])) {
 							</div>
 							<div id="newCommentContainer" class="col-md-8">
 								<div class="input-group">
-									<textarea class="form-control" aria-label="kolom komentar" id="newComment"></textarea>
+									<textarea name="isi" class="form-control" aria-label="kolom komentar" id="newComment"></textarea>
 								</div>
 							</div>
 						</div>
 					<div class="col-md-9 d-flex justify-content-end">
 						<a type="button" class="btn btn-outline-secondary me-1" role="button"  href="forum-signed.php">Kembali</a>
-						<button type="submit" class="btn btn-primary">Bagikan</button>
+						<button type="submit" class="btn btn-primary" name="submit">Bagikan</button>
 					</div>
 					</form>
+          <?php
+            if (isset($_POST['submit'])) {
+              $judul = $_POST['judul'];
+              $isi = $_POST['isi'];
+              $category = $_POST['inputPostCategory'];
+              $user = $data['id_user'];
+              if ($judul && $isi) {
+                $query = "INSERT INTO table_forum (judul, isi, id_category, id_user) VALUES ('$judul', '$isi', '$category', '$user')";
+                $ver = mysqli_query($koneksi, $query);
+                if (!$ver) {
+                  echo mysqli_error($koneksi);
+                  echo $currentuser;
+                }
+              } else {
+                echo "isi judul dan isi";
+              }
+            }
+            ?>
 				</div>
 			</div>
 		</section>

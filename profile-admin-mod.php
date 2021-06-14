@@ -1,3 +1,7 @@
+<?php
+  include "koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -78,13 +82,7 @@
 						<a class="nav-link" href="profile-admin-main.php">Profil</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="profile-act.php">Aktivitas</a>
-					</li>
-					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="#">Moderasi</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="profile-edit.php">Pengaturan Akun</a>
 					</li>
 				</ul>
 			</div>
@@ -202,16 +200,22 @@
 						  </tr>
 						</thead>
 						<tbody>
+              <?php 
+                $tampilcat = mysqli_query($koneksi, "SELECT * FROM table_category");
+                while($datacat = mysqli_fetch_array($tampilcat)) :
+
+              ?>
 						  <tr>
-							<td>Bantuan UKT</td>
-							<td>Tahapan pelaksanaan program, kriteria penerima, dokumen pendukung</td>
+							<td><?=$datacat['id_category'];?></td>
+							<td><?=$datacat['category'];?></td>
 							<td style="text-align: center;" >
 								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
 								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
 								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
 							</td>
 						  </tr>
-						  <tr>
+              <?php endwhile; ?>
+						  <!-- <tr>
 							  <td>Juara Gemastik</td>
 							  <td>IPB University berhasil meraih penghargaan juara 
 								  Harapan dari divisi lomba Penambangan Data.</td>
@@ -220,7 +224,7 @@
 									<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
 									<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
 								</td>
-						  </tr>
+						  </tr> -->
 						</tbody>
 					  </table>
 					</div>
@@ -232,7 +236,7 @@
 	<section id="modPostingan" style="display: none;">
 		<div class="container">
 			<div class="row">
-				<div class="d-flex width-100 justify-content-between mb-3">
+				<div class="d-flex wiFdth-100 justify-content-between mb-3">
 					  <h4>Kelola Postingan</h4>
 					  <div class="btn btn-primary"><i class="fa fa-pen-square icon-inbutton"></i> Tambah kategori baru</button>
 					  </div>
@@ -250,18 +254,28 @@
 						  </tr>
 						</thead>
 						<tbody>
+            <?php 
+                $tampilpos = mysqli_query($koneksi, "SELECT * FROM table_forum");
+                while($datapos = mysqli_fetch_array($tampilpos)) :
+
+              ?>
 						  <tr>
-							<td>Bantuan UKT</td>
-							<td>Tahapan pelaksanaan program, kriteria penerima, dokumen pendukung</td>
-							<td>Dx</td>
-							<td>2020-06-1</td>
+							<td><?=$datapos['judul'];?></td>
+							<td><?=$datapos['isi'];?></td>
+              <?php
+                $u = $datapos['id_user'];
+                $tampilan = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = $u"));
+              ?>
+              <td><?=$tampilan['nama'];?></td>
+              <td><?=$datapos['forum_waktu'];?></td>
 							<td style="text-align: center;" >
 								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
 								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
 								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
 							</td>
 						  </tr>
-						  <tr>
+              <?php endwhile; ?>
+						  <!-- <tr>
 							  <td>Juara Gemastik</td>
 							  <td>IPB University berhasil meraih penghargaan juara 
 								  Harapan dari divisi lomba Penambangan Data.</td>
@@ -272,7 +286,7 @@
 								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
 								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
 							</td>
-						  </tr>
+						  </tr> -->
 						</tbody>
 					  </table>
 					</div>

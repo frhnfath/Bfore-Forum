@@ -3,8 +3,8 @@
 include "koneksi.php";
 
 session_start();
-if (!isset($_SESSION['login'])) {
-  header("location: postingan-signed.php");
+if (isset($_SESSION['login'])) {
+  header("location: forum-signed.php");
   exit;
 }
 ?>
@@ -42,7 +42,7 @@ if (!isset($_SESSION['login'])) {
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				    <a class="navbar-brand" href="index.php">
+				    <a class="navbar-brand" href="/index">
 						<img id="logoBFore" src="images/logo-Navbar.png" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,7 +77,7 @@ if (!isset($_SESSION['login'])) {
 
 		<section id="forum-cover">
 	    	<img id="forum-cover-img" src="images/header.png" alt="">
-		</section>>
+		</section>
 
 		<section id="forum-content">
 			<div class="card">
@@ -86,57 +86,93 @@ if (!isset($_SESSION['login'])) {
 				<div class="card-item">
 					<div class="row">
 						<div class="col-lg-9">
-							<div id="judul-postingan" class="d-flex w-100 justify-content-between">
-								<div class="col-lg-6">
-									<p>UKM apa yang paling diminati anak fisika</p>
-								</div>
-								<div class="col-lg-6 g-1">
-									<div class="d-flex w-100 justify-content-end">
-									<button id="badge-indicator" class="btn btn-primary btn-sm">
-										Suara <span class="badge bg-secondary btn-sm">2</span>
-										</button>
-										<button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-										Jawaban <span class="badge bg-secondary">3</span>
-										</button>
-										<button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-										<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
-										</button>
-									</div>
-								</div>
+							<div class="d-flex w-100 justify-content-between">
+								<h3 style="display: inline-block;">$NAMAKATEGORI</h3>
+								<a class="btn btn-primary" role="button" href="signin.php"><i class="fa fa-pen-square icon-inbutton"></i> Bertanya</a>
 							</div>
-							<div class="container">
-								<div class="row">
-									<div class="col-lg-1">
-										<div id="vote-cont" class="btn-group-vertical align-items-center">
-											<i id="fawesome-button" class="fas fa-chevron-up"></i>
-											<p id="vote-cont-count" >23</p>
-											<i id="fawesome-button" class="fas fa-chevron-down"></i>
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="forum.php">Forum</a></li>
+									<li class="breadcrumb-item active" aria-current="page">$NAMAKATEGORI</li>
+								</ol>
+							</nav>
+							<ul id="list-postingan" class="list-group feature-grid g-1">
+								<a class="list-group-item list-group-item-action" href="postingan.php">
+									<div class="row">
+										<div class="col-lg-6">
+											<p>UKM apa yang paling diminati anak fisika</p>
+										</div>
+										<div class="col-lg-6 g-1">
+											<div class="d-flex w-100 justify-content-end">
+											<button id="badge-indicator" class="btn btn-primary btn-sm">
+												Suara <span class="badge bg-secondary btn-sm">2</span>
+											  </button>
+											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
+												Jawaban <span class="badge bg-secondary">3</span>
+											  </button>
+											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
+												<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
+											  </button>
+											  </div>
 										</div>
 									</div>
-									<div class="col-lg-11">
-										<div class="row">
-											<div class="col-lg-11">
-												<p>Saya ingin mengetahui lebih banyak mengenai prodi Ilmu Komputer.
-												Kegiatan rutin apa yang diselenggarakan secara rutin dan ada komunitas apa saja di ilkom?</p>
-											</div>
-											<div class="col-lg-11 d-flex justify-content-end">
-												<div class="card mb-3" style="max-width: 45%;">
-													<div class="row g-0">
-														<div class="col-md-4">
-															<img src="..." alt="...">
-														</div>
-														<div class="col-md-8">
-															<div class="card-body">
-																<h6 class="card-title">Ditanya <span>5 jam</span> lalu</h6>
-																<p id="nama-profile" class="card-text">Dx.</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+								</a>
+								<a class="list-group-item list-group-item-action">
+									<div class="row">
+										<div class="col-lg-6">
+											<p>Beasiswa apa saja yang sedang dibuka pendaftarannya</p>
+										</div>
+										<div class="col-lg-6 g-1">
+											<div class="d-flex w-100 justify-content-end">
+											<button id="badge-indicator" class="btn btn-primary btn-sm">
+												Suara <span class="badge bg-secondary btn-sm">1</span>
+											  </button>
+											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
+												Jawaban <span class="badge bg-secondary">1</span>
+											  </button>
+											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
+												<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
+											  </button>
+											  </div>
 										</div>
 									</div>
-								</div>
+								</a>
+								<a class="list-group-item list-group-item-action">
+									<div class="row">
+										<div class="col-lg-6">
+											<p>JUDUL TOPIK</p>
+										</div>
+										<div class="col-lg-6 g-1">
+											<div class="d-flex w-100 justify-content-end">
+											<button id="badge-indicator" class="btn btn-primary btn-sm">
+												Suara <span class="badge bg-secondary btn-sm">1</span>
+											  </button>
+											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
+												Jawaban <span class="badge bg-secondary">1</span>
+											  </button>
+											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
+												<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
+											  </button>
+											  </div>
+										</div>
+									</div>
+								</a>
+							</ul>
+							<div class="d-flex w-100 justify-content-end">
+								<nav aria-label="...">
+									<ul class="pagination">
+										<li class="page-item disabled">
+											<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Kembali</a>
+										</li>
+										<li class="page-item active"><a class="page-link" href="#">1</a></li>
+										<li class="page-item" aria-current="page">
+											<a class="page-link" href="#">2</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">Selanjutnya</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 						<div class="col-lg-3">
@@ -156,7 +192,7 @@ if (!isset($_SESSION['login'])) {
 							<ul class="list-group feature-grid g-1">
 								<li class="list-group-item bg-primary">Berita</li>
 								<a class="list-group-item list-group-item-action">
-									<img id="news-item-img" class="rounded float-start" src="{{URL('/images/forum/personal-finance.png')}}" alt="">
+									<img id="news-item-img" class="rounded float-start" src="img/forum/personal-finance.png" alt="">
 									<div class="d-flex w-100 justify-content-between">
 										<p class="mb-1">
 											Bantuan UKT Semester Genap Tahun Akademik 2020/2021
@@ -164,7 +200,7 @@ if (!isset($_SESSION['login'])) {
 									  </div>
 								</a>
 								<a class="list-group-item list-group-item-action">
-									<img id="news-item-img" class="rounded float-start" src="{{URL('/images/forum/team_pag.png')}}" alt="">
+									<img id="news-item-img" class="rounded float-start" src="img/forum/team_pag.png" alt="">
 									<div class="d-flex w-100 justify-content-between">
 										<p class="mb-1">
 											Piawai Mengolah Data Besar, Tim Ini Mendapatkan Juara di Gemastik XII

@@ -9,18 +9,12 @@ if (!isset($_SESSION['login'])) {
 
 ?>
 
-<?php 
-  $currentuser = $_SESSION['login'];
-  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
-  $data = mysqli_fetch_array($sql);
-  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>BFore : forum</title>
+		<title>BFore : Kategori</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
 		<link rel="stylesheet" href="css/styles.css" />
@@ -97,19 +91,20 @@ if (!isset($_SESSION['login'])) {
 					<div class="row">
 						<div class="col-lg-9">
 							<div class="d-flex w-100 justify-content-between">
-								<h3 style="display: inline-block;">Pertanyaan Teratas</h3>
+								<h3 style="display: inline-block;">$NAMAKATEGORI</h3>
 								<a class="btn btn-primary" role="button" href="forum-post.php"><i class="fa fa-pen-square icon-inbutton"></i> Bertanya</a>
 							</div>
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="forum-signed.php">Forum</a></li>
+									<li class="breadcrumb-item active" aria-current="page">$NAMAKATEGORI</li>
+								</ol>
+							</nav>
 							<ul id="list-postingan" class="list-group feature-grid g-1">
-                <?php
-                  $forum = mysqli_query($koneksi, "SELECT * FROM table_forum ORDER BY id_forum desc");
-                  while($tampil = mysqli_fetch_array($forum)) :
-
-                ?>
-								<a class="list-group-item list-group-item-action" href="postingan-signed.php?id_forum=<?=$tampil['id_forum'];?>">
+								<a class="list-group-item list-group-item-action" href="postingan-signed.php">
 									<div class="row">
 										<div class="col-lg-6">
-											<p id="postTitle"><?=$tampil['judul'];?></p>
+											<p id="postTitle">UKM apa yang paling diminati anak fisika</p>
 										</div>
 										<div class="col-lg-6 g-1">
 											<div class="d-flex w-100 justify-content-end">
@@ -126,8 +121,6 @@ if (!isset($_SESSION['login'])) {
 										</div>
 									</div>
 								</a>
-                <?php endwhile; ?>
-              <!-- </ul>
 								<a class="list-group-item list-group-item-action">
 									<div class="row">
 										<div class="col-lg-6">
@@ -168,7 +161,7 @@ if (!isset($_SESSION['login'])) {
 										</div>
 									</div>
 								</a>
-							</ul> -->
+							</ul>
 							<div class="d-flex w-100 justify-content-end">
 								<nav aria-label="...">
 									<ul class="pagination">
@@ -195,13 +188,10 @@ if (!isset($_SESSION['login'])) {
 							</div>
 							<ul class="list-group feature-grid g-1">
 								<li class="list-group-item bg-primary">Kategori</li>
-                <?php
-                  $cat = mysqli_query($koneksi, "SELECT * FROM table_category ORDER BY id_category");
-                  while ($cato = mysqli_fetch_array($cat)) :
-
-                  ?>
-								<a class="list-group-item list-group-item-action"><?=$cato['category']?></a>
-                <?php endwhile; ?>
+								<a class="list-group-item list-group-item-action">Organisasi Mahasiswa</a>
+								<a class="list-group-item list-group-item-action">Unit Kegiatan Mahasiswa</a>
+								<a class="list-group-item list-group-item-action">Akademik</a>
+								<a class="list-group-item list-group-item-action">Beasiswa</a>
 							</ul>
 							<ul class="list-group feature-grid g-1">
 								<li class="list-group-item bg-primary">Berita</li>

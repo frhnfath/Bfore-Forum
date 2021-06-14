@@ -8,7 +8,14 @@ if (!isset($_SESSION['login'])) {
   exit;
 }
 
+
+
 ?>
+<?php 
+  $currentuser = $_SESSION['login'];
+  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
+  $data = mysqli_fetch_array($sql);
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +53,7 @@ if (!isset($_SESSION['login'])) {
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				<a class="navbar-brand" href="/index-signed">
+				<a class="navbar-brand" href="index-signed.php">
 						<img id="logoBFore" src="images/logo-Navbar.png" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +74,7 @@ if (!isset($_SESSION['login'])) {
 								<div class="dropstart">
 									<a id="profileLinkHome" class="drop-down-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 										<img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture">
-										<p id="profileNameHome" class="text-primary" href="#">Nama Profil</p>
+										<p id="profileNameHome" class="text-primary" href="#"><?php echo $data['nama'];?></p>
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="profileLinkHome">
 										<li><a class="dropdown-item" href="profile-main.php">Profil</a></li>

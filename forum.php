@@ -60,7 +60,7 @@ if (isset($_SESSION['login'])) {
 								<a class="nav-link active" aria-current="page" href="#">Forum</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Bantuan</a>
+								<a class="nav-link" href="help.php">Bantuan</a>
 							</li>
 							<li class="nav-item">
 								<a id="tombolLink" class="nav-link" href="signin.php">Masuk</a>
@@ -88,25 +88,51 @@ if (isset($_SESSION['login'])) {
 						<div class="col-lg-9">
 							<div class="d-flex w-100 justify-content-between">
 								<h3 style="display: inline-block;">Pertanyaan Teratas</h3>
-								<div class="btn btn-primary"><i class="fa fa-pen-square icon-inbutton"></i> Bertanya</button>
-							</div>
+								<a class="btn btn-primary" role="button" href="forum-post.php"><i class="fa fa-pen-square icon-inbutton"></i> Bertanya</a>
 							</div>
 							<ul id="list-postingan" class="list-group feature-grid g-1">
-								<a class="list-group-item list-group-item-action" href="postingan.php">
+                <?php
+                  $forum = mysqli_query($koneksi, "SELECT * FROM table_forum ORDER BY id_forum desc");
+                  while($tampil = mysqli_fetch_array($forum)) :
+
+                ?>
+								<a class="list-group-item list-group-item-action" href="postingan-signed.php?id_forum=<?=$tampil['id_forum'];?>">
 									<div class="row">
 										<div class="col-lg-6">
-											<p>UKM apa yang paling diminati anak fisika</p>
+											<p id="postTitle"><?=$tampil['judul'];?></p>
 										</div>
 										<div class="col-lg-6 g-1">
 											<div class="d-flex w-100 justify-content-end">
 											<button id="badge-indicator" class="btn btn-primary btn-sm">
-												Suara <span class="badge bg-secondary btn-sm">2</span>
+												Suara <span id="numVote" class="badge bg-secondary btn-sm">2</span>
 											  </button>
 											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												Jawaban <span class="badge bg-secondary">3</span>
+												Jawaban <span id="numAnswer" class="badge bg-secondary">3</span>
 											  </button>
 											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
+												<i class="fas fa-eye"></i> <span id="numRead" class="badge bg-secondary">4</span>
+											  </button>
+											  </div>
+										</div>
+									</div>
+								</a>
+                <?php endwhile; ?>
+              <!-- </ul>
+								<a class="list-group-item list-group-item-action">
+									<div class="row">
+										<div class="col-lg-6">
+											<p id="postTitle">Beasiswa apa saja yang sedang dibuka pendaftarannya</p>
+										</div>
+										<div class="col-lg-6 g-1">
+											<div class="d-flex w-100 justify-content-end">
+											<button id="badge-indicator" class="btn btn-primary btn-sm">
+												Suara <span id="numVote" class="badge bg-secondary btn-sm">1</span>
+											  </button>
+											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
+												Jawaban <span id="numAnswer" class="badge bg-secondary">1</span>
+											  </button>
+											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
+												<i class="fas fa-eye"></i> <span id="numRead" class="badge bg-secondary">4</span>
 											  </button>
 											  </div>
 										</div>
@@ -115,44 +141,24 @@ if (isset($_SESSION['login'])) {
 								<a class="list-group-item list-group-item-action">
 									<div class="row">
 										<div class="col-lg-6">
-											<p>Beasiswa apa saja yang sedang dibuka pendaftarannya</p>
+											<p id="postTitle">JUDUL TOPIK</p>
 										</div>
 										<div class="col-lg-6 g-1">
 											<div class="d-flex w-100 justify-content-end">
 											<button id="badge-indicator" class="btn btn-primary btn-sm">
-												Suara <span class="badge bg-secondary btn-sm">1</span>
+												Suara <span id="numVote" class="badge bg-secondary btn-sm">1</span>
 											  </button>
 											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												Jawaban <span class="badge bg-secondary">1</span>
+												Jawaban <span id="numAnswer" class="badge bg-secondary">1</span>
 											  </button>
 											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
+												<i class="fas fa-eye"></i> <span id="numRead" class="badge bg-secondary">4</span>
 											  </button>
 											  </div>
 										</div>
 									</div>
 								</a>
-								<a class="list-group-item list-group-item-action">
-									<div class="row">
-										<div class="col-lg-6">
-											<p>JUDUL TOPIK</p>
-										</div>
-										<div class="col-lg-6 g-1">
-											<div class="d-flex w-100 justify-content-end">
-											<button id="badge-indicator" class="btn btn-primary btn-sm">
-												Suara <span class="badge bg-secondary btn-sm">1</span>
-											  </button>
-											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												Jawaban <span class="badge bg-secondary">1</span>
-											  </button>
-											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												<i class="fas fa-eye"></i> <span class="badge bg-secondary">4</span>
-											  </button>
-											  </div>
-										</div>
-									</div>
-								</a>
-							</ul>
+							</ul> -->
 							<div class="d-flex w-100 justify-content-end">
 								<nav aria-label="...">
 									<ul class="pagination">
@@ -179,15 +185,18 @@ if (isset($_SESSION['login'])) {
 							</div>
 							<ul class="list-group feature-grid g-1">
 								<li class="list-group-item bg-primary">Kategori</li>
-								<a class="list-group-item list-group-item-action">Organisasi Mahasiswa</a>
-								<a class="list-group-item list-group-item-action">Unit Kegiatan Mahasiswa</a>
-								<a class="list-group-item list-group-item-action">Akademik</a>
-								<a class="list-group-item list-group-item-action">Beasiswa</a>
+                <?php
+                  $cat = mysqli_query($koneksi, "SELECT * FROM table_category ORDER BY id_category");
+                  while ($cato = mysqli_fetch_array($cat)) :
+
+                  ?>
+								<a class="list-group-item list-group-item-action"><?=$cato['category']?></a>
+                <?php endwhile; ?>
 							</ul>
 							<ul class="list-group feature-grid g-1">
 								<li class="list-group-item bg-primary">Berita</li>
 								<a class="list-group-item list-group-item-action">
-									<img id="news-item-img" class="rounded float-start" src="img/forum/personal-finance.png" alt="">
+									<img id="news-item-img" class="rounded float-start" src="images/forum/personal-finance.png" alt="">
 									<div class="d-flex w-100 justify-content-between">
 										<p class="mb-1">
 											Bantuan UKT Semester Genap Tahun Akademik 2020/2021
@@ -195,7 +204,7 @@ if (isset($_SESSION['login'])) {
 									  </div>
 								</a>
 								<a class="list-group-item list-group-item-action">
-									<img id="news-item-img" class="rounded float-start" src="img/forum/team_pag.png" alt="">
+									<img id="news-item-img" class="rounded float-start" src="images/forum/team_pag.png" alt="">
 									<div class="d-flex w-100 justify-content-between">
 										<p class="mb-1">
 											Piawai Mengolah Data Besar, Tim Ini Mendapatkan Juara di Gemastik XII

@@ -159,7 +159,8 @@ if (!isset($_SESSION['login'])) {
 						  <img src="images/profile1/profile1-pp.png" alt="PROFILE PICT">
 					  </div>
 				 <div class="row justify-content-center" style="text-align: center;">
-					  <a href="" style="display: block" ><h5>Ganti foto profil</h5></a>
+         <form action="" met
+					  <input type="file" name="gambar" id="gambar" style="display: block" >
 					  </div>
 				  </div>
 			  </div>

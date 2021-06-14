@@ -79,13 +79,7 @@
 						<a class="nav-link active" aria-current="page" href="#">Profil</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="profile-act.php">Aktivitas</a>
-					</li>
-					<li class="nav-item">
 						<a class="nav-link" href="profile-admin-mod.php">Moderasi</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="profile-edit.php">Pengaturan Akun</a>
 					</li>
 				</ul>
 			</div>
@@ -96,7 +90,7 @@
 					<div class="row">
 						<div class="col-lg-6 mb-3" style="text-align: center;">
 							<img src="images/profile1/profile1-pp.png" alt="profile" style="display: inline-block;">
-							<h2 class="m-3" style="display: inline-block;">DX</h2>
+							<h2 class="m-3" style="display: inline-block;">Admin</h2>
 						</div>
 						<div class="col-lg-6 d-flex justify-content-center mb-5">
 							<div class="card border-primary mb-3" style="max-width: 18rem;">
