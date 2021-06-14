@@ -1,6 +1,6 @@
 # BFore
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60765e124abd8a8d2fb82b87/9d89169dba3898fdbf1ca767b60c7691/logo.PNG" width="172" height="70"/>
-BFore adalah web forum untuk memudahkan mahasiswa IPB University dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, tag, dan page admin untuk menambahkan berita.
+BFore adalah web forum untuk memudahkan mahasiswa IPB University dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, dan page admin untuk menambahkan berita.
 
 ## Laporan Akhir Projek Rekayasa Perangkat Lunak (KOM331)
 * Paralel  : P2
@@ -75,9 +75,6 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 ### Use Case Diagram
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/608048c87333ff8af3cb595a/7a1a39d574d87d8197cd8080cf9efe8b/rplusecase.png" width="553" height="851"/>
 
-### Architecture Diagram
-![image](https://user-images.githubusercontent.com/78837351/121927826-b3660580-cd69-11eb-80ab-61281852ca0b.png)
-
 ### Activity Diagram
 #### Mendaftar Akun
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60c74d242621e15943065364/594b82070406083343b6314df3a15258/Activity_Diagram-Membuat_Akun.png" width="641" height="761"/>
@@ -93,8 +90,45 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 
 #### Membuat Berita
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60c74d242621e15943065364/310b3cf009bde1ff1cd32728125a86ff/Activity_Diagram-Membuat_berita.png" width="641" height="661"/>
-          
-### Entity Relationship Diagram
 
 ### Class Diagram
 ![image](https://user-images.githubusercontent.com/78837351/121948537-8e7d8c80-cd81-11eb-94ba-6c71d5a4be62.png)
+
+### Entity Relationship Diagram
+
+### Architecture Diagram
+![image](https://user-images.githubusercontent.com/78837351/121927826-b3660580-cd69-11eb-80ab-61281852ca0b.png)
+
+## Fungsi CRUD
+### Create
+* Membuat akun pada aplikasi web BFore
+* Membuat pertanyaan
+
+### Read
+* Menampilkan daftar pertanyaan
+* Menampilkan jawaban 
+
+### Update
+* Mengedit pertanyaan
+* Mengubah kata sandi
+* Mengubah email
+* Menambahkan foto profil pengguna
+
+### Delete
+* Menghapus foto profil pengguna
+* Menghapus akun
+
+## Hasil Implementasi
+
+## Saran untuk Pengembangan Selanjutnya
+* Fitur tag yang dapat digunakan untuk memudahkan user dalam melakukan pencarian
+* BFore diharapkan tidak hanya menjadi sebuah forum untuk berdiskusi, tetapi juga menjadi wadah untuk mahasiswa agar lebih mudah mengeksplor hal-hal baru. Sehingga, BFore memiliki manfaat untuk mahasiswa.
+* Aplikasi dapat dikembangkan sebagai Mobile App di Android atau iOS
+
+## Ucapan Terima Kasih
+Selama pengembangan aplikasi berbasis web bernama BFore, tim Kami banyak mempelajari hal-hal baru dalam bidang perangkat lunak.Ucapan terima kasih juga kami sampaikan kepada semua pihak yang memberi kami kesempatan dalam pembuatan aplikasi BFore, diantaranya:
+
+1. Bapak/Ibu Dosen Ilmu Komputer IPB University karena telah membagikan ilmunya kepada kami
+2. Kakak Asisten Praktikum Rekayasa Perangkat Lunak karena telah memberikan masukan selama pengembangan aplikasi BFore
+
+Dalam proses pembuatan aplikasi ini, kami mendapatkan banyak pengalaman yang dapat membuat kami menjadi lebih baik di masa yang akan datang. Kami mohon maaf atas segala kekurangan kami dalam pengembangan aplikasi. Semoga laporan yang kelompok kami buat dapat bermanfaat bagi semua pihak.
