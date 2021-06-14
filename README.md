@@ -95,6 +95,7 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 ![image](https://user-images.githubusercontent.com/78837351/121948537-8e7d8c80-cd81-11eb-94ba-6c71d5a4be62.png)
 
 ### Entity Relationship Diagram
+<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60854502d72ac94df75d7dcc/49abd035041a7fc1039ef899bd321b2e/ERD.png" width="771" height="579"/>
 
 ### Architecture Diagram
 ![image](https://user-images.githubusercontent.com/78837351/121927826-b3660580-cd69-11eb-80ab-61281852ca0b.png)
