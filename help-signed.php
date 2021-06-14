@@ -1,13 +1,23 @@
+<?php
+include "koneksi.php";
+
+session_start();
+if (!isset($_SESSION['login'])) {
+  header("location: signin.php");
+  exit;
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>BFore : Ubah Pertanyaan</title>
+		<title>BFore : forum</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
-		<link rel="stylesheet" href="css/styles.css" /> 
+		<link rel="stylesheet" href="css/styles.css" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -28,12 +38,12 @@
 	</head>
 	
 	<body>
-	<section id="navigator bg-light">
+		<section id="navigator">
 		<div class="container-fluid bg-light">
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				<a class="navbar-brand" href="index-signed.php">
+				    <a class="navbar-brand" href="/index">
 						<img id="logoBFore" src="images/logo-Navbar.png" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +52,7 @@
 					<div class="collapse navbar-collapse" id="navbarCollapsing">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
-								<a class="nav-link" href="index-signed.php">Beranda</a>
+								<a class="nav-link" href="index.php">Beranda</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="about.php">Tentang</a>
@@ -53,11 +63,13 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#">Bantuan</a>
 							</li>
-							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="profile-main.php"><img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture"></a>
+							<li class="nav-item">
+								<a id="tombolLink" class="nav-link" href="signin.php">Masuk</a>
+							</li>
+							<li class="nav-item">
+								<a id="tombolLink" class="nav-link" href="signup.php">Daftar</a>
 							</li>
 						</ul>
-						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
 					</div>
 				</div>
 			</nav>
@@ -66,42 +78,23 @@
 
 		<section id="forum-cover">
 	    	<img id="forum-cover-img" src="images/header.png" alt="">
-		</section>
-
-		<section id="forum-content">
-			<div class="card">
-				<div class="card-header bg-primary">
-				</div>
-				<div class="card-item">
-					<form class="m-3 p-2">
-					<div class="row feature-grid">
-					<div class="col-lg-12">
-						<div class="alert alert-primary">
-									Hasil edit akan membuat postingan lebih mudah dipahami bagi pembaca. 
-										Cobalah untuk membuat posting jauh lebih baik daripada yang Anda temukan, misalnya, dengan memperbaiki tata bahasa atau menambahkan hyperlink tambahan.
-							</div>
-						</div>
-					</div>
-					<h5 class="mt-3 p-0 ml-0" style="margin-left: 27px;">Edit pertanyaan</h5>
-						<div id="deskripsiPertanyaan" class="container">
-							<div class="input-group">
-								<textarea class="form-control" aria-label="kolom komentar" id="newComment"></textarea>
-							</div>
-								<br>
-							<div class="d-flex justify-content-end">
-								<a type="button" class="btn btn-outline-secondary me-1" role="button"  href="/postingan-signed">Kembali</a>
-								<button type="submit" class="btn btn-primary">Bagikan</button>
-							</div>
-					<br>
-					</form>
-				</div>
+        </section>
+        
+        <!--isi-->
+        <section id="about-mid1section" style="margin-bottom: 25%;">
+			<div class="container-fluid" style="text-align: center;">
+                <p class="kalimat">Bagaimana mereset jika kehilangan kata sandi?</p>
+                <div class="card border-dark p-4">
+                    <p class="kalimat1">Jika Anda kehilangan kata sandi, kunjungi <a href="" style="color: #48A9E0;">halaman pemulihan akun</a> dan masukkan alamat email<br>
+                    <div class="kalimat2">yang Anda gunakan untuk mendaftar. Kami akan mengirimi Anda email untuk mereset kata sandi Anda.</div>
+                </div>
 			</div>
 		</section>
-
-	</body>
-	<footer class="bg-secondary">
-		<p>Copyright © 2021 BFore. All rights reserved.</p>
-		<a class="fa fa-google socmed" href="https://sites.google.com/view/rpl-kelompok-3/produk?authuser=0"></a>
-		<a class="fa fa-github socmed" href="https://github.com/frhnfath/RPL-3"></a>
-	</footer>
+    
+    <!--footer-->
+    <footer class="bg-secondary">
+        <p>Copyright © 2021 BFore. All rights reserved.</p>
+        <a class="fa fa-google socmed" href="https://sites.google.com/view/rpl-kelompok-3/produk?authuser=0"></a>
+        <a class="fa fa-github socmed" href="https://github.com/frhnfath/RPL-3"></a>
+    </footer>
 </html>

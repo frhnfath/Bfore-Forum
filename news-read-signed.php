@@ -9,18 +9,12 @@ if (!isset($_SESSION['login'])) {
 
 ?>
 
-<?php 
-  $currentuser = $_SESSION['login'];
-  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
-  $data = mysqli_fetch_array($sql);
-  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>BFore : forum</title>
+		<title>BFore : Berita</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
 		<link rel="stylesheet" href="css/styles.css" /> 
@@ -90,63 +84,37 @@ if (!isset($_SESSION['login'])) {
 		</section>
 
 		<section id="profil-navbar">
-			<div class="container mt-3 mb-3">
-			<ul class="nav nav-pills justify-content-center">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Profil</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="profile-act.php">Aktivitas</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="profile-edit.php">Pengaturan Akun</a>
-					</li>
-				</ul>
+			<div class="container mt-5 mb-3 d-flex justify-content-center align-items-center">
+				<i class="fas fa-newspaper icon-inbutton"></i> <h4 style="display: inline-block;">Berita</h4>
 			</div>
 		</section>
 		<main>
 			<section id="profil-section">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-6 mb-3" style="text-align: center;">
-							<img src="images/profile1/profile1-pp.png" alt="profile" style="display: inline-block;">
-							<h2 class="m-3" style="display: inline-block;"><?php echo $data['nama'];?></h2>
-						</div>
-						<div class="col-lg-6 d-flex justify-content-center mb-5">
-							<div class="card border-primary mb-3" style="max-width: 18rem;">
-								<div class="card-header"><i class="fa fa-user icon-inbutton"></i>Profil Jaringan</div>
-								<div class="card-body text-primary">
-									<dl class="row">
-										<dd class="list-item"><i class="fa fa-user-graduate icon-inbutton"></i>Prodi <span id="profilProdi"><?php echo $data['jurusan'] ?></span></dd>
-										<dd><i class="fa fa-university icon-inbutton"></i>Fakultas <span id="profilFakultas"><?php echo $data['fakultas'];?></span></dd>
-									</ul>
+						<div class="col-md-12 m-3">
+							<div class="card">
+								<div class="container d-flex w-100 justify-content-center">
+								<h5 id="newsTitle" class="m-3">Bantuan UKT Semester Genap Tahun Akademik 2020/2021</h5>
 								</div>
-							</div>
-						</div>
-						<div class="col-lg-12 d-flex justify-content-start">
-							<div class="border-bottom">
-								<h4>Tags teratas <span id="numTags"> (22)</span></h4>
-							</div>
-						</div>
-						<div class="col-lg-8">
-							<div class="row">
-								<div class="col-lg-12">
+								<img id="newsTumbnail" src="images/forum/personal-finance.png" class="card-img-top" alt="...">
+								<div class="card-body">
 									<div class="row">
-										<div class="col-lg-3">
-											<div id="tag-badgeProf"  class="badge bg-secondary text-wrap">Ormawa</div>
+										<div class="col-md-12 d-flex w-100 justify-content-start">
+											<h5> <span id="newsTimestamp" ></span> 14 Juni 2021</h5>
 										</div>
-										<div class="col-lg-9">
-											<div id="tag-badgeProf"  class="badge bg-light text-wrap text-dark">Kiriman 86   Skor 868</div>
+										<div class="col-md-12 d-flex w-100 justify-content-center p-3">
+											<p style="text-align: justify;">Untuk mendapatkan ide yang terbaik, kita harus memahami terlebih dahulu perbedaan antara kreativitas, penemuan, dan inovasi. Tiga poin penting ini yang disampaikan oleh Ifnu Bima, alumni Ilmu Komputer IPB yang sekarang bekerja sebagai Head of Product di BlackBerry Messenger.
+												Dalam materi yang beliau sampaikan dalam kegiatan ideation IPB Informatics Competition (ICON) tanggal 30 Maret 2019 lalu, beliau mengajarkan kita bahwa ide sangatlah murah. Ide dapat ditemukan dari manapun dan dari siapapun, yang membuat ide mahal adalah bagaimana kita menambahkan nilai guna dan diperjualbelikan dalam masyarakat. Ketika ide kita tergolong mahal, saat itu bisa dinamakan inovasi. Beliau menjelaskan bahwa terdapat berbagai jenis inovasi dan level inovasi yang wajib kita ketahui.
+												Beliau melanjutkan materinya dengan mengenalkan framework Quick and Dirty Method yang digunakan oleh perusahaan-perusahaan besar untuk mengidentifikasi oportunitas inovasi. Tidak hanya itu, beliau juga mengajarkan peserta tentang Business Model Canvas, dan juga konsep pembuatan aplikasi seperti Mockup dan Wireframe.  Mengakhiri pemaparan materi, beliau ingin seluruh peserta ideation menggali ide dengan menuliskan minimal 50 ide dalam kertas yang berhubungan dengan cabang lomba yang sedang mereka ikuti.</p>
 										</div>
-										<div class="col-lg-3">
-											<div id="tag-badgeProf"  class="badge bg-secondary text-wrap">Ilkom</div>
-										</div>
-										<div class="col-lg-9">
-											<div id="tag-badgeProf"  class="badge bg-light text-wrap text-dark">Kiriman 86   Skor 868</div>
+										<div class="col-md-12 d-flex w-100 justify-content-end p-3">
+											<form>
+												<input type="button" class="btn btn-outline-primary" value="Kembali" onclick="history.back()">
+											</form>
 										</div>
 									</div>
 								</div>
-							</div>
 							</div>
 						</div>
 					</div>

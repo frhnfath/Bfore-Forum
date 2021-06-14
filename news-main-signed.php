@@ -9,18 +9,12 @@ if (!isset($_SESSION['login'])) {
 
 ?>
 
-<?php 
-  $currentuser = $_SESSION['login'];
-  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
-  $data = mysqli_fetch_array($sql);
-  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>BFore : forum</title>
+		<title>BFore : Berita</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
 		<link rel="stylesheet" href="css/styles.css" /> 
@@ -90,63 +84,32 @@ if (!isset($_SESSION['login'])) {
 		</section>
 
 		<section id="profil-navbar">
-			<div class="container mt-3 mb-3">
-			<ul class="nav nav-pills justify-content-center">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Profil</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="profile-act.php">Aktivitas</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="profile-edit.php">Pengaturan Akun</a>
-					</li>
-				</ul>
+			<div class="container mt-5 mb-3 d-flex justify-content-center align-items-center">
+				<i class="fas fa-newspaper icon-inbutton"></i> <h4 style="display: inline-block;">Berita</h4>
 			</div>
 		</section>
 		<main>
 			<section id="profil-section">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-6 mb-3" style="text-align: center;">
-							<img src="images/profile1/profile1-pp.png" alt="profile" style="display: inline-block;">
-							<h2 class="m-3" style="display: inline-block;"><?php echo $data['nama'];?></h2>
-						</div>
-						<div class="col-lg-6 d-flex justify-content-center mb-5">
-							<div class="card border-primary mb-3" style="max-width: 18rem;">
-								<div class="card-header"><i class="fa fa-user icon-inbutton"></i>Profil Jaringan</div>
-								<div class="card-body text-primary">
-									<dl class="row">
-										<dd class="list-item"><i class="fa fa-user-graduate icon-inbutton"></i>Prodi <span id="profilProdi"><?php echo $data['jurusan'] ?></span></dd>
-										<dd><i class="fa fa-university icon-inbutton"></i>Fakultas <span id="profilFakultas"><?php echo $data['fakultas'];?></span></dd>
-									</ul>
+						<div class="col-md-12 m-3">
+							<div class="card">
+								<h5 class="card-header">Berita Utama <span class="m-5" id="newsTimestamp">14 Juni 2021</span> </h5>
+								<img id="newsTumbnail" src="images/forum/personal-finance.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Bantuan UKT Semester Genap Tahun Akademik 2020/2021</h5>
+									<a href="news-read-signed.php" class="card-link link-primary">Baca selengkapnya ></a>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-12 d-flex justify-content-start">
-							<div class="border-bottom">
-								<h4>Tags teratas <span id="numTags"> (22)</span></h4>
-							</div>
-						</div>
-						<div class="col-lg-8">
-							<div class="row">
-								<div class="col-lg-12">
-									<div class="row">
-										<div class="col-lg-3">
-											<div id="tag-badgeProf"  class="badge bg-secondary text-wrap">Ormawa</div>
-										</div>
-										<div class="col-lg-9">
-											<div id="tag-badgeProf"  class="badge bg-light text-wrap text-dark">Kiriman 86   Skor 868</div>
-										</div>
-										<div class="col-lg-3">
-											<div id="tag-badgeProf"  class="badge bg-secondary text-wrap">Ilkom</div>
-										</div>
-										<div class="col-lg-9">
-											<div id="tag-badgeProf"  class="badge bg-light text-wrap text-dark">Kiriman 86   Skor 868</div>
-										</div>
-									</div>
+						<div class="col-md-12 m-3">
+							<div class="card">
+								<h5 class="card-header">Berita Utama <span class="m-5" id="newsTimestamp">13 Juni 2021</span> </h5>
+								<img id="newsTumbnail" src="images/forum/team_pag.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Piawai Mengolah Data Besar, Tim Ini Mendapatkan Juara di Gemastik XII</h5>
+									<a href="news-read-signed.html" class="card-link link-primary">Baca selengkapnya ></a>
 								</div>
-							</div>
 							</div>
 						</div>
 					</div>

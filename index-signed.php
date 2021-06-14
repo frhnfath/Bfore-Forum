@@ -138,6 +138,8 @@ if (!isset($_SESSION['login'])) {
 					  Belajar, perluas wawasan, jalin koneksi baru dengan mahasiswa lain melalui forum. 
 					  Saling bantu dan berkolaborasi dalam memecahkan berbagai masalah.
 				  </p>
+          <br>
+          <p>Hello, <?php echo $_SESSION['login']; ?></p>
 				  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
 					<a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href="forum-signed.php" role="button">Jelajahi forum</a>
 					<a type="button" class="btn btn-outline-secondary btn-lg px-4" href="forum-post.php" role="button">Bertanya sekarang</a>

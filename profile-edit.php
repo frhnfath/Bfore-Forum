@@ -9,6 +9,12 @@ if (!isset($_SESSION['login'])) {
 
 ?>
 
+<?php 
+  $currentuser = $_SESSION['login'];
+  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
+  $data = mysqli_fetch_array($sql);
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -160,37 +166,45 @@ if (!isset($_SESSION['login'])) {
 			  </div>
 			  <div class="col-lg-6">
 				  <h3>Informasi Pribadi</h3>
-				  <form>
+				  <form action="" method="POST">
 					<div class="mb-3">
 						<label for="inputNamaLengkap" class="form-label">Nama Lengkap</label>
-						<input type="text" class="form-control" id="inputNamaLengkap" aria-describedby="namaLengkap">
+						<input type="text" class="form-control" name="nama" id="inputNamaLengkap" aria-describedby="namaLengkap" value="<?php echo $data['nama'] ?>">
 					</div>
 					<div class="mb-3">
 						<label for="inputNIM" class="form-label">NIM</label>
-						<input type="text" class="form-control" id="inputNIM">
+						<input type="text" class="form-control" name="nim" id="inputNIM" value="<?php echo $data['nim']; ?>">
 					</div>
 					<h3>Informasi Publik</h3>
 					<div class="mb-3">
 						<label for="inputNamaPengguna" class="form-label">Nama Pengguna</label>
-						<input type="text" class="form-control" id="inputNamaPengguna">
-					</div>
-					<div class="mb-3">
-						<label for="inputBio" class="form-label">Bio</label>
-						<input type="text" class="form-control" id="inputBio">
+						<input type="text" class="form-control" name="username" id="inputNamaPengguna" value="<?php echo $data['username'] ?>">
 					</div>
 					<div class="mb-3">
 						<label for="inputJurusan" class="form-label">Jurusan</label>
-						<input type="text" class="form-control" id="inputJurusan">
+						<input type="text" class="form-control" name="jurusan" id="inputJurusan" value="<?php echo $data['jurusan'] ?>">
 					</div>
 					<div class="mb-3">
 						<label for="inputFakultas" class="form-label">Fakultas</label>
-						<input type="text" class="form-control" id="inputFakultas">
+						<input type="text" class="form-control" name="fakultas" id="inputFakultas" value="<?php echo $data['fakultas'] ?>">
 					</div>
 					<div class="d-flex justify-content-end">
-						<button type="submit" class="btn btn-primary m-1">Simpan</button>
+						<button type="submit" class="btn btn-primary m-1" name="update-info">Simpan</button>
 						<button type="reset" class="btn btn-outline-secondary m-1">Batalkan</button>
 					</div>
 				</form>
+        <?php
+        if(isset($_POST['update-info'])) {
+          $nama = mysqli_real_escape_string($koneksi, $_POST['nama']);
+          $nim = mysqli_real_escape_string($koneksi, $_POST['nim']);
+          $username = mysqli_real_escape_string($koneksi, $_POST['username']);
+          $jurusan = mysqli_real_escape_string($koneksi, $_POST['jurusan']);
+          $fakultas = mysqli_real_escape_string($koneksi, $_POST['fakultas']);
+          mysqli_query($koneksi, "UPDATE table_mahasiswa SET nama = '$nama', nim ='$nim', username = '$username', jurusan = '$jurusan', fakultas = '$fakultas' WHERE email = '$currentuser'");
+          echo "<script>alert('Information updated, please refresh this page')</script>";
+          exit;
+        }
+        ?>
 			  </div>
 		  </div>
 	  </div>
@@ -208,40 +222,69 @@ if (!isset($_SESSION['login'])) {
 				  <div class="row justify-content-center">
 					<div class="col-lg-12">
 						<h3>Mengubah Kata Sandi</h3>
-						<form>
+						<form action="" method="POST">
 							<div class="mb-3">
 								<label for="inputOldPassword" class="form-label">Kata sandi lama</label>
-								<input type="password" class="form-control" id="inputOldPassword" aria-describedby="namaOldPass">
+								<input type="password" class="form-control" id="inputOldPassword" aria-describedby="namaOldPass" name="old-pass">
 							</div>
 							<div class="mb-3">
 								<label for="inputNewPassword" class="form-label">Kata sandi baru</label>
-								<input type="password" class="form-control" id="inputNewPassword">
+								<input type="password" class="form-control" name="new-pass" id="inputNewPassword">
 							</div>
 							<div class="mb-3">
 								<label for="inputNewPasswordComf" class="form-label">Konfirmasi kata sandi baru</label>
-								<input type="password" class="form-control" id="inputNewPasswordComf">
+								<input type="password" class="form-control" name="renew-pass" id="inputNewPasswordComf">
 							</div>
 							<div class="d-flex justify-content-end">
-								<button type="submit" class="btn btn-primary m-1">Simpan</button>
+								<button type="submit" class="btn btn-primary m-1" name="save-password">Simpan</button>
 								<button type="reset" class="btn btn-outline-secondary m-1">Batalkan</button>
 							</div>
 						</form>
+            <?php
+              if (isset($_POST['save-password'])) {
+                $oldpass = mysqli_real_escape_string($koneksi, $_POST['old-pass']);
+                $newpass = mysqli_real_escape_string($koneksi, $_POST['new-pass']);
+                $repass = mysqli_real_escape_string($koneksi, $_POST['renew-pass']);
+                if (password_verify($oldpass, $data['password'])) {
+                  echo "<script>alert('same password!')</script>";
+                  exit;
+                }
+                if ($newpass != $repass) {
+                  echo "<script>alert('password do not match!')</script>";
+                  exit;
+                }
+                $newpass = password_hash($newpass, PASSWORD_DEFAULT);
+                mysqli_query($koneksi, "UPDATE table_mahasiswa SET password = '$newpass' WHERE email = '$currentuser'");
+                echo "<script>alert('Password changed')</script>";
+              }
+            ?>
 						<br>
 						<h3>Mengubah Email</h3>
-						<form>
+						<form action="" method="POST">
 							<div class="mb-3">
 								<label for="viewOldEmail" class="form-label">Email sekarang</label>
-								<input type="text" readonly class="form-control" id="viewOldEmail" value="dxgg@dxgg.com">
+								<input type="text" readonly class="form-control" id="viewOldEmail" name="email-lama" value="<?php echo $data['email'];?>">
 							</div>
 							<div class="mb-3">
 								<label for="inputNewEmail" class="form-label">Email baru</label>
-								<input type="email" class="form-control" id="inputNewEmail">
+								<input type="email" class="form-control" id="inputNewEmail" name="email-baru">
 							</div>
 							<div class="d-flex justify-content-end">
-								<button type="submit" class="btn btn-primary m-1">Simpan</button>
+								<button type="submit" class="btn btn-primary m-1" name="save-email">Simpan</button>
 								<button type="reset" class="btn btn-outline-secondary m-1">Batalkan</button>
 							</div>
 						</form>
+            <?php
+              if (isset($_POST["save-email"])){
+                $email = mysqli_real_escape_string($koneksi, $_POST["email-lama"]); 
+                $new = mysqli_real_escape_string($koneksi, $_POST["email-baru"]); 
+                if ($email == $new) {
+                  echo "<script>alert('Email cannot be indentical')</script";
+                  exit;
+                }
+                mysqli_query($koneksi, "UPDATE table_mahasiswa SET email = '$new' WHERE email = '$currentuser'");
+              }
+            ?>
 					</div>
 			  </div>
 		  </div>
@@ -260,7 +303,7 @@ if (!isset($_SESSION['login'])) {
  			Penghapusan tidak dapat diubah, dan Anda tidak akan bisa mendapatkan kembali akun asli Anda, jika penghapusan ini dilakukan.
 			</div>
 			<div class="form-check">
-				<input class="form-check-input" type="checkbox" value="" id="checkHapusAkun">
+				<input class="form-check-input" type="checkbox" value="" id="checkHapusAkun" required>
 				<label class="form-check-label" for="checkHapusAkun">
 					Saya telah membaca informasi yang disebutkan di atas dan memahami implikasi jika profil saya dihapus. Saya ingin melanjutkan penghapusan profil saya.
 				</label>

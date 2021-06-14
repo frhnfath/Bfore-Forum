@@ -50,7 +50,7 @@ if (isset($_SESSION['login'])) {
 		<script src="https://kit.fontawesome.com/0efdbc0531.js" crossorigin="anonymous"></script>
 		<!-- BOOTSTRAP SCRIPTS -->
 		<script
-			src="https://cdn.jsdeli`v`r.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
 			crossorigin="anonymous"
 		></script>
@@ -58,11 +58,12 @@ if (isset($_SESSION['login'])) {
   
 <body id="body-signin" class="text-center">
   <main class="form-signin">
-    <form action="simpan-signin.php" method="POST">
+    <form action="simpan-admin.php" method="POST">
       <a class="navbar-brand" href="index.php">
         <img class="mb-4" src="images/logo-Navbar.png" alt="" width="40%" height="60%">
 			</a>
       <h1 class="h3 mb-3 fw-normal">Selamat Datang!</h1>
+      
       <div class="form-floating">
         <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
         <label for="floatingInput">Alamat Email</label>
