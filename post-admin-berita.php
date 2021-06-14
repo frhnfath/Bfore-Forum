@@ -49,14 +49,19 @@
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="#">Forum</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Bantuan</a>
-							</li>
-							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="profile-main.php"><img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture"></a>
+							<li class="nav-item nav-fil" display="inline-block drop-down-toggle">
+								<div class="dropstart">
+									<a id="profileLinkHome" class="drop-down-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture">
+										<p id="profileNameHome" class="text-primary" href="#">Nama Profil</p>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="profileLinkHome">
+										<li><a class="dropdown-item" href="profile-main.php">Profil</a></li>
+										<li><a class="dropdown-item" href="logout.php">Keluar</a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
-						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
 					</div>
 				</div>
 			</nav>
@@ -73,12 +78,12 @@
 			<h3 class="m-4">Membuat berita</h3>
 			<form class="m-3 p-2">
 				<div class="row g-3 align-items-center">
-					<div class="col-1">
+					<div class="col-md-1">
 						<label for="inputPostTitle" class="col-form-label"
 							>Judul</label
 						>
 					</div>
-					<div class="col-4">
+					<div class="col-md-4">
 						<input
 							type="text"
 							id="inputPostTitle"
@@ -87,27 +92,12 @@
 					</div>
 				</div>
 				<div class="row g-3 align-items-center">
-					<div class="col-1">
-						<label for="inputPostCategory" class="col-form-label"
-							>Tanggal</label
-						>
-					</div>
-					<div class="col-lg-4">
-						<input
-							type="date"
-							class="form-control"
-							id="inputPassword3"
-							placeholder="dd/mm/yyyy"
-						/>
-					</div>
-				</div>
-				<div class="row g-3 align-items-center">
-					<div class="col-1">
+					<div class="col-md-1">
 						<label for="inputPostDescription" class="col-form-label"
 							>Berita</label
 						>
 					</div>
-					<div id="newCommentContainer" class="col-lg-8">
+					<div id="newCommentContainer" class="col-md-8">
 						<div class="input-group-prepend">
 							<span class="input-group-text"
 								><svg
@@ -205,16 +195,9 @@
 					</div>
 				</div>
 				<br />
-				<div class="col-lg-9 d-flex justify-content-end">
-					<button
-						type="button"
-						class="btn btn-outline-secondary me-1"
-					>
-						Kembali
-					</button>
-					<button type="submit" class="btn btn-primary">
-						Bagikan
-					</button>
+				<div class="col-md-9 d-flex justify-content-end">
+					<a type="button" class="btn btn-outline-secondary me-1" role="button"  href="profile-admin-mod.php">Kembali</a>
+					<button type="submit" class="btn btn-primary">Bagikan</button>
 				</div>
 			</form>
 		</div>

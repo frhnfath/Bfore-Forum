@@ -49,14 +49,19 @@
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="#">Forum</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Bantuan</a>
-							</li>
-							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="profile-main.php"><img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture"></a>
+							<li class="nav-item nav-fil" display="inline-block drop-down-toggle">
+								<div class="dropstart">
+									<a id="profileLinkHome" class="drop-down-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture">
+										<p id="profileNameHome" class="text-primary" href="#">Nama Profil</p>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="profileLinkHome">
+										<li><a class="dropdown-item" href="profile-main.php">Profil</a></li>
+										<li><a class="dropdown-item" href="logout.php">Keluar</a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
-						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
 					</div>
 				</div>
 			</nav>
@@ -88,10 +93,11 @@
 							</div>
 								<br>
 							<div class="d-flex justify-content-end">
-								<a type="button" class="btn btn-outline-secondary me-1" role="button"  href="/postingan-signed">Kembali</a>
+								<a type="button" class="btn btn-outline-secondary me-1" role="button"  href="postingan-signed.php">Kembali</a>
 								<button type="submit" class="btn btn-primary">Bagikan</button>
 							</div>
-					<br>
+							<br>
+						</div>
 					</form>
 				</div>
 			</div>

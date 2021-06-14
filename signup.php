@@ -57,7 +57,7 @@ if (isset($_SESSION['login'])) {
   </head>
   
 <body id="body-signin" class="text-center">
-  <main class="form-signup">
+  <main class="form-signin">
     <form action="simpan-signup.php" method="POST">
      	<a class="navbar-brand" href="index.php">
         <img class="mb-4" src="images/logo-Navbar.png" alt="" width="40%" height="60%">
@@ -65,23 +65,23 @@ if (isset($_SESSION['login'])) {
       <h1 class="h3 mb-3 fw-normal">Bergabung Forum</h1>
 
       <div class="form-floating">
-        <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" required>
+        <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
         <label for="floatingInput">Alamat Email</label>
       </div>
       <div class="form-floating">
-        <input type="name" class="form-control" name="name" id="floatingInput" placeholder="text" required>
+        <input type="name" class="form-control" name="name" id="floatingInput" placeholder="text">
         <label for="floatingInput">Nama</label>
       </div>
       <div class="form-floating">
-        <input type="nim" class="form-control" name="nim" id="floatingInput" placeholder="text" required>
+        <input type="nim" class="form-control" name="nim" id="floatingInput" placeholder="text">
         <label for="floatingInput">NIM</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
+        <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
         <label for="floatingPassword">Kata Sandi</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" name="repass" id="floatingPasswordVal" placeholder="Password" required>
+        <input type="password" class="form-control" name="repass" id="floatingPasswordVal" placeholder="Password">
         <label for="floatingPassword">Konfirmasi Kata Sandi</label>
       </div>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Daftar</button>

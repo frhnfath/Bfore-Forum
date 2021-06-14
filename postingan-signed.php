@@ -14,7 +14,7 @@ if (!isset($_SESSION['login'])) {
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>BFore : forum</title>
+		<title>BFore : Post</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
 		<link rel="stylesheet" href="css/styles.css" /> 
@@ -60,14 +60,19 @@ if (!isset($_SESSION['login'])) {
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="forum-signed.php">Forum</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Bantuan</a>
-							</li>
-							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="profile-main.php"><img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture"></a>
+							<li class="nav-item nav-fil" display="inline-block drop-down-toggle">
+								<div class="dropstart">
+									<a id="profileLinkHome" class="drop-down-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture">
+										<p id="profileNameHome" class="text-primary" href="#">Nama Profil</p>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="profileLinkHome">
+										<li><a class="dropdown-item" href="profile-main.php">Profil</a></li>
+										<li><a class="dropdown-item" href="logout.php">Keluar</a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
-						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
 					</div>
 				</div>
 			</nav>
@@ -107,23 +112,23 @@ if (!isset($_SESSION['login'])) {
 								</div>
 							</div>
 							<div id="deskripsiPertanyaan" class="container">
-								<div class="row">
-									<div class="col-lg-1">
+								<div id="postContentContainer" class="row">
+									<div class="col-md-1">
 										<div id="vote-cont" class="btn-group-vertical align-items-center">
 											<i id="fawesome-button" class="fas fa-chevron-up"></i>
 											<p id="vote-cont-count">23</p>
 											<i id="fawesome-button" class="fas fa-chevron-down"></i>
 										</div>
 									</div>
-									<div class="col-lg-11">
+									<div class="col-md-11">
 										<div class="row">
-											<div class="col-lg-11">
+											<div class="col-md-11 mb-3">
 												<p id="postDescription" >Saya ingin mengetahui lebih banyak mengenai prodi Ilmu Komputer.
 												Kegiatan rutin apa yang diselenggarakan secara rutin dan ada komunitas apa saja di ilkom?</p>
 												<a class="btn btn-sm btn-outline-info" role="button" href="/forum-edit">Ubah</a>
 											</div>
-											<div class="col-lg-11 d-flex justify-content-end">
-												<div class="card mb-3" style="max-width: 45%;">
+											<div id="postCardContainer" class="col-sm-11 d-flex">
+												<div id="postProfileCard" class="card mb-3">
 													<div class="row g-0">
 														<div class="col-md-4">
 															<img class="profilePictPost" src="images/profile1/profile1-pp.png" alt="profilePicture">
@@ -142,25 +147,25 @@ if (!isset($_SESSION['login'])) {
 								</div>
 							</div>
 							<!-- BAGIAN JAWABAN -->
-							<h3 style="margin-left: 27px;"><span>1</span>  jawaban</h3>
+							<h3 class="border-bottom" style="margin-left: 27px;"><span id="numAnswer" >1</span>  Jawaban</h3>
 							<div id="jawaban-pertanyaan" class="container">
 								<div class="row border-bottom">
-									<div class="col-lg-1">
+									<div class="col-md-1">
 										<div id="vote-cont" class="btn-group-vertical align-items-center">
 											<i id="fawesome-button" class="fas fa-chevron-up"></i>
 											<p id="vote-cont-count" >2</p>
 											<i id="fawesome-button" class="fas fa-chevron-down"></i>
 										</div>
 									</div>
-									<div class="col-lg-11">
-										<div class="row">
-											<div class="col-lg-11">
+									<div class="col-md-11">
+										<div class="row border-bottom">
+											<div class="col-md-11 mb-3">
 												<p id="answerDescription" >Kegiatan rutin yang diselenggarakan ada seminar dan pembinaan lomba. 
 													Komunitas di ilkom itu ada agribot, MAD, data mining. Komunitas robotik berfokus pada pengembangan sistem tertanam dan juga pada bidang robotika. Komunitas ini diperuntukkan untuk semua mahasiswa aktif ilmu komputer IPB beserta mahasiswa lain yang tertarik dengan komunitas ini. Komunitas Mobile Apps Development (MAD) komunitas pengembangan perangkat lunak berbasis android. 
 													Komunitas Data Mining merupakan komunitas yang memfasilitasi mahasiswa IPB yang memiliki minat terhadap bidang Data Science. </p>
 											</div>
-											<div class="col-lg-11 d-flex justify-content-end">
-												<div class="card mb-3" style="max-width: 45%;">
+											<div id="postCardContainer" class="col-sm-11 d-flex">
+												<div id="postProfileCard" class="card mb-3">
 													<div class="row g-0">
 														<div class="col-md-4">
 															<img class="profilePictPost" src="images/profile1/profile1-pp.png" alt="profilePicture">
@@ -176,21 +181,23 @@ if (!isset($_SESSION['login'])) {
 											</div>
 										</div>
 									</div>
+									<!-- BAGIAN INPUT JAWABAN -->
+									<div class="col-md-11">
+									<h4 class="mt-3" style="margin-left: 27px;">Tambahkan komentar</h4>
+									<div id="deskripsiPertanyaan" class="col-md-12">
+										<form>
+											<div class="input-group">
+												<textarea class="form-control" aria-label="kolom komentar" id="newComment"></textarea>
+											</div>
+											<br>
+											<div class="d-flex justify-content-end">
+												<a type="button" class="btn btn-outline-secondary me-1" role="button" href="forum-signed.php">Kembali</a>
+												<button type="submit" class="btn btn-primary">Bagikan</button>
+											</div>
+										</form>
+									</div>
 								</div>
 							</div>
-							<!-- BAGIAN INPUT JAWABAN -->
-							<h4 class="mt-3" style="margin-left: 27px;">Tambahkan komentar</h4>
-							<div id="deskripsiPertanyaan" class="container">
-								<form>
-								<div class="input-group">
-									<textarea class="form-control" aria-label="kolom komentar" id="newComment"></textarea>
-								</div>
-									<br>
-								<div class="d-flex justify-content-end">
-									<a type="button" class="btn btn-outline-secondary me-1" role="button" href="forum-signed.php">Kembali</a>
-									<button type="submit" class="btn btn-primary">Bagikan</button>
-								</div>
-								</form>
 							</div>
 						</div>
 						<div class="col-lg-3">

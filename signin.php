@@ -9,6 +9,7 @@ if (isset($_SESSION['login'])) {
 }
 
 ?>
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -71,7 +72,10 @@ if (isset($_SESSION['login'])) {
         <input type="password" class="form-control" name="password" id="floatingPasswordSignin" placeholder="Password">
         <label for="floatingPassword">Kata Sandi</label>
       </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit" name="login" >Masuk</button>
+      <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Masuk</button>
+      <br>
+      <a class="link-info" href="help.php">Lupa kata sandi?</a>
+      <br>
       <p class="mt-5 mb-3 text-muted" style="display: inline-block; margin-right: 3%;">Belum memiliki akun?</p>
       <a type="button" class="btn btn-outline-primary" href="signup.php" role="button">Daftar</a>
     </form>

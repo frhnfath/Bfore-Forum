@@ -59,14 +59,19 @@ if (!isset($_SESSION['login'])) {
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="#">Forum</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Bantuan</a>
-							</li>
-							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="profile-main.php"><img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture"></a>
+							<li class="nav-item nav-fil" display="inline-block drop-down-toggle">
+								<div class="dropstart">
+									<a id="profileLinkHome" class="drop-down-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture">
+										<p id="profileNameHome" class="text-primary">Nama Profil</p>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="profileLinkHome">
+										<li><a class="dropdown-item" href="profile-main.php">Profil</a></li>
+										<li><a class="dropdown-item" href="logout.php">Keluar</a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
-						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
 					</div>
 				</div>
 			</nav>
@@ -84,19 +89,19 @@ if (!isset($_SESSION['login'])) {
 				<div class="card-item">
 					<h3 class="m-4">Ajukan Pertayaan</h3>
 					<form class="m-3 p-2">
-						<div class="row g-3 align-items-center">
-							<div class="col-1">
+						<div class="row g-0 align-items-center">
+							<div class="col-md-1">
 								<label for="inputPostTitle" class="col-form-label">Judul</label>
 							</div>
-							<div class="col-4">
+							<div class="col-md-8">
 								<input type="text" id="inputPostTitle" class="form-control">
 							</div>
 						</div>
-						<div class="row g-3 align-items-center">
-							<div class="col-1">
+						<div class="row g-0 align-items-center">
+							<div class="col-md-1">
 								<label for="inputPostCategory" class="col-form-label">Kategori</label>
 							</div>
-							<div class="col-lg-4">
+							<div class="col-md-8">
 								<select class="col-lg-12" name="inputPostCategory" id="inputPostCategory">
 									<option value="Organisasi Mahasiswa">Organisasi Mahasiswa</option>
 									<option value="Unit Kegiatan Mahasiwa">Unit Kegiatan Mahasiwa</option>
@@ -106,29 +111,28 @@ if (!isset($_SESSION['login'])) {
 								</select>
 							</div>
 						</div>
-						<div class="row g-3 align-items-center">
-							<div class="col-1">
+						<div class="row g-0 align-items-center">
+							<div class="col-md-1">
 								<label for="inputPostDescription" class="col-form-label">Pesan</label>
 							</div>
-							<div id="newCommentContainer" class="col-lg-8">
+							<div id="newCommentContainer" class="col-md-8">
 								<div class="input-group">
 									<textarea class="form-control" aria-label="kolom komentar" id="newComment"></textarea>
 								</div>
 							</div>
 						</div>
-						<div class="row g-3 align-items-center">
-							<div class="col-1">
+						<div class="row g-0 align-items-center">
+							<div class="col-md-1">
 								<label for="inputPostTags" class="col-form-label">Tag</label>
 							</div>
-							<div class="col-4">
+							<div class="col-md-8">
 								<div class="form-floating mb-3">
 									<input type="text" class="form-control" id="inputPostTags" placeholder="">
-									<label for="inputPostTags">Tambahkan 3 tag untuk mendeskripsikan pertanyaan</label>
+									<label id="floatingFormLabel" for="inputPostTags">Tambahkan 3 tag untuk mendeskripsikan pertanyaan</label>
 								  </div>
 							</div>
 						</div>
-					<br>
-					<div class="col-9 d-flex justify-content-end">
+					<div class="col-md-9 d-flex justify-content-end">
 						<a type="button" class="btn btn-outline-secondary me-1" role="button"  href="forum-signed.php">Kembali</a>
 						<button type="submit" class="btn btn-primary">Bagikan</button>
 					</div>

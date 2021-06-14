@@ -36,7 +36,7 @@ if (!isset($_SESSION['login'])) {
 			crossorigin="anonymous"
 		></script>
 	</head>
-
+  
 	<body>
 		<section id="navigator">
 		<div class="container-fluid bg-light">
@@ -60,14 +60,19 @@ if (!isset($_SESSION['login'])) {
 							<li class="nav-item">
 								<a class="nav-link" href="forum-signed.php">Forum</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Bantuan</a>
-							</li>
-							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="profile-main.php"><img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture"></a>
+							<li class="nav-item nav-fil" display="inline-block drop-down-toggle">
+								<div class="dropstart">
+									<a id="profileLinkHome" class="drop-down-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture">
+										<p id="profileNameHome" class="text-primary" href="#">Nama Profil</p>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="profileLinkHome">
+										<li><a class="dropdown-item" href="profile-main.php">Profil</a></li>
+										<li><a class="dropdown-item" href="logout.php">Keluar</a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
-						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
 					</div>
 				</div>
 			</nav>
@@ -101,7 +106,7 @@ if (!isset($_SESSION['login'])) {
         <ul class="nav flex-column">
           <li class="nav-item">
             <a id="suntingProfilButton" class="nav-link link-dark active" role="button" onclick="suntingProfilFunct()" href="#">
-				Sunting Profil
+				<i class="fas fa-user-alt"></i> Sunting Profil
 				<script>
 					function suntingProfilFunct() {
 						document.getElementById("suntingAkun").style.display = "none"
@@ -114,7 +119,7 @@ if (!isset($_SESSION['login'])) {
           </li>
           <li class="nav-item">
             <a class="nav-link link-dark" role="button" onclick="suntingAkunFunct()" href="#">
-			  Sunting Akun
+			  <i class="fas fa-user-cog"></i> Sunting Akun
 			  <script>
 				  function suntingAkunFunct() {
 					  document.getElementById("suntingProfil").style.display = "none"
@@ -126,7 +131,7 @@ if (!isset($_SESSION['login'])) {
           </li>
           <li class="nav-item">
             <a class="nav-link link-dark" role="button" onclick="hapusAkunFunct()" href="#">
-				Hapus Akun
+				<i class="fas fa-user-alt-slash"></i> Hapus Akun
 				<script>
 					function hapusAkunFunct() {
 						document.getElementById("suntingAkun").style.display = "none"

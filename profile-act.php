@@ -60,14 +60,19 @@ if (!isset($_SESSION['login'])) {
 							<li class="nav-item">
 								<a class="nav-link" href="forum-signed.php">Forum</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Bantuan</a>
-							</li>
-							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="profile-main.php"><img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture"></a>
+							<li class="nav-item nav-fil" display="inline-block drop-down-toggle">
+								<div class="dropstart">
+									<a id="profileLinkHome" class="drop-down-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture">
+										<p id="profileNameHome" class="text-primary" href="#">Nama Profil</p>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="profileLinkHome">
+										<li><a class="dropdown-item" href="profile-main.php">Profil</a></li>
+										<li><a class="dropdown-item" href="logout.php">Keluar</a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
-						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
 					</div>
 				</div>
 			</nav>
@@ -97,36 +102,36 @@ if (!isset($_SESSION['login'])) {
 			<section id="activity-section">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-md-12">
 							<div class="row align-items-center border-bottom d-flex justify-content-between">
-								<div class="col-lg-1">
+								<div class="col-md-1">
 									<button class="btn btn-outline-secondary btn-sm disabled">5 </button>
 								</div>
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<h4>Pertanyaan</h4>
 								</div>
-								<div class="col-lg-3" style="text-align: end;">
+								<div id="memberiSuaraBut" class="col-md-3">
 									<button class="btn btn-outline-primary btn-sm">Memberi suara</button>
 								</div>
 							</div>
 							<div class="row align-items-center">
-								<div class="col-lg-1">
+								<div class="col-md-1">
 									<button class="btn btn-light btm-sm disabled">5 </button>
 								</div>
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<p class="text-primary">Komunitas apa saja yang ada di Ilmu Komputer?</p>
 								</div>
 							</div>
 							<div class="row align-items-center">
-								<div class="col-lg-1">
+								<div class="col-md-1">
 									<button class="btn btn-light btm-sm disabled">5 </button>
 								</div>
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<p class="text-primary">Komunitas apa saja yang ada di Ilmu Komputer?</p>
 								</div>
 							</div>
 							<div class="row align-items-center">
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<a class="link-primary">Lihat lebih banyak</a>
 								</div>
 							</div>
@@ -134,65 +139,65 @@ if (!isset($_SESSION['login'])) {
 					</div>
 
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-md-12">
 							<div class="row align-items-center border-bottom d-flex justify-content-between">
-								<div class="col-lg-1">
+								<div class="col-md-1">
 									<button class="btn btn-outline-secondary btn-sm disabled">5 </button>
 								</div>
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<h4>Jawaban</h4>
 								</div>
-								<div class="col-lg-3" style="text-align: end;">
+								<div id="memberiSuaraBut" class="col-md-3">
 									<button class="btn btn-outline-primary btn-sm">Memberi suara</button>
 								</div>
 							</div>
 							<div class="row align-items-center">
-								<div class="col-lg-1">
+								<div class="col-md-1">
 									<button class="btn btn-light btm-sm disabled">5 </button>
 								</div>
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<p class="text-primary">
 										Komunitas di ilkom ada competitive programing, cyber security, game development, agribot, agriweb, mobile apps development, data mining, dan ui ux. </p>
 								</div>
 							</div>
 							<div class="row align-items-center">
-								<div class="col-lg-1">
+								<div class="col-md-1">
 									<button class="btn btn-light btm-sm disabled">5 </button>
 								</div>
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<p class="text-primary">Komunitas apa saja yang ada di Ilmu Komputer?</p>
 								</div>
 							</div>
 							<div class="row align-items-center">
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<a class="link-primary">Lihat lebih banyak</a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-md-12">
 							<div class="row align-items-center border-bottom d-flex justify-content-between">
-								<div class="col-lg-1">
+								<div class="col-md-1">
 									<button class="btn btn-outline-secondary btn-sm disabled">5 </button>
 								</div>
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<h4>Tags</h4>
 								</div>
-								<div class="col-lg-3" style="text-align: end;">
+								<div id="memberiSuaraBut" class="col-md-3">
 									<button class="btn btn-outline-primary btn-sm">Memberi suara</button>
 								</div>
 							</div>
 							<div class="row align-items-center">
-								<div class="col-lg-1">
+								<div class="col-md-1">
 									<button class="btn btn-light btm-sm disabled"></button>
 								</div>
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<p class="text-primary">
 										Ormawa
 								</div>
 							<div class="row align-items-center">
-								<div class="col-lg-8">
+								<div class="col-md-8">
 									<a class="link-primary">Lihat lebih banyak</a>
 								</div>
 							</div>
