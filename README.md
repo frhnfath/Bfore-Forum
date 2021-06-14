@@ -1,6 +1,8 @@
 # BFore
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60765e124abd8a8d2fb82b87/9d89169dba3898fdbf1ca767b60c7691/logo.PNG" width="172" height="70"/>
-BFore adalah web forum untuk memudahkan mahasiswa IPB University dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, dan page admin untuk menambahkan berita.
+BFore adalah web forum untuk memudahkan mahasiswa IPB University dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut.Hal itu dikarenakan kunci sukses mahasiswa adalah pengetahuan yang luas dan terbuka.
+
+Aplikasi ini akan menyediakan fitur login untuk user dan admin. Kemudian aplikasi ini juga menggunakan fitur search, diharapkan user dapat lebih mudah melakukan pencarian pertanyaan dan jawaban yang tersedia pada aplikasi ini.Fitur-fitur lainnya yang ada di BFore adalah fitur untuk comment, upvote, dan downvote.
 
 ## Laporan Akhir Projek Rekayasa Perangkat Lunak (KOM331)
 * Paralel  : P2
@@ -22,9 +24,13 @@ BFore adalah web forum untuk memudahkan mahasiswa IPB University dalam mencari i
   | Genta Pramillean Bayu           | G84170067 | Front-End Developer |
 
 ## Latar Belakang
+Forum online merupakan konsep pengembangan yang bisa dimanfaatkan di dalam dunia pendidikan. Selain berguna untuk menjalin hubungan silaturahmi, juga berguna untuk menunjang dalam meningkatkan efektivitas belajar, dengan cara membentuk forum berupa diskusi sesuai dengan bidang dan minat bagi mahasiswa. Melalui forum online seseorang dapat saling berbagi pengalaman dan informasi mengenai topik yang sedang dibahas tanpa harus saling berhadapan. 
+
 Pengetahuan dan informasi terbuka menjadi kunci sukses setiap mahasiswa, namun sayangnya hal ini belum dapat terealisasikan dengan baik dalam bentuk wadah yang memadai. Sehingga, para mahasiswa terbatas dalam memperoleh informasi, terutama informasi lintas jurusan. Kerap terjadi juga terbentuknya kelompok sosial yang bersifat terbatas dan tertutup. Di IPB University sendiri, tidak sedikit yang mengalami kesulitan dalam mengakses informasi ketika mereka ingin menggali hal-hal baru, baik dalam akademik maupun non-akademik.
 
-Solusi untuk masalah ini adalah dengan menyediakan forum sebagai sarana untuk mempermudah mahasiswa IPB University dalam memperoleh informasi, minat, dan kondisi tertentu dengan berdiskusi secara terbuka pada forum tersebut.
+Salah satu cara untuk menyebarluaskan infromasi di dalam kampus adalah dengan menggunakan website. Dengan adanya website, maka penyebaran informasi, baik informasi pendidikan maupun informasi seputar kegiatan kampus akan lebih mudah dan cepat dalam penyampaiannya, tak terbatas ruang dan waktu, karena website dapat diakses kapan saja. 
+
+Dengan adanya website forum online ini, diharapkan akan lebih menumbuhkan rasa persatuan dan kekompakkan antara mahasiswa, serta menjadi tempat yang tepat bagi mahasiswa untuk mengembangkan kreatifitas, ide-ide, berbagai pengalaman serta bertukar pikiran.
 
 ## Tujuan
 1. Mempermudah mahasiswa dalam memperoleh informasi
