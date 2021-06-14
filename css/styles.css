@@ -406,3 +406,8 @@ footer {
 	object-fit: scale-down;
 	height: 15rem;
 }
+
+/* ADMIN MOD PAGE */
+#iconOptionBut {
+	display: block;
+}

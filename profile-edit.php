@@ -111,14 +111,13 @@ if (!isset($_SESSION['login'])) {
       <div class="position-sticky g-1">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a id="suntingProfilButton" class="nav-link link-dark active" role="button" onclick="suntingProfilFunct()" href="#">
+            <a id="suntingProfilButton" class="nav-link link-dark" role="button" onclick="suntingProfilFunct()" href="#">
 				<i class="fas fa-user-alt"></i> Sunting Profil
 				<script>
 					function suntingProfilFunct() {
 						document.getElementById("suntingAkun").style.display = "none"
 						document.getElementById("hapusAkun").style.display = "none"
 						document.getElementById("suntingProfil").style.display = "block"
-						document.getElementById("suntingProfilButton").classList.add('active')
 					}
 				</script>
 			  </a>

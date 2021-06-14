@@ -93,9 +93,6 @@ if (!isset($_SESSION['login'])) {
 							<div id="judul-postingan" class="d-flex w-100 justify-content-between">
 								<div class="col-lg-6">
 									<p id="postTitle">UKM apa yang paling diminati anak fisika</p>
-									<div id="tag-badge"  class="badge bg-secondary text-wrap">Ormawa</div>
-									<div id="tag-badge" class="badge bg-secondary text-wrap">Ilkom</div>
-									<div id="tag-badge" class="badge bg-secondary text-wrap">FMIPA</div>
 								</div>
 								<div class="col-lg-6 g-1">
 									<div class="d-flex w-100 justify-content-end">

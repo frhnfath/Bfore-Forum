@@ -109,31 +109,6 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-12 d-flex justify-content-start">
-							<div class="border-bottom">
-								<h4>Tags teratas <span id="numTags"> (22)</span></h4>
-							</div>
-						</div>
-						<div class="col-lg-8">
-							<div class="row">
-								<div class="col-lg-12">
-									<div class="row">
-										<div class="col-lg-3">
-											<div id="tag-badgeProf"  class="badge bg-secondary text-wrap">Ormawa</div>
-										</div>
-										<div class="col-lg-9">
-											<div id="tag-badgeProf"  class="badge bg-light text-wrap text-dark">Kiriman 86   Skor 868</div>
-										</div>
-										<div class="col-lg-3">
-											<div id="tag-badgeProf"  class="badge bg-secondary text-wrap">Ilkom</div>
-										</div>
-										<div class="col-lg-9">
-											<div id="tag-badgeProf"  class="badge bg-light text-wrap text-dark">Kiriman 86   Skor 868</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							</div>
 						</div>
 					</div>
 				</div>

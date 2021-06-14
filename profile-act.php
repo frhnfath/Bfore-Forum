@@ -175,35 +175,6 @@ if (!isset($_SESSION['login'])) {
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row align-items-center border-bottom d-flex justify-content-between">
-								<div class="col-md-1">
-									<button class="btn btn-outline-secondary btn-sm disabled">5 </button>
-								</div>
-								<div class="col-md-8">
-									<h4>Tags</h4>
-								</div>
-								<div id="memberiSuaraBut" class="col-md-3">
-									<button class="btn btn-outline-primary btn-sm">Memberi suara</button>
-								</div>
-							</div>
-							<div class="row align-items-center">
-								<div class="col-md-1">
-									<button class="btn btn-light btm-sm disabled"></button>
-								</div>
-								<div class="col-md-8">
-									<p class="text-primary">
-										Ormawa
-								</div>
-							<div class="row align-items-center">
-								<div class="col-md-8">
-									<a class="link-primary">Lihat lebih banyak</a>
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</section>
 		</main>

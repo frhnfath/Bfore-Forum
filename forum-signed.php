@@ -99,9 +99,6 @@ if (!isset($_SESSION['login'])) {
 									<div class="row">
 										<div class="col-lg-6">
 											<p id="postTitle">UKM apa yang paling diminati anak fisika</p>
-											<div id="tag-badge"  class="badge bg-secondary text-wrap">Ormawa</div>
-											<div id="tag-badge" class="badge bg-secondary text-wrap">Ilkom</div>
-											<div id="tag-badge" class="badge bg-secondary text-wrap">FMIPA</div>
 										</div>
 										<div class="col-lg-6 g-1">
 											<div class="d-flex w-100 justify-content-end">
@@ -122,8 +119,6 @@ if (!isset($_SESSION['login'])) {
 									<div class="row">
 										<div class="col-lg-6">
 											<p id="postTitle">Beasiswa apa saja yang sedang dibuka pendaftarannya</p>
-											<div id="tag-badge"  class="badge bg-secondary text-wrap">Beasiswa</div>
-											<div id="tag-badge" class="badge bg-secondary text-wrap">Faperta</div>
 										</div>
 										<div class="col-lg-6 g-1">
 											<div class="d-flex w-100 justify-content-end">
@@ -144,8 +139,6 @@ if (!isset($_SESSION['login'])) {
 									<div class="row">
 										<div class="col-lg-6">
 											<p id="postTitle">JUDUL TOPIK</p>
-											<div id="tag-badge"  class="badge bg-secondary text-wrap">TAG1</div>
-											<div id="tag-badge" class="badge bg-secondary text-wrap">TAG2</div>
 										</div>
 										<div class="col-lg-6 g-1">
 											<div class="d-flex w-100 justify-content-end">

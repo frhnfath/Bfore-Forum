@@ -96,14 +96,13 @@
       <div class="position-sticky g-1">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a id="suntingProfilButton" class="nav-link link-dark active" role="button" onclick="suntingProfilFunct()" href="#">
+            <a id="suntingProfilButton" class="nav-link link-dark" role="button" onclick="suntingProfilFunct()" href="#">
 				<i class="fas fa-newspaper"></i> Kelola Berita
 				<script>
 					function suntingProfilFunct() {
 						document.getElementById("modKategori").style.display = "none"
 						document.getElementById("modPostingan").style.display = "none"
 						document.getElementById("modBerita").style.display = "block"
-						document.getElementById("suntingProfilButton").classList.add('active')
 					}
 				</script>
 			  </a>
@@ -159,10 +158,10 @@
 						  <td>Bantuan UKT</td>
 						  <td>Tahapan pelaksanaan program, kriteria penerima, dokumen pendukung</td>
 						  <td><img src="images/forum/personal-finance.png" width="25%" alt=""></td>
-						  <td>
-							  <i class="fas fa-pen"></i>
-							  <i class="fas fa-search"></i>
-							  <i class="fas fa-times"></i>
+						  <td style="text-align: center;" >
+							  <a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
+							  <a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
+							  <a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
 						  </td>
 						</tr>
 						<tr>
@@ -170,10 +169,10 @@
 							<td>IPB University berhasil meraih penghargaan juara 
 								Harapan dari divisi lomba Penambangan Data.</td>
 							<td><img src="images/forum/team_pag.png" width="25%" alt=""></td>
-							<td>
-								<i class="fas fa-pen"></i>
-								<i class="fas fa-search"></i>
-								<i class="fas fa-times"></i>
+							<td style="text-align: center;" >
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
 							</td>
 						</tr>
 					  </tbody>
@@ -206,21 +205,21 @@
 						  <tr>
 							<td>Bantuan UKT</td>
 							<td>Tahapan pelaksanaan program, kriteria penerima, dokumen pendukung</td>
-							<td>
-								<i class="fas fa-pen"></i>
-								<i class="fas fa-search"></i>
-								<i class="fas fa-times"></i>
+							<td style="text-align: center;" >
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
 							</td>
 						  </tr>
 						  <tr>
 							  <td>Juara Gemastik</td>
 							  <td>IPB University berhasil meraih penghargaan juara 
 								  Harapan dari divisi lomba Penambangan Data.</td>
-							  <td>
-								  <i class="fas fa-pen"></i>
-								  <i class="fas fa-search"></i>
-								  <i class="fas fa-times"></i>
-							  </td>
+								  <td style="text-align: center;" >
+									<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
+									<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
+									<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
+								</td>
 						  </tr>
 						</tbody>
 					  </table>
@@ -256,10 +255,10 @@
 							<td>Tahapan pelaksanaan program, kriteria penerima, dokumen pendukung</td>
 							<td>Dx</td>
 							<td>2020-06-1</td>
-							<td>
-								<i class="fas fa-pen"></i>
-								<i class="fas fa-search"></i>
-								<i class="fas fa-times"></i>
+							<td style="text-align: center;" >
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
 							</td>
 						  </tr>
 						  <tr>
@@ -268,11 +267,11 @@
 								  Harapan dari divisi lomba Penambangan Data.</td>
 							<td>Dx</td>
 							<td>2020-06-1</td>
-							  <td>
-								  <i class="fas fa-pen"></i>
-								  <i class="fas fa-search"></i>
-								  <i class="fas fa-times"></i>
-							  </td>
+							<td style="text-align: center;" >
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
+								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
+							</td>
 						  </tr>
 						</tbody>
 					  </table>
@@ -282,7 +281,6 @@
 		</div>
 	</section>
 	</main>
-
   </div>
 </div>
 		</section>

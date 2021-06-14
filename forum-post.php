@@ -121,17 +121,6 @@ if (!isset($_SESSION['login'])) {
 								</div>
 							</div>
 						</div>
-						<div class="row g-0 align-items-center">
-							<div class="col-md-1">
-								<label for="inputPostTags" class="col-form-label">Tag</label>
-							</div>
-							<div class="col-md-8">
-								<div class="form-floating mb-3">
-									<input type="text" class="form-control" id="inputPostTags" placeholder="">
-									<label id="floatingFormLabel" for="inputPostTags">Tambahkan 3 tag untuk mendeskripsikan pertanyaan</label>
-								  </div>
-							</div>
-						</div>
 					<div class="col-md-9 d-flex justify-content-end">
 						<a type="button" class="btn btn-outline-secondary me-1" role="button"  href="forum-signed.php">Kembali</a>
 						<button type="submit" class="btn btn-primary">Bagikan</button>

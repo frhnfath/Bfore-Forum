@@ -61,14 +61,19 @@ if (!isset($_SESSION['login'])) {
 							<li class="nav-item">
 								<a class="nav-link" href="forum-signed.php">Forum</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="help-signed.php">Bantuan</a>
-							</li>
-							<li class="nav-item nav-fill">
-								<a id="profileLinkHome" href="profile-main.php"><img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture"></a>
+							<li class="nav-item nav-fil" display="inline-block drop-down-toggle">
+								<div class="dropstart">
+									<a id="profileLinkHome" class="drop-down-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture">
+										<p id="profileNameHome" class="text-primary" href="#">Nama Profil</p>
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="profileLinkHome">
+										<li><a class="dropdown-item" href="profile-main.php">Profil</a></li>
+										<li><a class="dropdown-item" href="logout.php">Keluar</a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
-						<a id="profileNameHome" class="nav-link" href="#">Nama Profil</a>
 					</div>
 				</div>
 			</nav>
@@ -121,25 +126,6 @@ if (!isset($_SESSION['login'])) {
 							<div class="card-body">
 							<p>Kegiatan rutin yang diselenggarakan oleh Himalkom meliputi komunitas peminatan, seminar dan kompetisi bidang TIK, pembinaan lomba, dan bina desa. 
 							Komunitas di ilkom itu ada competitive programing, cyber security, game development, agribot, agriweb, mobile apps development, data mining, dan ui ux.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 g-4">
-						<p>Tag memudahkan untuk menemukan pertanyaan yang ditandai dengan kategori.
-							Masing-masing dapat memiliki 2 atau lebih tag.</p>
-						<p>Dalam forum setiap pertanyaan harus mengandung salah satu dari tag berikut :</p>
-						<div id="tag-badge"  class="badge bg-secondary text-wrap">Ormawa</div>
-						<div id="tag-badge"  class="badge bg-secondary text-wrap">UKM</div>
-						<div id="tag-badge"  class="badge bg-secondary text-wrap">Program Mahasiswa</div>
-						<div id="tag-badge"  class="badge bg-secondary text-wrap">Akademik</div>
-						<div id="tag-badge"  class="badge bg-secondary text-wrap">Beasiswa</div>
-					</div>
-					<div class="col-lg-6 g-4">
-						<div class="card">
-							<div class="card-body">
-								<div id="tag-badge"  class="badge bg-secondary text-wrap">Ormawa</div>
-								<div id="tag-badge" class="badge bg-secondary text-wrap">Ilkom</div>
-								<div id="tag-badge" class="badge bg-secondary text-wrap">FMIPA</div>
 							</div>
 						</div>
 					</div>
