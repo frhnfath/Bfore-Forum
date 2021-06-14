@@ -1,5 +1,5 @@
 # BFore
-<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60765e124abd8a8d2fb82b87/9d89169dba3898fdbf1ca767b60c7691/logo.PNG" width="200" height="200"/>
+<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60765e124abd8a8d2fb82b87/9d89169dba3898fdbf1ca767b60c7691/logo.PNG" width="172" height="70"/>
 BFore adalah web forum untuk memudahkan mahasiswa IPB University dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, tag, dan page admin untuk menambahkan berita.
 
 ## Laporan Akhir Projek Rekayasa Perangkat Lunak (KOM331)
