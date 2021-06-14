@@ -93,4 +93,5 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 ### Entity Relationship Diagram
 
 ### Architecture Diagram
-![image](https://user-images.githubusercontent.com/78837351/121927684-8a457500-cd69-11eb-8c54-1aa6e42792e1.png)
+![image](https://user-images.githubusercontent.com/78837351/121927826-b3660580-cd69-11eb-80ab-61281852ca0b.png)
+
