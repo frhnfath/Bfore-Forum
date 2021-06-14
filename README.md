@@ -75,6 +75,9 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 ### Use Case Diagram
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/608048c87333ff8af3cb595a/7a1a39d574d87d8197cd8080cf9efe8b/rplusecase.png" width="553" height="851"/>
 
+### Architecture Diagram
+![image](https://user-images.githubusercontent.com/78837351/121927826-b3660580-cd69-11eb-80ab-61281852ca0b.png)
+
 ### Activity Diagram
 #### Mendaftar Akun
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60c74d242621e15943065364/594b82070406083343b6314df3a15258/Activity_Diagram-Membuat_Akun.png" width="641" height="761"/>
@@ -93,6 +96,5 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
           
 ### Entity Relationship Diagram
 
-### Architecture Diagram
-![image](https://user-images.githubusercontent.com/78837351/121927826-b3660580-cd69-11eb-80ab-61281852ca0b.png)
-
+### Class Diagram
+![image](https://user-images.githubusercontent.com/78837351/121948537-8e7d8c80-cd81-11eb-94ba-6c71d5a4be62.png)
