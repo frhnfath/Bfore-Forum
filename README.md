@@ -121,7 +121,7 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 ## Hasil Implementasi
 
 ## Saran untuk Pengembangan Selanjutnya
-* Fitur tag yang dapat digunakan untuk memudahkan user dalam melakukan pencarian
+* Fitur tag dapat berfungsi dengan baik agar memudahkan user dalam melakukan pencarian
 * BFore diharapkan tidak hanya menjadi sebuah forum untuk berdiskusi, tetapi juga menjadi wadah untuk mahasiswa agar lebih mudah mengeksplor hal-hal baru. Sehingga, BFore memiliki manfaat untuk mahasiswa.
 * Aplikasi dapat dikembangkan sebagai Mobile App di Android atau iOS
 
