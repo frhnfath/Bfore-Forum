@@ -2,8 +2,8 @@
 include "koneksi.php";
 
 session_start();
-if (isset($_SESSION['login'])) {
-  header("location: help-signed.php");
+if (!isset($_SESSION['login'])) {
+  header("location: signin.php");
   exit;
 }
 

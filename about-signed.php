@@ -62,7 +62,7 @@ if (!isset($_SESSION['login'])) {
 								<a class="nav-link" href="forum-signed.php">Forum</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Bantuan</a>
+								<a class="nav-link" href="help-signed.php">Bantuan</a>
 							</li>
 							<li class="nav-item nav-fill">
 								<a id="profileLinkHome" href="profile-main.php"><img class="profilePict" src="images/profile1/profile1-pp.png" alt="profilePicture"></a>
