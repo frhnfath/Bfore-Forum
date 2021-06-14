@@ -1,4 +1,5 @@
 # BFore
+<img src="logo-Navbar.png" width="200" height="200"/>
 BFore adalah web forum untuk memudahkan mahasiswa IPB University dalam mencari informasi tertentu, khususnya minat, bakat, dan informasi terbaru lainnya yang diharapkan dapat menambah wawasan, meningkatkan minat dan bakat mahasiswa sesuai dengan yang ingin diketahui oleh mahasiswa tersebut. Fitur-fitur yang ada di BFore adalah fitur untuk comment, upvote, downvote, search, tag, dan page admin untuk menambahkan berita.
 
 ## Laporan Akhir Projek Rekayasa Perangkat Lunak (KOM331)
