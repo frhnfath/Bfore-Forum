@@ -109,7 +109,7 @@ if (!isset($_SESSION['login'])) {
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 mb-3" style="text-align: center;">
-							<img src="images/profile1/profile1-pp.png" alt="profile" style="display: inline-block;">
+							<img src="images/profile1/profile1-pp.png" alt="profile" style="display: inline-block; border-radius: 100%;">
 							<h2 class="m-3" style="display: inline-block;"><?php echo $data['nama'];?></h2>
 						</div>
 						<div class="col-lg-6 d-flex justify-content-center mb-5">
