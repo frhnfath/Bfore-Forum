@@ -20,7 +20,7 @@ BFore adalah web forum untuk memudahkan mahasiswa IPB University dalam mencari i
   | Farhan Fathurrahman             | G64190088 | Back-End Developer  |
   | Genta Pramillean Bayu           | G84170067 | Front-End Developer |
 
-# A. Latar Belakang
+# Latar Belakang
 Forum online merupakan konsep pengembangan yang bisa dimanfaatkan di dalam dunia pendidikan. Selain berguna untuk menjalin hubungan silaturahmi, juga berguna untuk menunjang dalam meningkatkan efektivitas belajar, dengan cara membentuk forum berupa diskusi sesuai dengan bidang dan minat bagi mahasiswa. Melalui forum online seseorang dapat saling berbagi pengalaman dan informasi mengenai topik yang sedang dibahas tanpa harus saling berhadapan. 
 
 Pengetahuan dan informasi terbuka menjadi kunci sukses setiap mahasiswa, namun sayangnya hal ini belum dapat terealisasikan dengan baik dalam bentuk wadah yang memadai. Sehingga, para mahasiswa terbatas dalam memperoleh informasi, terutama informasi lintas jurusan. Kerap terjadi juga terbentuknya kelompok sosial yang bersifat terbatas dan tertutup. Di IPB University sendiri, tidak sedikit yang mengalami kesulitan dalam mengakses informasi ketika mereka ingin menggali hal-hal baru, baik dalam akademik maupun non-akademik.
@@ -29,12 +29,12 @@ Salah satu cara untuk menyebarluaskan infromasi di dalam kampus adalah dengan me
 
 Dengan adanya website forum online ini, diharapkan akan lebih menumbuhkan rasa persatuan dan kekompakkan antara mahasiswa, serta menjadi tempat yang tepat bagi mahasiswa untuk mengembangkan kreatifitas, ide-ide, berbagai pengalaman serta bertukar pikiran.
 
-# B. Tujuan
+# Tujuan
 1. Mempermudah mahasiswa dalam memperoleh informasi
 2. Menyediakan wadah untuk mahasiswa berdiskusi
 3. Menambah relasi antar jurusan di dalam kampus
 
-# C. User Analysis
+# User Analysis
 ### User Profile
 Target pengguna dari BFore adalah mahasiswa IPB University.
 
@@ -46,7 +46,7 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 * Sebagai pengguna yang terdaftar, agar dapat menemukan topik diskusi yang diminati, saya dapat menggunakan fitur kategori topik di dalam forum.
 * Sebagai pengguna terdaftar, agar dapat meneruskan diskusi topik tertentu, saya dapat menggunakan fungsi jawab pada fitur diskusi forum.
 
-# D. Spesifikasi Teknis Lingkungan Pengembangan
+# Spesifikasi Teknis Lingkungan Pengembangan
 ### Software
   | Komponen    | Teknologi                  |
   | ----------- | -------------------------- |
@@ -74,11 +74,11 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
   | Software Documentation                     | Google Sites   |
   | Version Control dan Collaboration Platform | Github         |
 
-# E. Hasil dan Pembahasan
-### E.1 Use Case Diagram
+# Hasil dan Pembahasan
+### Use Case Diagram
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/608048c87333ff8af3cb595a/7a1a39d574d87d8197cd8080cf9efe8b/rplusecase.png" width="553" height="851"/>
 
-### E.2 Activity Diagram
+### Activity Diagram
 #### Mendaftar Akun
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60c74d242621e15943065364/594b82070406083343b6314df3a15258/Activity_Diagram-Membuat_Akun.png" width="641" height="761"/>
 
@@ -91,19 +91,16 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 #### Membuat Pertanyaan
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60c74d242621e15943065364/bf4ca4da57fbfdd70e0816c60a1dfe64/Activity_Diagram-Membuat_Pertanyaan.png" width="641" height="521"/>
 
-#### Membuat Berita
-<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60c74d242621e15943065364/310b3cf009bde1ff1cd32728125a86ff/Activity_Diagram-Membuat_berita.png" width="641" height="661"/>
-
-### E.3 Class Diagram
+### Class Diagram
 ![image](https://user-images.githubusercontent.com/78837351/121948537-8e7d8c80-cd81-11eb-94ba-6c71d5a4be62.png)
 
-### E.4 Entity Relationship Diagram
+### Entity Relationship Diagram
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60854502d72ac94df75d7dcc/49abd035041a7fc1039ef899bd321b2e/ERD.png" width="771" height="579"/>
 
-### E.5 Arsitektur Sistem
+### Arsitektur Sistem
 ![image](https://user-images.githubusercontent.com/78837351/121927826-b3660580-cd69-11eb-80ab-61281852ca0b.png)
 
-### E.7 Fungsi CRUD
+### Fungsi CRUD
 #### Create
 * Membuat akun pada aplikasi web BFore
 * Membuat pertanyaan
@@ -122,7 +119,7 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 * Menghapus foto profil pengguna
 * Menghapus akun
 
-# F. Hasil Implementasi
+# Hasil Implementasi
 
 ## Saran untuk Pengembangan Selanjutnya
 * Fitur tag dapat berfungsi dengan baik agar memudahkan user dalam melakukan pencarian
