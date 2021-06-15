@@ -124,25 +124,6 @@ if (isset($_SESSION['login'])) {
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 g-4">
-						<p>Tag memudahkan untuk menemukan pertanyaan yang ditandai dengan kategori.
-							Masing-masing dapat memiliki 2 atau lebih tag.</p>
-						<p>Dalam forum setiap pertanyaan harus mengandung salah satu dari tag berikut :</p>
-						<div id="tag-badge"  class="badge bg-secondary text-wrap">Ormawa</div>
-						<div id="tag-badge"  class="badge bg-secondary text-wrap">UKM</div>
-						<div id="tag-badge"  class="badge bg-secondary text-wrap">Program Mahasiswa</div>
-						<div id="tag-badge"  class="badge bg-secondary text-wrap">Akademik</div>
-						<div id="tag-badge"  class="badge bg-secondary text-wrap">Beasiswa</div>
-					</div>
-					<div class="col-lg-6 g-4">
-						<div class="card">
-							<div class="card-body">
-								<div id="tag-badge"  class="badge bg-secondary text-wrap">Ormawa</div>
-								<div id="tag-badge" class="badge bg-secondary text-wrap">Ilkom</div>
-								<div id="tag-badge" class="badge bg-secondary text-wrap">FMIPA</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>
