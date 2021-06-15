@@ -137,7 +137,7 @@ if (!isset($_SESSION['login'])) {
 			<div class="container-fluid" style="text-align: center;">
 				<p>Temukan pertanyaan untuk dijawab, atau tanyakan pertanyaan Anda sendiri</p>
 				<a class="btn btn-primary" style="margin-right:1%;" role="button" href="forum-signed.php">Lihat pertanyaan baru</a>
-				<button class="btn btn-primary">Ajukan pertanyaan</button>
+				<a class="btn btn-primary" role="button" href="forum-post.php">Ajukan pertanyaan</a>>
 			</div>
 		</section>
 
