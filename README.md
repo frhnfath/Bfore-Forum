@@ -76,7 +76,7 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 
 # Hasil dan Pembahasan
 ### Use Case Diagram
-<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/608048c87333ff8af3cb595a/7a1a39d574d87d8197cd8080cf9efe8b/rplusecase.png" width="553" height="851"/>
+![image](https://user-images.githubusercontent.com/78837351/121982517-d4eedd80-cdb9-11eb-98c0-b771624b5357.png)
 
 ### Activity Diagram
 #### Mendaftar Akun
@@ -91,11 +91,11 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 #### Membuat Pertanyaan
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60c74d242621e15943065364/a065d6f0d342f8b367d46454c5f1bb6c/Activity_Diagram-Membuat_Pertanyaan_fiks.png" width="641" height="521"/>
 
-### Class Diagram
-![image](https://user-images.githubusercontent.com/78837351/121948537-8e7d8c80-cd81-11eb-94ba-6c71d5a4be62.png)
-
 ### Entity Relationship Diagram
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60854502d72ac94df75d7dcc/49abd035041a7fc1039ef899bd321b2e/ERD.png" width="771" height="579"/>
+
+### Class Diagram
+![image](https://user-images.githubusercontent.com/78837351/121948537-8e7d8c80-cd81-11eb-94ba-6c71d5a4be62.png)
 
 ### Arsitektur Sistem
 ![image](https://user-images.githubusercontent.com/78837351/121927826-b3660580-cd69-11eb-80ab-61281852ca0b.png)
@@ -120,6 +120,7 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 * Menghapus akun
 
 # Hasil Implementasi
+
 
 ## Saran untuk Pengembangan Selanjutnya
 * Fitur tag dapat berfungsi dengan baik agar memudahkan user dalam melakukan pencarian
