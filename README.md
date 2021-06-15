@@ -109,7 +109,7 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 * Menampilkan daftar pertanyaan
 * Menampilkan jawaban 
 
-###3 Update
+### Update
 * Mengedit pertanyaan
 * Mengubah kata sandi
 * Mengubah email
