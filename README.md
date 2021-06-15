@@ -124,6 +124,17 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 
 ![image](https://user-images.githubusercontent.com/78837351/121982996-c6ed8c80-cdba-11eb-9720-d5cff9b23d89.png)
 
+* Index
+![image](https://user-images.githubusercontent.com/78837351/121985765-95c38b00-cdbf-11eb-879e-722a638e3868.png)
+![image](https://user-images.githubusercontent.com/78837351/121985792-a07e2000-cdbf-11eb-92d3-81746c8752df.png)
+
+
+* Daftar Akun
+![image](https://user-images.githubusercontent.com/78837351/121985684-6a40a080-cdbf-11eb-8ab0-9cb685ee98d1.png)
+
+* Sign In
+![image](https://user-images.githubusercontent.com/78837351/121985655-5bf28480-cdbf-11eb-91ca-61f89a0582cc.png)
+
 * Forum
 ![image](https://user-images.githubusercontent.com/78837351/121982951-b6d5ad00-cdba-11eb-8293-f8c728a2586f.png)
 
