@@ -120,6 +120,26 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 * Menghapus akun
 
 # Hasil Implementasi
+* Tampilan Web
+
+![image](https://user-images.githubusercontent.com/78837351/121982996-c6ed8c80-cdba-11eb-9720-d5cff9b23d89.png)
+
+* Forum
+![image](https://user-images.githubusercontent.com/78837351/121982951-b6d5ad00-cdba-11eb-8293-f8c728a2586f.png)
+
+* Profile
+![image](https://user-images.githubusercontent.com/78837351/121982921-a6bdcd80-cdba-11eb-8dc8-663c95c0c1ad.png)
+
+* Menyunting Profile
+![image](https://user-images.githubusercontent.com/78837351/121982889-9b6aa200-cdba-11eb-8be9-a8f6ed8d884c.png)
+
+![image](https://user-images.githubusercontent.com/78837351/121982862-8f7ee000-cdba-11eb-8824-76d1303fb808.png)
+
+* Menghapus Akun
+![image](https://user-images.githubusercontent.com/78837351/121982838-7fff9700-cdba-11eb-8bbf-d36a0c29a713.png)
+
+* Kolom Pertanyaan
+![image](https://user-images.githubusercontent.com/78837351/121982800-6d855d80-cdba-11eb-9eda-7ec0674ff25c.png)
 
 
 ## Saran untuk Pengembangan Selanjutnya
