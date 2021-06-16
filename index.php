@@ -62,7 +62,7 @@ if (isset($_SESSION['login'])) {
 								<a class="nav-link" href="forum.php">Forum</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Bantuan</a>
+								<a class="nav-link" href="help.php">Bantuan</a>
 							</li>
 							<li class="nav-item">
 								<a id="tombolLink" class="nav-link" href="signin.php">Masuk</a>

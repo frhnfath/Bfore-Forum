@@ -3,7 +3,7 @@ include "koneksi.php";
 
 session_start();
 if (!isset($_SESSION['login'])) {
-  header("location: signin.php");
+  header("Location: signin.php");
   exit;
 }
 
@@ -111,13 +111,14 @@ if (!isset($_SESSION['login'])) {
       <div class="position-sticky g-1">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a id="suntingProfilButton" class="nav-link link-dark" role="button" onclick="suntingProfilFunct()" href="#">
+            <a id="suntingProfilButton" class="nav-link link-dark active" role="button" onclick="suntingProfilFunct()" href="#">
 				<i class="fas fa-user-alt"></i> Sunting Profil
 				<script>
 					function suntingProfilFunct() {
 						document.getElementById("suntingAkun").style.display = "none"
 						document.getElementById("hapusAkun").style.display = "none"
 						document.getElementById("suntingProfil").style.display = "block"
+						document.getElementById("suntingProfilButton").classList.add('active')
 					}
 				</script>
 			  </a>
@@ -159,8 +160,7 @@ if (!isset($_SESSION['login'])) {
 						  <img src="images/profile1/profile1-pp.png" alt="PROFILE PICT">
 					  </div>
 				 <div class="row justify-content-center" style="text-align: center;">
-         <form action="" met
-					  <input type="file" name="gambar" id="gambar" style="display: block" >
+					  <a href="" style="display: block" ><h5>Ganti foto profil</h5></a>
 					  </div>
 				  </div>
 			  </div>
@@ -217,7 +217,7 @@ if (!isset($_SESSION['login'])) {
 				  <div class="row justify-content-center">
 					  <div class="col-lg-6">
 						  <img src="images/profile1/profile1-pp.png" alt="PROFILE PICT">
-						  <h4 id="namaPengguna" style="display: inline-block; margin-left: 5%;">Dx</h4>
+						  <h4 id="namaPengguna" style="display: inline-block; margin-left: 5%;"<?php echo $data['nama']; ?>></h4>
 					  </div>
 				  <div class="row justify-content-center">
 					<div class="col-lg-12">
@@ -309,9 +309,19 @@ if (!isset($_SESSION['login'])) {
 				</label>
 			</div>
 			<br>
+      <form action="" method="POST">
 			<div class="d-flex justify-content-end">
-				<button type="submit" class="btn btn-danger">Hapus Akun</button>
+				<button type="submit" name="btn-delete" class="btn btn-danger">Hapus Akun</button>
 			</div>
+      </form>
+      <?php 
+        if (isset($_POST['btn-delete'])) {
+          $query = "DELETE FROM table_mahasiswa WHERE email = '$currentuser'";
+          mysqli_query($koneksi, $query);
+          session_unset();
+          session_destroy();
+        }
+      ?>
 		</div>
 	</section>
 	</main>

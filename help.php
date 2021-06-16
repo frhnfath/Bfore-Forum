@@ -58,7 +58,7 @@ if (isset($_SESSION['login'])) {
 								<a class="nav-link" href="about.php">Tentang</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">Forum</a>
+								<a class="nav-link active" aria-current="page" href="forum.php">Forum</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">Bantuan</a>

@@ -104,13 +104,10 @@ if (isset($_SESSION['login'])) {
 										<div class="col-lg-6 g-1">
 											<div class="d-flex w-100 justify-content-end">
 											<button id="badge-indicator" class="btn btn-primary btn-sm">
-												Suara <span id="numVote" class="badge bg-secondary btn-sm">2</span>
+												Suara <span id="numVote" class="badge bg-secondary btn-sm"><?=$tampil['vote']; ?></span>
 											  </button>
 											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												Jawaban <span id="numAnswer" class="badge bg-secondary">3</span>
-											  </button>
-											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												<i class="fas fa-eye"></i> <span id="numRead" class="badge bg-secondary">4</span>
+												Jawaban <span id="numAnswer" class="badge bg-secondary">0</span>
 											  </button>
 											  </div>
 										</div>

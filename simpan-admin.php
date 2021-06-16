@@ -34,7 +34,7 @@ if (isset($_POST["login"])){
   // }
 
   if ($email = "admin@admin.com" && $password = "123") {
-    $_SESSION["login"] = true;
+    $_SESSION["admin"] = true;
     header("Location: profile-admin-main.php");
     exit;
   };

@@ -21,6 +21,7 @@ $author = mysqli_fetch_array($auth);
   $currentuser = $_SESSION['login'];
   $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
   $data = mysqli_fetch_array($sql);
+  $idu = $data['id_user'];
   ?>
 
 <!DOCTYPE html>
@@ -114,10 +115,7 @@ $author = mysqli_fetch_array($auth);
 										Suara <span id="numVote" class="badge bg-secondary btn-sm"><?=$isi['vote'];?></span>
 										</button>
 										<button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-										Jawaban <span id="numAnswer" class="badge bg-secondary">3</span>
-										</button>
-										<button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-										<i class="fas fa-eye"></i> <span id="numRead" class="badge bg-secondary">4</span>
+										Jawaban <span id="numAnswer" class="badge bg-secondary">0</span>
 										</button>
 									</div>
 								</div>
@@ -157,13 +155,13 @@ $author = mysqli_fetch_array($auth);
 							</div>
 							<!-- BAGIAN JAWABAN -->
 							<h3 class="border-bottom" style="margin-left: 27px;"><span id="numAnswer" ></span>  Komentar</h3>
+							<div id="jawaban-pertanyaan" class="container">
               <?php
                 $re = mysqli_query($koneksi, "SELECT * FROM table_reply WHERE id_forum = $id");
                 $res = mysqli_fetch_array($re);
                 while($rep = mysqli_fetch_array($re)) :
 
                   ?>
-							<div id="jawaban-pertanyaan" class="container">
 								<div class="row border-bottom">
 									<div class="col-md-1">
 										<div id="vote-cont" class="btn-group-vertical align-items-center">
@@ -185,7 +183,7 @@ $author = mysqli_fetch_array($auth);
 														</div>
 														<div class="col-md-8">
 															<div class="card-body">
-																<h6 class="card-title">Ditanya <span id="timePosted">5 jam</span> lalu</h6>\
+																<h6 class="card-title">Ditanya <span id="timePosted"><?=$rep['date_created']; ?></span></h6>\
                                 <?php
                                   $u = $res['id_user'];
                                   $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = $u"));
@@ -197,35 +195,36 @@ $author = mysqli_fetch_array($auth);
 													</div>
 												</div>
 											</div>
+                      <?php endwhile; ?>
 										</div>
                     
-                <?php endwhile; ?>
+
 									</div>
 									<!-- BAGIAN INPUT JAWABAN -->
 									<div class="col-md-11">
 									<h4 class="mt-3" style="margin-left: 27px;">Tambahkan komentar</h4>
 									<div id="deskripsiPertanyaan" class="col-md-12">
-										<form action="" method="POST">
+                  <form action="" method="POST">
 											<div class="input-group">
 												<textarea class="form-control" name="reply" aria-label="kolom komentar" id="newComment" required></textarea>
 											</div>
 											<br>
 											<div class="d-flex justify-content-end">
 												<a type="button" class="btn btn-outline-secondary me-1" role="button" href="forum-signed.php">Kembali</a>
-												<button type="button" name="btn-reply" class="btn btn-primary">Bagikan</button>
+												<button type="submit" name="btn-reply" class="btn btn-primary">Bagikan</button>
 											</div>
-										</form>
+                  </form>
                     <?php
                       if (isset($_POST['btn-reply'])) {
-                        $aut = $currentuser;
                         $reply = $_POST['reply'];
                         $forum = $isi['id_forum'];
                         if ($reply == "") {
                           echo "<script>alert('text kosong')</script>";
                           exit;
                         }
-                        $query = "INSERT INTO table_reply (id_forum, id_user, rep) VALUES ('$forum', '$aut', $reply)";
-                        mysqli_query($koneksi, $query);
+                        $query = "INSERT INTO table_reply (id_forum, id_user, rep) VALUES ('$forum', '$idu', '$reply')";
+                        $hasil = mysqli_query($koneksi, $query);
+                        mysqli_error($koneksi);
                       }
                     ?>
 									</div>

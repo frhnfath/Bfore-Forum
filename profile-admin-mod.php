@@ -186,8 +186,7 @@
 			<div class="row">
 				<div class="d-flex width-100 justify-content-between mb-3">
 					  <h4>Kelola Kategori</h4>
-					  <div class="btn btn-primary"><i class="fa fa-pen-square icon-inbutton"></i> Tambah kategori baru</button>
-					  </div>
+					  <a class="btn btn-primary" role="button" href="cat-add.php"><i class="fa fa-pen-square icon-inbutton"></i> Tambah Kategori Baru</a>
 				</div>
 				<div class="col-md-12">
 				  <div class="table-responsive">
@@ -201,17 +200,18 @@
 						</thead>
 						<tbody>
               <?php 
+                $i = 0;
                 $tampilcat = mysqli_query($koneksi, "SELECT * FROM table_category");
                 while($datacat = mysqli_fetch_array($tampilcat)) :
 
+              $i++;
               ?>
 						  <tr>
-							<td><?=$datacat['id_category'];?></td>
+							<td><?=$i;?></td>
 							<td><?=$datacat['category'];?></td>
 							<td style="text-align: center;" >
-								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
-								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
-								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
+								<a role="button" href="cat-edit.php?id_category=<?= $datacat["id_category"]; ?>"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
+								<a role="button" href="delete-cat.php?id_category=<?= $datacat["id_category"]; ?>"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
 							</td>
 						  </tr>
               <?php endwhile; ?>
@@ -238,7 +238,7 @@
 			<div class="row">
 				<div class="d-flex wiFdth-100 justify-content-between mb-3">
 					  <h4>Kelola Postingan</h4>
-					  <div class="btn btn-primary"><i class="fa fa-pen-square icon-inbutton"></i> Tambah kategori baru</button>
+					  <a class="btn btn-primary" href="forum-post.php"><i class="fa fa-pen-square icon-inbutton"></i> Tambah Forum Baru</a>
 					  </div>
 				</div>
 				<div class="col-md-12">
@@ -258,22 +258,21 @@
                 $tampilpos = mysqli_query($koneksi, "SELECT * FROM table_forum");
                 while($datapos = mysqli_fetch_array($tampilpos)) :
 
-              ?>
-						  <tr>
-							<td><?=$datapos['judul'];?></td>
-							<td><?=$datapos['isi'];?></td>
-              <?php
-                $u = $datapos['id_user'];
-                $tampilan = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = $u"));
-              ?>
-              <td><?=$tampilan['nama'];?></td>
-              <td><?=$datapos['forum_waktu'];?></td>
-							<td style="text-align: center;" >
-								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
-								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-search m-1"></i></a>
-								<a role="button" href="#"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
-							</td>
-						  </tr>
+                ?>
+                  <tr>
+                  <td><?=$datapos['judul'];?></td>
+                  <td><?=$datapos['isi'];?></td>
+                  <?php
+                    $u = $datapos['id_user'];
+                    $tampilan = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = $u"));
+                  ?>
+                  <td><?=$tampilan['nama'];?></td>
+                  <td><?=$datapos['forum_waktu'];?></td>
+                  <td style="text-align: center;" >
+                    <a role="button" href="forum-edit.php?id_forum=<?= $datapos["id_forum"]; ?>"><i id="iconOptionBut" class="text-dark fas fa-pen m-1"></i></a>
+                    <a role="button" href="delete-forum.php?id_forum=<?= $datapos["id_forum"]; ?>"><i id="iconOptionBut" class="text-dark fas fa-times m-1"></i></a>
+                  </td>
+                  </tr>
               <?php endwhile; ?>
 						  <!-- <tr>
 							  <td>Juara Gemastik</td>

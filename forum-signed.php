@@ -104,6 +104,7 @@ if (!isset($_SESSION['login'])) {
                 <?php
                   $forum = mysqli_query($koneksi, "SELECT * FROM table_forum ORDER BY id_forum desc");
                   while($tampil = mysqli_fetch_array($forum)) :
+                   $rep = mysqli_fetch_array(mysqli_query($koneksi, "SELECT COUNT(id_forum) FROM table_reply WHERE id_forum = '$tampil[id_forum]'"));
 
                 ?>
 								<a class="list-group-item list-group-item-action" href="postingan-signed.php?id_forum=<?=$tampil['id_forum'];?>">
@@ -114,13 +115,10 @@ if (!isset($_SESSION['login'])) {
 										<div class="col-lg-6 g-1">
 											<div class="d-flex w-100 justify-content-end">
 											<button id="badge-indicator" class="btn btn-primary btn-sm">
-												Suara <span id="numVote" class="badge bg-secondary btn-sm">2</span>
+												Suara <span id="numVote" class="badge bg-secondary btn-sm"><?=$tampil['vote']; ?></span>
 											  </button>
 											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												Jawaban <span id="numAnswer" class="badge bg-secondary">3</span>
-											  </button>
-											  <button id="badge-indicator" class="btn btn-primary btn-sm" disabled>
-												<i class="fas fa-eye"></i> <span id="numRead" class="badge bg-secondary">4</span>
+												Jawaban <span id="numAnswer" class="badge bg-secondary">0</span>
 											  </button>
 											  </div>
 										</div>
@@ -176,9 +174,6 @@ if (!isset($_SESSION['login'])) {
 											<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Kembali</a>
 										</li>
 										<li class="page-item active"><a class="page-link" href="#">1</a></li>
-										<li class="page-item" aria-current="page">
-											<a class="page-link" href="#">2</a>
-										</li>
 										<li class="page-item">
 											<a class="page-link" href="#">Selanjutnya</a>
 										</li>

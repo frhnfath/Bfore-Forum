@@ -1,12 +1,23 @@
+<?php
+include "koneksi.php";
+
+session_start();
+if (!isset($_SESSION['admin'])) {
+  header("location: signin.php");
+  exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>BFore : Akun kamu</title>
+		<title>BFore : Ubah Pertanyaan</title>
 		<link rel="icon" type="image/ico" href="favicon.ico"/>
 		<!-- STYLE AND BOOTSTRAP LOAD -->
-		<link rel="stylesheet" href="css/styles.css" />  
+		<link rel="stylesheet" href="css/styles.css" /> 
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -27,7 +38,7 @@
 	</head>
 	
 	<body>
-		<section id="navigator">
+	<section id="navigator bg-light">
 		<div class="container-fluid bg-light">
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -47,7 +58,7 @@
 								<a class="nav-link" href="about.php">Tentang</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="forum-signed.php">Forum</a>
+								<a class="nav-link active" aria-current="page" href="#">Forum</a>
 							</li>
 							<li class="nav-item nav-fil" display="inline-block drop-down-toggle">
 								<div class="dropstart">
@@ -72,42 +83,44 @@
 	    	<img id="forum-cover-img" src="images/header.png" alt="">
 		</section>
 
-		<section id="profil-navbar">
-			<div class="container mt-3 mb-3">
-			<ul class="nav nav-pills justify-content-center">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Profil</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="profile-admin-mod.php">Moderasi</a>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<main>
-			<section id="profil-section">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6 mb-3" style="text-align: center;">
-							<img src="images/profile1/profile1-pp.png" alt="profile" style="display: inline-block; border-radius: 100%;">
-							<h2 class="m-3" style="display: inline-block;">Admin</h2>
-						</div>
-						<div class="col-lg-6 d-flex justify-content-center mb-5">
-							<div class="card border-primary mb-3" style="max-width: 18rem;">
-								<div class="card-header"><i class="fa fa-user icon-inbutton"></i>Profil Jaringan</div>
-								<div class="card-body text-primary">
-									<dl class="row">
-										<dd class="list-item"><i class="fa fa-user-graduate icon-inbutton"></i>Hai <span id="profilProdi">Admin</span></dd>
-										<dd><i class="fa fa-university icon-inbutton"></i>Ini <span id="profilFakultas">adalah profile admin</span></dd>
-									</ul>
-								</div>
+		<section id="forum-content">
+			<div class="card">
+				<div class="card-header bg-primary">
+				</div>
+				<div class="card-item">
+					<form action="" method="POST" class="m-3 p-2">
+					<div class="row feature-grid">
+					<div class="col-lg-12">
+						<div class="alert alert-primary">
+									Tambah Kategori 
 							</div>
 						</div>
-						</div>
 					</div>
+					<h5 class="mt-3 p-0 ml-0" style="margin-left: 27px;">Tambah Kategori</h5>
+						<div id="deskripsiPertanyaan" class="container">
+								<textarea class="form-control" name="category" aria-label="kolom komentar" id="newComment"></textarea>
+								<br>
+							<div class="d-flex justify-content-end">
+								<a type="button" class="btn btn-outline-secondary me-1" role="button"  href="postingan-signed.php">Kembali</a>
+								<button type="submit" name="btn-category" class="btn btn-primary">Bagikan</button>
+							</div>
+							<br>
+						</div>
+					</form>
+          <?php
+            if (isset($_POST['btn-category'])) {
+              $category = $_POST['category'];
+              $query = "INSERT INTO table_category (category) VALUES ('$category')";
+              $ver = mysqli_query($koneksi, $query);
+              if (!$ver) {
+                echo mysqli_error($koneksi);
+              }
+              header("Location: profile-admin-mod.php");
+            }
+          ?>
 				</div>
-			</section>
-		</main>
+			</div>
+		</section>
 
 	</body>
 	<footer class="bg-secondary">

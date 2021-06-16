@@ -1,3 +1,16 @@
+<?php
+include "koneksi.php";
+
+session_start();
+if (!isset($_SESSION['admin'])) {
+  header("location: signin.php");
+  exit;
+}
+$id = $_GET["id_forum"];
+$cat = mysqli_query($koneksi, "SELECT * FROM table_forum WHERE id_forum = $id");
+$data = mysqli_fetch_array($cat);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -89,16 +102,28 @@
 					<h5 class="mt-3 p-0 ml-0" style="margin-left: 27px;">Edit pertanyaan</h5>
 						<div id="deskripsiPertanyaan" class="container">
 							<div class="input-group">
-								<textarea class="form-control" aria-label="kolom komentar" id="newComment"></textarea>
+								<textarea class="form-control" name="isi" aria-label="kolom komentar" id="newComment">
+                <?php echo $data['isi']; ?>
+                </textarea>
 							</div>
 								<br>
 							<div class="d-flex justify-content-end">
 								<a type="button" class="btn btn-outline-secondary me-1" role="button"  href="postingan-signed.php">Kembali</a>
-								<button type="submit" class="btn btn-primary">Bagikan</button>
+								<button type="submit" name="btn-submit" class="btn btn-primary">Bagikan</button>
 							</div>
 							<br>
 						</div>
 					</form>
+          <?php 
+            if (isset($_POST['btn-submit'])) {
+              $forum = mysqli_real_escape_string($koneksi, $_POST['isi']);
+              $query = "UPDATE table_forum SET isi = '$forum' WHERE id_forum = '$id'";
+              $ver = mysqli_query($koneksi, $query);
+              if (!$ver) {
+                echo mysqli_error($koneksi);
+              }
+            }
+          ?>
 				</div>
 			</div>
 		</section>

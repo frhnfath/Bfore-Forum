@@ -64,11 +64,11 @@ if (isset($_SESSION['login'])) {
 			</a>
       <h1 class="h3 mb-3 fw-normal">Selamat Datang!</h1>
       <div class="form-floating">
-        <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
+        <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" required>
         <label for="floatingInput">Alamat Email</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" name="password" id="floatingPasswordSignin" placeholder="Password">
+        <input type="password" class="form-control" name="password" id="floatingPasswordSignin" placeholder="Password" required>
         <label for="floatingPassword">Kata Sandi</label>
       </div>
       <button class="w-100 btn btn-lg btn-primary mb-3" type="submit" name="login">Masuk</button>

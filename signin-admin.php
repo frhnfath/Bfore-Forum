@@ -62,7 +62,7 @@ if (isset($_SESSION['login'])) {
       <a class="navbar-brand" href="index.php">
         <img class="mb-4" src="images/logo-Navbar.png" alt="" width="40%" height="60%">
 			</a>
-      <h1 class="h3 mb-3 fw-normal">Selamat Datang!</h1>
+      <h1 class="h3 mb-3 fw-normal">Selamat Datang, Admin!</h1>
       
       <div class="form-floating">
         <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
