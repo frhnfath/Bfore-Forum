@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
 
 <?php 
   $currentuser = $_SESSION['login'];
-  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
+  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_ser = $currentuser");
   $data = mysqli_fetch_array($sql);
   ?>
 
@@ -245,7 +245,7 @@ if (!isset($_SESSION['login'])) {
                 $oldpass = mysqli_real_escape_string($koneksi, $_POST['old-pass']);
                 $newpass = mysqli_real_escape_string($koneksi, $_POST['new-pass']);
                 $repass = mysqli_real_escape_string($koneksi, $_POST['renew-pass']);
-                if (password_verify($oldpass, $data['password'])) {
+                if (!password_verify($oldpass, $data['password'])) {
                   echo "<script>alert('same password!')</script>";
                   exit;
                 }

@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
 
 <?php 
   $currentuser = $_SESSION['login'];
-  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
+  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = $currentuser");
   $data = mysqli_fetch_array($sql);
   ?>
 

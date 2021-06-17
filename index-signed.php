@@ -9,11 +9,10 @@ if (!isset($_SESSION['login'])) {
 }
 
 
-
 ?>
 <?php 
   $currentuser = $_SESSION['login'];
-  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE email = '$currentuser'");
+  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = $currentuser");
   $data = mysqli_fetch_array($sql);
   ?>
 
@@ -146,7 +145,7 @@ if (!isset($_SESSION['login'])) {
 					  Saling bantu dan berkolaborasi dalam memecahkan berbagai masalah.
 				  </p>
           <br>
-          <p>Hello, <?php echo $_SESSION['login']; ?></p>
+          <p>Hello, <?php echo $data['nama']; ?></p>
 				  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
 					<a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href="forum-signed.php" role="button">Jelajahi forum</a>
 					<a type="button" class="btn btn-outline-secondary btn-lg px-4" href="forum-post.php" role="button">Bertanya sekarang</a>

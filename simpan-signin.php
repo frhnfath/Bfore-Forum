@@ -28,7 +28,7 @@ if (isset($_POST["login"])){
   if (mysqli_num_rows($result) === 1) {
     $row = mysqli_fetch_assoc($result);
     if (password_verify($password, $row["password"]))  {  // check password
-      $_SESSION["login"] = $email;
+      $_SESSION["login"] = $row['id_user'];
       header("Location: index-signed.php");
       exit;
     } 
