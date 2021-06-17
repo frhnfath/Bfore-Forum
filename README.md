@@ -92,7 +92,7 @@ Target pengguna dari BFore adalah mahasiswa IPB University.
 <img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60c74d242621e15943065364/a065d6f0d342f8b367d46454c5f1bb6c/Activity_Diagram-Membuat_Pertanyaan_fiks.png" width="641" height="521"/>
 
 ### Entity Relationship Diagram
-<img src="https://trello-attachments.s3.amazonaws.com/605a00873a12268150d849ef/60854502d72ac94df75d7dcc/49abd035041a7fc1039ef899bd321b2e/ERD.png" width="771" height="579"/>
+<img src=" ![Image 2021-06-17 at 00 35 37](https://user-images.githubusercontent.com/78837297/122415202-e995c600-cfb1-11eb-962d-1d966276d50f.jpeg)"/>
 
 ### Class Diagram
 ![image](https://user-images.githubusercontent.com/78837351/121948537-8e7d8c80-cd81-11eb-94ba-6c71d5a4be62.png)
