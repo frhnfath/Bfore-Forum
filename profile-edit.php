@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
 
 <?php 
   $currentuser = $_SESSION['login'];
-  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_ser = $currentuser");
+  $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = $currentuser");
   $data = mysqli_fetch_array($sql);
   ?>
 
@@ -200,7 +200,7 @@ if (!isset($_SESSION['login'])) {
           $username = mysqli_real_escape_string($koneksi, $_POST['username']);
           $jurusan = mysqli_real_escape_string($koneksi, $_POST['jurusan']);
           $fakultas = mysqli_real_escape_string($koneksi, $_POST['fakultas']);
-          mysqli_query($koneksi, "UPDATE table_mahasiswa SET nama = '$nama', nim ='$nim', username = '$username', jurusan = '$jurusan', fakultas = '$fakultas' WHERE email = '$currentuser'");
+          mysqli_query($koneksi, "UPDATE table_mahasiswa SET nama = '$nama', nim ='$nim', username = '$username', jurusan = '$jurusan', fakultas = '$fakultas' WHERE id_user = $currentuser");
           echo "<script>alert('Information updated, please refresh this page')</script>";
           exit;
         }
@@ -254,7 +254,7 @@ if (!isset($_SESSION['login'])) {
                   exit;
                 }
                 $newpass = password_hash($newpass, PASSWORD_DEFAULT);
-                mysqli_query($koneksi, "UPDATE table_mahasiswa SET password = '$newpass' WHERE email = '$currentuser'");
+                mysqli_query($koneksi, "UPDATE table_mahasiswa SET password = '$newpass' WHERE id_user = $currentuser");
                 echo "<script>alert('Password changed')</script>";
               }
             ?>
@@ -282,7 +282,8 @@ if (!isset($_SESSION['login'])) {
                   echo "<script>alert('Email cannot be indentical')</script";
                   exit;
                 }
-                mysqli_query($koneksi, "UPDATE table_mahasiswa SET email = '$new' WHERE email = '$currentuser'");
+                mysqli_query($koneksi, "UPDATE table_mahasiswa SET email = '$new' WHERE id_user = $currentuser");
+                echo "<script>alert('email changed')</script>";
               }
             ?>
 					</div>
@@ -316,7 +317,7 @@ if (!isset($_SESSION['login'])) {
       </form>
       <?php 
         if (isset($_POST['btn-delete'])) {
-          $query = "DELETE FROM table_mahasiswa WHERE email = '$currentuser'";
+          $query = "DELETE FROM table_mahasiswa WHERE id_user = $currentuser";
           mysqli_query($koneksi, $query);
           session_unset();
           session_destroy();

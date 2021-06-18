@@ -31,8 +31,10 @@ if (isset($_POST["login"])){
       $_SESSION["login"] = $row['id_user'];
       header("Location: index-signed.php");
       exit;
-    } 
-  } else echo "<script>alert('Email/Password do not match')</script>"; 
+    } else { 
+      echo "<script>alert('Email/Password do not match')</script>"; 
+    }
+  } 
 
 }
 

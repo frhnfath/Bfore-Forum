@@ -21,7 +21,6 @@ $author = mysqli_fetch_array($auth);
   $currentuser = $_SESSION['login'];
   $sql = mysqli_query($koneksi, "SELECT * FROM table_mahasiswa WHERE id_user = $currentuser");
   $data = mysqli_fetch_array($sql);
-  $idu = $data['id_user'];
   ?>
 
 <!DOCTYPE html>
@@ -58,7 +57,7 @@ $author = mysqli_fetch_array($auth);
 			<!-- Nav Bar -->
 			<nav class="navbar navbar-expand-md navbar-light bg-light">
 				<div class="container-fluid">
-				<a class="navbar-brand" href="/index-signed">
+				<a class="navbar-brand" href="index-signed.php">
 						<img id="logoBFore" src="images/logo-Navbar.png" alt="BFore-Logo">
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapsing" aria-controls="navbarCollapsing" aria-expanded="false" aria-label="Toggle navigation">
@@ -222,7 +221,7 @@ $author = mysqli_fetch_array($auth);
                           echo "<script>alert('text kosong')</script>";
                           exit;
                         }
-                        $query = "INSERT INTO table_reply (id_forum, id_user, rep) VALUES ('$forum', '$idu', '$reply')";
+                        $query = "INSERT INTO table_reply (id_forum, id_user, rep) VALUES ($forum, $currentuser, '$reply')";
                         $hasil = mysqli_query($koneksi, $query);
                         mysqli_error($koneksi);
                       }
